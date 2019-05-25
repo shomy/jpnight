@@ -4,8 +4,8 @@
 .top-wrapper {
   width: 100%;
   height: 370px;
-  background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url(image/topimage.jpg);
-  background-image: linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url(image/topimage.jpg);
+  background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url("topimage.jpg");
+  background-image: linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url("topimage.jpg");
   background-size: cover;
   background-position: center;
   margin: 0 auto;

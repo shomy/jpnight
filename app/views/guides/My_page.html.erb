@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <link rel ="stylesheet" href="header_footer.css">
+  <link rel ="stylesheet" href="basic_parts.css">
+  <link rel ="stylesheet" href="btn_ill_parts.css">
+  <link rel ="stylesheet" href="text.css">
+  <link rel ="stylesheet" href="wrapper.css">
+  <link rel ="stylesheet" href="media.css">
+  <link href ="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300|Amatic+SC:700|Anton|Bangers|Caveat|Cherry+Swash:700|Corben:700|Creepster|Economica:700|Homemade+Apple|IM+Fell+DW+Pica+SC|Kaushan+Script|Londrina+Shadow|Montserrat+Subrayada|Oswald:700|Permanent+Marker|Quicksand|Roboto+Condensed:700|Teko|Vollkorn" rel="stylesheet">
+  <link href ="https://fonts.googleapis.com/css?family=Anton|Fredoka+One|Lato|Righteous" rel ="stylesheet">
+  <link rel ="stylesheet" href ="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity ="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="circletype.min.js"></script>
+  <script src="stylesheet.js" type="text/javascript"></script>
+
+  <title>JAPANIGHT</title>
+</head>
+
+<body>
+
+ <header>　
+  <div class = "dropdown-header">
+   <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
+    <div class ="dropdown-content-header">
+     <a href="#">設定編集</a>
+     <a href="#">マッチ</a>
+     <a href="#">お知らせ</a>
+     <a href="#">Q&A</a>
+     <a href="#">LOGOUT</a>
+    </div>
+  </div>
+
+   <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
+   <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
+   <ul class ="mypagecommand"><a href="">設定編集</a></ul>　<!-- ログインすることでマイページコマンドが表出　-->
+   <ul class ="mypagecommand"><a href="">マッチ</a></ul>
+   <ul class ="mypagecommand"><a href="">お知らせ</a></ul>
+   <ul class ="mypagecommand"><a href="">Q&A</a></ul>
+   <ul class ="signup"><a href="">LOGOUT</a></ul>　<!-- ログインすることでsignupがlogoutに変更される　-->
+ </header>
+
+
+ <div class="mypage">
+  <ul class="tabs group">
+   <li><a class="active" href="#/asaguide">AS A GUIDE</a></li>
+   <li><a href="#/asaguest">AS A GUEST</a></li>
+  </ul>
+
+
+  <div id="content">
+   <section id= "asaguide"><!-- ガイドのタブ -->
+    <div class ="mypage-head">　<!-- ガイドマイページ上部 -->
+
+     <div class ="myface-wrapper">　
+      <img id ="mypageface-icon"></img><!-- 顔写真アップ画像 -->
+      <div class = "face-message">顔写真をアップロードしてください</div>
+      <a class ="face-message"><顔写真をアップする際の注意点></a>
+      <label class ="upload-btn" for ="img1"> <!-- アップロードボタンラベル　-->
+       ファイルを選択
+       <input type="file" id= "img1">　<!-- アップロードボタン　-->
+      </label>
+      <h4><a href ="">★★★★</a></h4>　<!--評価レビュー５段階平均値の集計（未実装）、リンク先で評価コメント一覧-->
+     </div>
+        <!-- img2~img4でJSで同じ処理をしているのでまとめたい（もっちー）-->
+     <div class ="myscene-wrapper">
+      <h4 class ="guide-area-tag"><a>#Shinjyuku</a></h4>
+      <img id ="preview2"></img>
+      <div class = "face-message">風景写真をアップロードしてください</div>
+      <label class ="upload-btn" for ="img2">
+       ファイルを選択
+       <input type="file" id= "img2">
+      </label>
+     </div>
+     <div class ="myscene-wrapper">
+      <h4 class ="guide-area-tag"><a>#Shinjyuku</a></h4>
+      <img id ="preview2"></img>
+      <div class = "face-message">風景写真をアップロードしてください</div>
+      <label class ="upload-btn" for ="img2">
+       ファイルを選択
+       <input type="file" id= "img2">
+      </label>
+     </div>
+     <div class ="myscene-wrapper">
+      <h4 class ="guide-area-tag"><a>#Shinjyuku</a></h4>
+      <img id ="preview2"></img>
+      <div class = "face-message">風景写真をアップロードしてください</div>
+      <label class ="upload-btn" for ="img2">
+       ファイルを選択
+       <input type="file" id= "img2">
+      </label>
+     </div>
+     <div class ="myscene-wrapper">
+      <h4 class ="guide-area-tag"><a>#Shinjyuku</a></h4>
+      <img id ="preview2"></img>
+      <div class = "face-message">風景写真をアップロードしてください</div>
+      <label class ="upload-btn" for ="img2">
+       ファイルを選択
+       <input type="file" id= "img2">
+      </label>
+     </div>
+     <div class ="myscene-wrapper">
+      <h4 class ="guide-area-tag"><a>#Shinjyuku</a></h4>
+      <img id ="preview2"></img>
+      <div class = "face-message">風景写真をアップロードしてください</div>
+      <label class ="upload-btn" for ="img2">
+       ファイルを選択
+       <input type="file" id= "img2">
+      </label>
+     </div>
+
+    </div>
+
+      <!-- 設定情報部分--><!-- この部分は「編集」ボタンのリンク先でまとめて編集できる、以下同-->
+    <div class ="myinfo-wrapper">　
+     <div class ="edit">編集する</div>
+
+     <div class ="myinfo-label">名前</div>
+     <div class ="myinfo">000</div>
+
+     <div class ="myinfo-label">性別</div>
+     <div class ="myinfo">00000000000</div>
+
+     <div class ="myinfo-label">年齢</div>
+     <div class ="myinfo">00000000000</div>
+
+     <div class ="myinfo-label">電話番号</div>
+     <div class ="myinfo">00000000000</div>
+
+     <div class ="myinfo-label">案内できる場所</div>
+     <div class ="myinfo">00000000000</div>
+
+     <div class ="myinfo-label">使用可能言語</div>
+     <div class ="myinfo">00000000000</div>
+
+     <div class ="myinfo-label">1言紹介文(　文字)</div>
+     <div class ="myinfo">00000000000</div>
+
+     <div class ="myinfo-label">紹介文（　文字）</div>
+     <div class ="myinfo-big"></div>
+
+     <div class ="edit">編集する</div>
+
+     <label class ="myinfo-label">正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</label>
+
+    </div>
+   </section>
+
+
+   <section id= "asaguest">　<!-- ゲストのタブ　-->
+    <div class ="mypage-head">
+
+     <div class ="myface-wrapper">
+      <img id ="mypageface-icon"></img> 　<!-- ガイドのマイページ画面の方で顔写真アップしたら自動的にゲスト画面の方にもアップされるようにしたい（未実装）-->
+      <div class = "face-message">顔写真をアップロードしてください</div>
+      <a class ="face-message"><顔写真をアップする際の注意点></a>
+      <label class ="upload-btn" for ="img1">
+      ファイルを選択
+       <input type="file" id= "img1">
+      </label>
+      <h4><a href ="">★★★★</a></h4>
+     </div>
+     <img src ="image/bottle_b.png" class ="bottle-ill"></img>
+    </div>
+
+    <div class ="myinfo-wrapper">
+
+     <div class ="edit">編集する</div>
+
+     <label class ="myinfo-label">名前</label>
+     <div class ="myinfo">000</div>
+
+     <label class ="myinfo-label">性別</label>
+     <div class ="myinfo">00000000000</div>
+
+     <label class ="myinfo-label">年齢</label>
+     <div class ="myinfo">00000000000</div>
+
+     <label class ="myinfo-label">電話番号</label>
+     <div class ="myinfo">00000000000</div>
+
+     <div class ="edit">編集する</div>
+
+     <label class ="myinfo-label">After the official launch, guide fee (charged guide)function & payment function will be added.</label>
+
+    </div>
+
+   </section>
+
+  </div>
+
+ </div>
+
+
+
+
+ <footer>　<!-- フッターは同じコードなので省略して記述したい　-->
+    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
+    <img src  = "image/town.png" class ="town-ill"></img>
+    <wrapper class ="footer-wrapper">
+     <ul class ="footer-list"><a href ="">HELP</a></ul>
+     <ul class ="footer-list"><a href ="">CONTACT</a></ul>
+     <ul class ="footer-list"><a href ="">COMPANY</a></ul>
+     <ul class ="footer-list"><a href ="">OUR PHILOSOPHY</a></ul>
+     <ul class ="footer-list"><a href ="">TERMS OF USE</a></ul>
+     <ul class ="footer-list"><a href ="">SPECIAL COMMERCIAL CODE</a></ul>
+     <ul class ="footer-list"><a href ="">PRIVACY POLICY</a></ul>
+    </wrapper>
+ </footer>
+
+ <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+ <script src="stylesheet.js" type="text/javascript"></script>
+ <script src="jquery.upload_thumbs.js"></script>
+</body>
+</html>

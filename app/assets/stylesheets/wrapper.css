@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
+
+.top-wrapper {
+  width: 100%;
+  height: 370px;
+  background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url(image/topimage.jpg);
+  background-image: linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url(image/topimage.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  display: inline-block;
+  border-bottom-right-radius: 2000px 300px;
+  border-bottom-left-radius: 2000px 300px;
+  margin-left: -200px;
+  margin-right: -200px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.guide-wrapper {
+  width: 90%;
+  height: 110%;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  margin: 10px auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 10px 8px lightgray;
+}
+
+.area-tag-wrapper {
+  position: relative;
+}
+
+.guide-index {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  position: relative;
+  margin: 10px auto;
+  z-index: 1;
+}
+
+.guide {
+  width:33%;
+  position: relative;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(226, 226, 226);
+  z-index: 2;
+}
+
+@supports (display: grid) {
+.guide-index {
+  margin: auto;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.guide {
+  width: auto;
+  margin: 0;
+}
+
+.guide:hover {
+  transition: background-color 3s;
+  background-color: rgba(110, 222, 239,  0.5);
+  filter:alpha(opacity=70);
+  -ms-filter: “alpha( opacity=70 )”;
+}
+}
+
+.mailadress-form, .chat-room, .news-room, .QA-room, .logout-form, .company-profile {
+  width: 90%;
+  height: 110%;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: rgb(161, 175, 204);
+  background-color: rgb(245, 245, 245);
+  margin: 10px auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 10px 8px lightgray;
+  z-index: 1;
+}
+
+.chat-room, .news-room, .QA-room, .logout-form, .company-profile {
+  margin: 60px auto 10px;
+  text-align: left;
+}
+
+.logout-form {
+  text-align: center;
+}
+
+#content {
+  width: 90%;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(245, 245, 245);
+  margin: 0 auto 10px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 10px 8px lightgray;
+-webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+   	   -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+   	        box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+#asaguide {
+  margin: 0 auto;
+}
+
+#asaguest {
+  margin: 0 auto;
+}
+
+.mypage-head {
+  border-bottom-color: white;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-top-color: white;
+  border-top-width: 2px;
+  border-top-style: solid;
+  text-align: center;
+}
+
+.myface-wrapper {
+  height: 330px;
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 30px;
+  position: relative;
+}
+.myscene-wrapper {
+  height: 330px;
+  width: 330px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 30px;
+}
+
+.myinfo-wrapper {
+  margin-top: 70px;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.chat-index {
+  width: 80%;
+  margin: 5px auto;
+  padding: 10px;
+  vertical-align: middle;
+  position: relative;
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-top-color: white;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.news-room, .QA-room {
+  text-align: center;
+}
+
+.news-wrapper, .sixarea-wrapper {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-rows: 50px 50px 50px 50px 50px ;
+  grid-template-columns: 100%;
+}
+
+.sixarea-wrapper {
+  width: 70%;
+  grid-template-rows: 16.7% 16.7% 16.7% 16.7% 16.7% 16.7%;
+  margin: 10px auto;
+  grid-gap: 0;
+}
+
+.sixarea {
+  width: 100%;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(109, 90, 204);
+  line-height: 110px;
+  padding: 20px;
+  font-size: 40px;
+  vertical-align: baseline;
+  background-color: rgb(245, 245, 245);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(161, 175, 204);
+}
+
+.sixarea:hover {
+  background-color: white;
+}
+
+.news {
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(226, 226, 226);
+  text-align: left;
+}
+
+.news:hover {
+  background-color: rgba(110, 222, 239,  0.4);
+  cursor: pointer;
+}

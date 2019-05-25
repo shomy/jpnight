@@ -1,0 +1,265 @@
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
+
+
+@media (max-width: 1140px) {
+
+.lead {
+  font-size: 30px;
+}
+
+.lead4guide {
+  font-size: 25px;
+}
+
+.top-wrapper {
+  height: 450px;
+}
+
+.btn-one {
+  width: 50%;
+  margin: 8px;
+}
+
+.guide-wrapper {
+
+}
+
+#chat-face, .treat-icon, .chat-name, .chat-btn, .chat-delete  {
+  display: block;
+}
+
+.chat-btn {
+  margin: 10px auto;
+}
+
+
+ @supports (display: grid) {
+.guide-index {
+  grid-template-rows: 20% 20% 20% 20%;
+  grid-template-columns: 50% 50%;
+}
+}
+.one-message {
+
+}
+
+.town-ill {
+  height: 90px;
+  width: 160px;
+}
+}
+
+@media (max-width: 935px) {
+
+.logo {
+  font-size: 26px;
+  padding-left: 0;
+  margin-left: 3px;
+}
+
+.mypagecommand {
+  display: none;
+}
+.signup {
+  display: none;
+}
+.responsive-menu {
+  display: inline-block;
+}
+
+.myscene-wrapper {
+  display: ;
+}
+}
+
+@media (max-width: 420px) {
+
+header {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.logo {
+  text-align: center;
+}
+
+.header-username {
+  font-size: 17px;
+}
+
+.signup {
+  display: none;
+}
+
+
+.top-wrapper {
+  height: 580px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 55px;
+  margin-top: 70px;
+}
+
+.btn-one {
+  width: 80%;
+  margin:3px;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  top: 490px;
+}
+
+.circle span {
+  width: 70px;
+  font-size: 13px;
+}
+
+.wine-ill {
+  display: none;
+}
+
+.guide-wrapper {
+  padding: 20px 0;
+}
+
+.area-btn {
+  width:80%;
+}
+
+.area-tag-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.guide-index {
+  grid-template-rows: 11%;
+  grid-template-columns: 100%;
+}
+
+.guide-area-tag {
+  line-height: 4px;
+}
+
+.photo {
+  height: 60%;
+}
+
+footer {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding: 20px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-wrapper{
+  top:130px;
+}
+
+#content, .chat-wrapper, .mailadress-form, .logout-form, .company-profile {
+  padding: 10px;
+}
+
+#mypageface-icon, #chat-room-face {
+  width: 70px;
+  height: 70px;
+  margin: 10px 40px 10px 10px;
+}
+
+.myscene-wrapper {
+  width: 200px;
+  height: 250px;
+}
+
+#preview2, #preview3, #preview4 {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 5px;
+}
+
+.bottle-ill {
+    width: 10%;
+    height: 6%;
+    margin: 20px;
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    transform: rotate(10deg)
+}
+
+.myinfo {
+  width: 100%;
+  height: 40px;
+  padding: 6px;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.myinfo-label {
+  width: 100%;
+  font-size: 15px;
+}
+
+.myinfo-big {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.myarea-info {
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    margin: 10px auto;
+    padding: 5px;
+  }
+
+.chat-room, .news-room, .QA-room {
+ padding: 10px;
+}
+
+.treat-icon-room {
+  width:30px;
+  height: 30px;
+  font-size: 22px;
+  right: 80px;
+  top: 40px;
+}
+
+#chat-face {
+   width: 70px;
+   height: 70px;
+}
+
+.chat-name {
+   width: 200px;
+   text-align: center;
+}
+
+.sixarea {
+  font-size: 20px;
+  line-height: 80%;
+  width: 75%;
+  padding: 30px;
+}
+
+.sp-area-btn {
+  width: 200px;
+  font-size: 20px;
+}
+
+.area-tag {
+  font-size: 20px;
+  margin: 10px auto;
+}
+
+}

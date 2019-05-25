@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
+
+
+.lead {
+  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+  text-align: center;
+  color:white;
+  letter-spacing: 10px;
+  line-height: 80px;
+}
+
+.lead4guide {
+  width: 90%;
+  font-family: 'Anton', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  color: white;
+  letter-spacing: 11px;
+  margin: 0 auto;
+}
+
+.guide-area-tag {
+  width: 80%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.guide-name {
+  position: relative;
+  margin: 2px;
+}
+
+.review {
+  margin: 0 auto;
+}
+
+.one-message {
+  position: relative;
+  width: 80%;
+  color: rgb(161, 175, 204);
+  text-align: left;
+  margin: 0 auto;
+}
+
+
+.face-message {
+  font-size: 10px;
+  color: rgb(161, 175, 204);
+}
+
+.myinfo-label {
+  width: 50%;
+  font-size: 25px;
+  margin: 0 auto;
+  text-align: left;
+  color: rgb(161, 175, 204);
+}
+
+
+.news-headline {
+  text-align: left;
+  padding:7px;
+  margin: 0;
+  line-height: 35px;
+  font-weight: lighter;
+}
+
+.title-QA, .title-news, .title-company {
+  line-height: 30px;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  color: rgb(109, 90, 204) ;
+  border: solid 1px rgb(109, 90, 204);
+  padding: 15px;
+}
+
+.Q_A, .company-info {
+  margin-bottom: 50px;
+}
+
+.Q, .A {
+  font-size: 20px;
+  text-align: left;
+  margin: 5px;
+}
+
+.Q {
+  color: rgb(46, 204, 113);
+}
+
+.A {
+  font-size: 15px;
+}

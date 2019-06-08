@@ -10,6 +10,7 @@ class GuidesController < ApplicationController
   # GET /guides/1
   # GET /guides/1.json
   def show
+    @guide = Guide.find(params[:id])
   end
 
   # GET /guides/new

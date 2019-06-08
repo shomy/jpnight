@@ -2,15 +2,18 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
 
+.lead, .btn-one, .circle span, .area-search, .area-tag, h3 span, .signin, .header-username, .mypagecommand, .footer-wrapper{
+  font-family: 'Baloo Da', cursive;
+}
+
 .lead {
-  font-family: 'Anton', sans-serif;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: lighter;
   text-align: center;
-  color:white;
-  letter-spacing: 10px;
-  line-height: 80px;
-}
+  color: white;
+  letter-spacing: 7px;
+  line-height: 70px;
+  }
 
 .lead4guide {
   width: 90%;
@@ -25,11 +28,13 @@
 .guide-area-tag {
   width: 80%;
   text-align: center;
+  font-size: 22px;
   margin: 10px auto;
 }
 
 .guide-name {
   position: relative;
+  font-size: 22px;
   margin: 2px;
 }
 
@@ -39,8 +44,8 @@
 
 .one-message {
   position: relative;
+  font-weight: lighter;
   width: 80%;
-  color: rgb(161, 175, 204);
   text-align: left;
   margin: 0 auto;
 }

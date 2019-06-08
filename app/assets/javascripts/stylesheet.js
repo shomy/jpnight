@@ -2,6 +2,13 @@
 
 })();
 
+(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+
+
 //マイページのガイドとゲストの切り替えタブの処理
 (function($) {
 

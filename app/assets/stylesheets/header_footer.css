@@ -20,12 +20,11 @@ header {
   z-index:40;
 }
 
-.logo, .header-username, .mypagecommand, .signup, .responsive-menu {
+.logo, .header-username, .mypagecommand, .sigin, .responsive-menu {
   line-height: 50px;
 }
 
 .header-username {
-  font-family: 'Lato', sans-serif;
   font-size: 26px;
   color: rgb(197,253,255);
   text-align: center;
@@ -35,7 +34,6 @@ header {
 }
 
 .mypagecommand {
-  font-family: 'Lato', sans-serif;
   font-size: 20px;
   color: white;
   display: inline-block;
@@ -46,7 +44,7 @@ header {
 }
 
 
-.mypagecommand:hover, .signup:hover {
+.mypagecommand:hover, .signin:hover {
   background-color: rgba(255, 255, 255, 0.4);
   transition: background-color 1s;
 }
@@ -64,8 +62,9 @@ header {
   color: rgb(197,253,255);
 }
 
-.signup {
-  font-size: 20px;
+.signin {
+  font-size: 27px;
+  line-height: 50px;
   text-align: center;
   color: white;
   vertical-align: middle;
@@ -105,8 +104,8 @@ footer {
 }
 
 .footer-wrapper {
-  font-family: 'Lato', sans-serif;
   text-align: right;
+  font-size: 27px;
   color: white;
   padding: 10px;
 }
@@ -125,7 +124,7 @@ footer {
   content: '';
   width: 0;
   height: 2px;
-  background-color: rgb(46, 204, 113);
+  background: linear-gradient(to right, rgba(240, 204, 255, 0.5), rgba(204, 255, 213, 0.5));
   transition: .3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);

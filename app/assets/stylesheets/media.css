@@ -6,6 +6,7 @@
 
 .lead {
   font-size: 30px;
+  line-height: 30px;
 }
 
 .lead4guide {
@@ -21,9 +22,7 @@
   margin: 8px;
 }
 
-.guide-wrapper {
 
-}
 
 #chat-face, .treat-icon, .chat-name, .chat-btn, .chat-delete  {
   display: block;
@@ -58,10 +57,14 @@
   margin-left: 3px;
 }
 
+.wine-top-ill {
+  display: none;
+}
+
 .mypagecommand {
   display: none;
 }
-.signup {
+.signin {
   display: none;
 }
 .responsive-menu {
@@ -71,6 +74,7 @@
 .myscene-wrapper {
   display: ;
 }
+
 }
 
 @media (max-width: 420px) {
@@ -88,7 +92,7 @@ header {
   font-size: 17px;
 }
 
-.signup {
+.signin {
   display: none;
 }
 
@@ -105,6 +109,10 @@ h1 {
   font-size: 30px;
   line-height: 55px;
   margin-top: 70px;
+}
+
+h3 span {
+  font-size: 20px;
 }
 
 .btn-one {
@@ -151,6 +159,14 @@ h1 {
 
 .photo {
   height: 60%;
+}
+
+.one-message,.review, .guide-name {
+  font-size: 12px;
+}
+
+figcaption {
+  font-size: 20px;
 }
 
 footer {

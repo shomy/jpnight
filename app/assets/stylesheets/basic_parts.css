@@ -6,6 +6,7 @@ body {
    margin: 0;
    padding: 0;
    overflow-x: hidden;
+   background-color: rgba(8, 12, 214, 0.5);
 }
 
 a {
@@ -23,26 +24,27 @@ background-image {
    height: 500px;
 }
 
-h1, .mypagecommand span {
+ .mypagecommand, h1 span {
   color: rgb(197,253,255);
 }
+
 
 h2 span {
   color: rgb(197,253,255);
 }
 
 h1, h2, h3, h4, h5, h6, .fa-angle-double-right  {
-  color: rgb(161, 175, 204);
+  color: rgb(164, 179, 239);
   text-align: center;
+  font-family: 'Baloo Da', cursive;
 }
 
 h3 span {
   width: 55%;
-  font-family: 'Anton', sans-serif;
   font-weight: lighter;
-  font-size: 26px;
-  color: rgb(161, 175, 204);
-  letter-spacing: 10px;
+  font-size: 50px;
+  color: rgb(164, 179, 239);
+  letter-spacing: 5px;
   border-top: solid 2px white;
   border-bottom: solid 2px white;
   padding: 15px;

@@ -25,11 +25,11 @@
   height: 110%;
   font-family: 'Lato', sans-serif;
   text-align: center;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(249, 249, 249);
   margin: 10px auto;
   padding: 30px;
   position: relative;
-  box-shadow: 0 0 10px 8px lightgray;
+  box-shadow: 0px 0px 40px 40px rgba(255,255,255,0.9);
 }
 
 .area-tag-wrapper {
@@ -40,7 +40,7 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(249, 249, 249);
   position: relative;
   margin: 10px auto;
   z-index: 1;
@@ -48,36 +48,104 @@
 
 .guide {
   width:33%;
+  padding: 10px;
   position: relative;
   background-color: white;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(226, 226, 226);
+  border-radius: 2em;
   z-index: 2;
 }
 
+
 @supports (display: grid) {
 .guide-index {
-  margin: auto;
+  margin: 10px auto;
   display: grid;
   grid-gap: 3px;
   grid-template-rows: 33.3% 33.3% 33.3%;
   grid-template-columns: 33.3% 33.3% 33.3%;
 }
+}
+
 
 .guide {
   width: auto;
   margin: 0;
 }
 
-.guide:hover {
-  transition: background-color 3s;
-  background-color: rgba(110, 222, 239,  0.5);
-  filter:alpha(opacity=70);
-  -ms-filter: “alpha( opacity=70 )”;
-}
+
+.guide * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
+.guide:after {
+  background: linear-gradient(to bottom, rgba(240, 204, 255, 0.5), rgba(204, 255, 213, 0.5));
+  width: 100%;
+  height: 100%;
+  border-radius: 2em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0.75;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.guide figcaption {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: white;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.guide:hover:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+.guide p {
+  margin: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+
+.guide a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.guide:hover figcaption p {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.guide:hover figcaption p {
+  opacity: 1;
+}
+
+.guide:hover {
+
+}
 .mailadress-form, .chat-room, .news-room, .QA-room, .logout-form, .company-profile {
   width: 90%;
   height: 110%;

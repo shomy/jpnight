@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
+.upload-btn, .edit, .dropdown-content-header {
+  color: white;
+  text-align: center;
+  font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
+}
 
 .circle {
   width: 170px;
@@ -21,11 +26,30 @@
   position: absolute;
   display: inline-block;
   left: 0;
-  top: 55%;
+  top: 52%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   width :170px;
   text-align:center;
+}
+
+.bottle_w_l {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  top: 100px;
+  left: 50px;
+  transform: rotate(-20deg);
+  z-index: 1;
+}
+
+.bottle_w_r {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  top: 1000px;
+  right: 50px;
+  z-index: 1;
 }
 
 .btn-one {
@@ -93,6 +117,7 @@
 .area-tag {
   line-height: 40px;
   font-size: 26px;
+  font-weight: bolder;
   color: rgb(146, 123, 243);
   background-color: white;
   border-radius: 5em;
@@ -154,23 +179,23 @@
 ul.tabs {
 	width: 390px;
 	height: 80px;
-	margin: 30px 20px 0 20px;
+	margin: 0 0 0 7%;
 	list-style: none;
 	overflow: hidden;
   padding: 0;
 }
 ul.tabs li {
 	float: left;
-	width: 130px;
+	width: 160px;
 
 }
 ul.tabs li a {
 	position: relative;
+  font-family: 'Poiret One', cursive;
 	display: block;
 	height: 30px;
-	margin: 40px 0 0 10%;
+	margin: 40px 0 0 0;
 	padding: 10px 0 0 0;
-	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	text-align: center;
 	text-decoration: none;
@@ -199,7 +224,7 @@ ul.tabs li a {
 	z-index: 2;
 }
 .tabs li:last-child a {
-	z-index: 1;
+	z-index: 4;
   -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
 	   -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
 	        box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
@@ -210,12 +235,14 @@ ul.tabs li a {
        -moz-border-radius-topleft: 8px;
            border-top-left-radius: 8px;
 }
+
 ul.tabs li a:hover {
 	margin: 35px 0 0 0;
 	padding: 10px 0 5px 0;
 }
 ul.tabs li a.active {
-	margin: 40px 0 0 10%;
+  font-family: 'Poiret One', cursive;
+	margin: 40px 0 0 0;
 	padding: 10px 0 10px 0;
 	background: rgb(245, 245, 245);
 	color: rgb(110, 222, 239);
@@ -233,34 +260,25 @@ ul.tabs li a.active {
 }
 
 #mypageface-icon  {
-  height: 150px;
-  width: 150px;
-  margin-top: 27px;
-  margin-bottom: 5px;
-  border-color: rgb(226, 226, 226);
+  height: 200px;
+  width: 200px;
+  margin: 10px auto;
   border-radius: 50%;
-  position: relative;
-  background-color: #ECECEC; /* rgbに変える */
+  border: 2px solid;
+  border-color: rgb(164, 179, 239);
+  background-color: rgb(236, 236, 236);
   background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
   -webkit-background-size: 20px 20px;
-  z-index: 10;
+  display: block;
 }
 
-#preview2, #preview3, #preview4 {
-  width: 330px;
-  height: 230px;
-  margin-bottom: 5px;
-  background-color: #ECECEC; /* rgbに変える */
-  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
-  -webkit-background-size: 20px 20px;
-}
 
 .bottle-ill {
   width: 120px;
   height: 200px;
   margin: 20px;
   position: absolute;
-  top: 200px;
+  top: 100px;
   right: 100px;
   transform: rotate(10deg);
 }
@@ -275,8 +293,7 @@ ul.tabs li a.active {
   height: 60px;
   width: 50%;
   font-size: 26px;
-  border: 2px solid rgb(170, 170, 170);
-  color: rgb(170, 170, 170);
+  border: 2px solid;
   border-radius: 5em;
   margin: 20px auto;
   outline: none;
@@ -287,20 +304,21 @@ ul.tabs li a.active {
   transition: 0.3s;
   text-align: left;
   z-index: 1;
+  z-index: 10;
 }
 
 .myinfo-big {
   height: 120px;
   width: 45%;
-  color: rgb(161, 175, 204);
   text-align: left;
   vertical-align: middle;
   padding: 30px;
   font-size: 2em;
   margin: 20px auto;
   border-radius: 30px;
-  border: 2px solid rgb(170, 170, 170);
+  border: 2px solid;
   display: block;
+  z-index: 10;
 }
 
 .edit {
@@ -308,35 +326,37 @@ ul.tabs li a.active {
   line-height: 30px;
   font-size: 20px;
   color: white;
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 5px;
   text-align: center;
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%));
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%);
   border-radius: 5em;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 .upload-btn {
   width: 150px;
   font-size: 14px;
   color: white;
-  margin: 2px;
+  margin: 5px auto;
   padding: 5px;
   text-align: center;
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%));
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%);
   border-radius: 5em;
-  display: inline-block;
+  display: block;
   cursor: pointer;
 }
 
 .edit:hover, .upload-btn:hover, .chat-btn:hover {
-    background-color: white;
-    transition: background-color 1s;
-    opacity:0.5;
-    filter:alpha(opacity=70);
-    -ms-filter: “alpha( opacity=70 )”;
+  background-color: white;
+  transition: background-color 1s;
+  opacity:0.5;
+  filter:alpha(opacity=70);
+  -ms-filter: “alpha( opacity=70 )”;
   }
 
 label input {

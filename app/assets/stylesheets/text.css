@@ -1,102 +1,102 @@
-@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
+  @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
 
-.lead, .btn-one, .circle span, .area-search, .area-tag, h3 span, .signin, .header-username, .mypagecommand, .footer-wrapper{
-  font-family: 'Baloo Da', cursive;
-}
-
-.lead {
-  font-size: 70px;
-  font-weight: lighter;
-  text-align: center;
-  color: white;
-  letter-spacing: 7px;
-  line-height: 70px;
+  .lead, .btn-one, .circle span, .area-search, .area-tag, h3 span, .signin, .header-username, .mypagecommand, .footer-wrapper{
+    font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
   }
 
-.lead4guide {
-  width: 90%;
-  font-family: 'Anton', sans-serif;
-  font-weight: lighter;
-  font-size: 40px;
-  color: white;
-  letter-spacing: 11px;
-  margin: 0 auto;
-}
+  .lead {
+    font-size: 70px;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+    letter-spacing: 7px;
+    line-height: 70px;
+    }
 
-.guide-area-tag {
-  width: 80%;
-  text-align: center;
-  font-size: 22px;
-  margin: 10px auto;
-}
+  .lead4guide {
+    width: 90%;
+    font-weight: lighter;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 11px;
+    margin: 0 auto;
+  }
 
-.guide-name {
-  position: relative;
-  font-size: 22px;
-  margin: 2px;
-}
+  .guide-area-tag {
+    width: 80%;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px auto;
+  }
 
-.review {
-  margin: 0 auto;
-}
+  .guide-name {
+    position: relative;
+    font-size: 22px;
+    margin: 2px;
+  }
 
-.one-message {
-  position: relative;
-  font-weight: lighter;
-  width: 80%;
-  text-align: left;
-  margin: 0 auto;
-}
+  .review {
+    margin: 0 auto;
+  }
 
-
-.face-message {
-  font-size: 10px;
-  color: rgb(161, 175, 204);
-}
-
-.myinfo-label {
-  width: 50%;
-  font-size: 25px;
-  margin: 0 auto;
-  text-align: left;
-  color: rgb(161, 175, 204);
-}
+  .one-message {
+    position: relative;
+    font-weight: lighter;
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+  }
 
 
-.news-headline {
-  text-align: left;
-  padding:7px;
-  margin: 0;
-  line-height: 35px;
-  font-weight: lighter;
-}
+  .face-message {
+    font-size: 13px;
+    color: rgb(161, 175, 204);
+  }
 
-.title-QA, .title-news, .title-company {
-  line-height: 30px;
-  width: 200px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  color: rgb(109, 90, 204) ;
-  border: solid 1px rgb(109, 90, 204);
-  padding: 15px;
-}
+  .myinfo-label {
+    width: 100%;
+    font-size: 25px;
+    margin: 100px 10px 10px auto;
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
 
-.Q_A, .company-info {
-  margin-bottom: 50px;
-}
 
-.Q, .A {
-  font-size: 20px;
-  text-align: left;
-  margin: 5px;
-}
+  .news-headline {
+    text-align: left;
+    padding:7px;
+    margin: 0;
+    line-height: 35px;
+    font-weight: lighter;
+  }
 
-.Q {
-  color: rgb(46, 204, 113);
-}
+  .title-QA, .title-news, .title-company {
+    line-height: 30px;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    color: rgb(109, 90, 204) ;
+    border: solid 1px rgb(109, 90, 204);
+    padding: 15px;
+  }
 
-.A {
-  font-size: 15px;
-}
+  .Q_A, .company-info {
+    margin-bottom: 50px;
+  }
+
+  .Q, .A {
+    font-size: 20px;
+    text-align: left;
+    margin: 5px;
+  }
+
+  .Q {
+    color: rgb(46, 204, 113);
+  }
+
+  .A {
+    font-size: 15px;
+  }

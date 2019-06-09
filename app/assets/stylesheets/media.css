@@ -49,7 +49,7 @@
 }
 }
 
-@media (max-width: 935px) {
+@media (max-width: 1035px) {
 
 .logo {
   font-size: 26px;
@@ -64,6 +64,7 @@
 .mypagecommand {
   display: none;
 }
+
 .signin {
   display: none;
 }
@@ -86,6 +87,9 @@ header {
 
 .logo {
   text-align: center;
+  font-size: 20px;
+  width: 180px;
+  letter-spacing: 5px;
 }
 
 .header-username {
@@ -95,7 +99,6 @@ header {
 .signin {
   display: none;
 }
-
 
 .top-wrapper {
   height: 580px;
@@ -132,6 +135,10 @@ h3 span {
 }
 
 .wine-ill {
+  display: none;
+}
+
+.bottle_w_l, .bottle_w_r {
   display: none;
 }
 
@@ -175,7 +182,7 @@ footer {
   padding: 20px;
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .footer-wrapper{
@@ -187,9 +194,9 @@ footer {
 }
 
 #mypageface-icon, #chat-room-face {
-  width: 70px;
-  height: 70px;
-  margin: 10px 40px 10px 10px;
+  width: 150px;
+  height: 150px;
+  margin: 5px auto;
 }
 
 .myscene-wrapper {

@@ -28,15 +28,14 @@ background-image {
   color: rgb(197,253,255);
 }
 
+h1, h2, h3, h4, h5, h6, .fa-angle-double-right, .guide, .myinfo-label, .myinfo, .myinfo-big, .face-message {
+  color: rgb(164, 179, 239);
+  text-align: center;
+  font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
+}
 
 h2 span {
   color: rgb(197,253,255);
-}
-
-h1, h2, h3, h4, h5, h6, .fa-angle-double-right  {
-  color: rgb(164, 179, 239);
-  text-align: center;
-  font-family: 'Baloo Da', cursive;
 }
 
 h3 span {
@@ -54,4 +53,16 @@ h3 span {
 
 footer ul {
 line-height: 30px;
+}
+
+#preview2, #preview3, #preview4, #preview5 {
+  width: 330px;
+  height: 230px;
+  margin-bottom: 5px;
+  border: 1px solid;
+  border-color: rgb(164, 179, 239);
+  background-color: rgb(236, 236, 236);
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+  -webkit-background-size: 20px 20px;
+  z-index: 10;
 }

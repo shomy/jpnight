@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
-.upload-btn, .edit, .dropdown-content-header {
+.upload-btn, .edit, .dropdown-content-header, .chat-btn {
   color: white;
   text-align: center;
   font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
@@ -37,9 +37,9 @@
   position: absolute;
   height: 300px;
   width: 300px;
-  top: 100px;
+  top: 200px;
   left: 50px;
-  transform: rotate(-20deg);
+  transform: rotate(0deg);
   z-index: 1;
 }
 
@@ -149,7 +149,7 @@
   font-size: 30px;
   margin: 10px auto;
   position: relative;
-  color: rgb(146, 123, 243);
+  color: rgba(8, 12, 214, 0.5);
 }
 
 .face-icon {
@@ -186,7 +186,7 @@ ul.tabs {
 }
 ul.tabs li {
 	float: left;
-	width: 160px;
+	width: 140px;
 
 }
 ul.tabs li a {
@@ -274,14 +274,26 @@ ul.tabs li a.active {
 
 
 .bottle-ill {
-  width: 120px;
-  height: 200px;
+  width: 200px;
+  height: 350px;
   margin: 20px;
   position: absolute;
-  top: 100px;
+  top: 60px;
   right: 100px;
   transform: rotate(10deg);
+  z-index: 1;
 }
+
+.bottle-ill_l {
+  width: 300px;
+  height: 600px;
+  margin: 10px;
+  position: absolute;
+  top: 500px;
+  left: 40px;
+  transform: rotate(-10deg)
+}
+
 
 .input-upload {
   background: none;
@@ -289,9 +301,9 @@ ul.tabs li a.active {
   border: none;
 }
 
-.myinfo {
+.myinfo, .myarea-info, .guide-area-tag-input {
   height: 60px;
-  width: 50%;
+  width: 57%;
   font-size: 26px;
   border: 2px solid;
   border-radius: 5em;
@@ -303,17 +315,26 @@ ul.tabs li a.active {
   box-sizing: border-box;
   transition: 0.3s;
   text-align: left;
-  z-index: 1;
   z-index: 10;
 }
 
+.guide-area-tag-input {
+  height: 30px;
+  width: 320px;
+  margin: 5px auto;
+  max-width: 310px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .myinfo-big {
-  height: 120px;
+  height: 200px;
   width: 45%;
   text-align: left;
   vertical-align: middle;
-  padding: 30px;
-  font-size: 2em;
+  padding: 20px;
+  font-size: 26px;
   margin: 20px auto;
   border-radius: 30px;
   border: 2px solid;
@@ -326,7 +347,7 @@ ul.tabs li a.active {
   line-height: 30px;
   font-size: 20px;
   color: white;
-  margin: 10px auto;
+  margin: 30px auto;
   padding: 5px;
   text-align: center;
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%));
@@ -363,23 +384,7 @@ label input {
   display: none;
 }
 
-.myarea-info {
-  height: 60px;
-  width: 50%;
-  font-size: 26px;
-  border: 2px solid rgb(170, 170, 170);
-  color: rgb(170, 170, 170);
-  background-color: rgba(0);
-  border-radius: 5em;
-  margin: 20px auto;
-  outline: none;
-  padding: 10px;
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  transition: 0.3s;
-  text-align: left;
-}
+
 
 .dropdown {
     width: 100%;
@@ -401,7 +406,7 @@ label input {
     min-width: 100%;
     padding: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    z-index: 100;
 }
 
 .dropdown-content-header {
@@ -417,7 +422,6 @@ label input {
 
 
 .dropdown-content a {
-    color: rgb(170, 170, 170);
     text-align: left;
     font-size: 26px;
     padding: 12px 16px;
@@ -451,15 +455,26 @@ label input {
 }
 
 
-#chat-face {
+#chat-indexface {
   height: 130px;
   width: 130px;
   border-radius: 50%;
+  border: 2px solid;
+  border-color: rgb(164, 179, 239);
   display: inline-block;
   margin: 10px auto;
   vertical-align: middle; /* 画像を垂直に */
   text-align: center; /* 画像を中央に */
   line-height: 0; /* ボックス内でのp要素の余分な下スペースを消去 */
+}
+
+#chatroom-myface, #chatroom-theirface {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgb(164, 179, 239);
+  display: inline-block;
 }
 
 .chat-name, .chat-delete, .chat-room-name {
@@ -483,6 +498,7 @@ label input {
   width: 50px;
   height: 50px;
   margin: 10px auto;
+  padding: 4px;
   color: white;
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.1) 10%, rgba(222,97,190,0.7)50%);
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 50%);
@@ -491,12 +507,6 @@ label input {
   vertical-align: middle;
   border-radius: 50%;
   display: inline-block;
-}
-
-.treat-icon-room {
-   position: absolute;
-   right: 150px;
-   top: 150px;
 }
 
 .chat-btn {
@@ -514,20 +524,6 @@ label input {
   vertical-align: middle;
 }
 
-.chat-room-name, .chat-room-name2 {
-  display: inline-block;
-  width: 50%;
-  text-align: left;
-  margin: 10px;
-}
-
-.chat-room-name2 {
-  text-align: right;
-}
-.chat-room-names {
-   width: 100%;
-   display: flex
-}
 
 #chat-room-face {
   width: 150px;
@@ -670,7 +666,7 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 .sb-line3.sb-right {
-  background: #d5e0f4;
+  background: white;
   border-top-right-radius: 0;
 }
 

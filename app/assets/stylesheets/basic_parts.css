@@ -28,7 +28,7 @@ background-image {
   color: rgb(197,253,255);
 }
 
-h1, h2, h3, h4, h5, h6, .fa-angle-double-right, .guide, .myinfo-label, .myinfo, .myinfo-big, .face-message {
+h1, h2, h3, h4, h5, h6, .fa-angle-double-right, .guide, .myinfo-label, .myinfo, .myinfo-big, .face-message, .myarea-info, .dropdown-content, .dropdown-content-header, .guide-area-tag-input, .chat-delete {
   color: rgb(164, 179, 239);
   text-align: center;
   font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
@@ -65,4 +65,8 @@ line-height: 30px;
   background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
   -webkit-background-size: 20px 20px;
   z-index: 10;
+}
+
+::placeholder {
+  color: rgb(238, 238, 238);
 }

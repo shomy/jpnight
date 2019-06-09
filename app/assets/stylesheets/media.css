@@ -53,8 +53,6 @@
 
 .logo {
   font-size: 26px;
-  padding-left: 0;
-  margin-left: 3px;
 }
 
 .wine-top-ill {
@@ -138,7 +136,7 @@ h3 span {
   display: none;
 }
 
-.bottle_w_l, .bottle_w_r {
+.bottle_w_l, .bottle_w_r, .bottle-ill, .bottle-ill_l {
   display: none;
 }
 
@@ -176,6 +174,7 @@ figcaption {
   font-size: 20px;
 }
 
+
 footer {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -194,8 +193,8 @@ footer {
 }
 
 #mypageface-icon, #chat-room-face {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   margin: 5px auto;
 }
 
@@ -204,11 +203,12 @@ footer {
   height: 250px;
 }
 
-#preview2, #preview3, #preview4 {
+#preview2, #preview3, #preview4, #preview5 {
   width: 100%;
   height: 150px;
   margin-bottom: 5px;
 }
+
 
 .bottle-ill {
     width: 10%;
@@ -244,7 +244,16 @@ footer {
     font-size: 20px;
     margin: 10px auto;
     padding: 5px;
-  }
+}
+
+.guide-area-tag-input {
+  width: 100%;
+}
+
+.myinfo-wrapper, .myface-wrapper {
+  width:95%;
+}
+
 
 .chat-room, .news-room, .QA-room {
  padding: 10px;
@@ -259,8 +268,8 @@ footer {
 }
 
 #chat-face {
-   width: 70px;
-   height: 70px;
+   width: 100px;
+   height: 100px;
 }
 
 .chat-name {

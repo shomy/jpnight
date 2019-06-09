@@ -1,19 +1,6 @@
 
 //マイページのガイドとゲストの切り替えタブの処理
-(function($) {
 
-	var tabs =  $(".tabs li a");
-
-	tabs.click(function() {
-		var content = this.hash.replace('/','');
-		tabs.removeClass("active");
-		$(this).addClass("active");
-    $("#content").find('section').hide();
-    $(content).fadeIn(200);
-	}).filter('.active').trigger('click'); // add
-
-
-})(jQuery);
 
 //ファイルのアップロードとプレビューの処理　同じ処理を4回書いているのでまとめたい（＞もっちー）
 $(function(){

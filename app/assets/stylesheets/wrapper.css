@@ -145,7 +145,7 @@
 .guide:hover {
 
 }
-.mailadress-form, .chat-room, .news-room, .QA-room, .logout-form, .company-profile {
+.mailadress-form, .news-room, .QA-room, .logout-form, .company-profile {
   width: 90%;
   height: 110%;
   text-align: center;
@@ -158,7 +158,7 @@
   z-index: 1;
 }
 
-.chat-room, .news-room, .QA-room, .logout-form, .company-profile {
+.news-room, .QA-room, .logout-form, .company-profile {
   margin: 60px auto 10px;
   text-align: left;
 }
@@ -167,7 +167,7 @@
   text-align: center;
 }
 
-#content {
+#content, #chatroom {
   width: 90%;
   background-color: rgb(245, 245, 245);
   margin: 0 auto 10px;
@@ -191,9 +191,9 @@
 }
 
 .mypage-head {
-  border-bottom-color: white;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
   border-top-color: white;
   border-top-width: 2px;
   border-top-style: solid;
@@ -222,6 +222,9 @@
   margin: 0 auto;
   width: 80%;
   text-align: center;
+  border-bottom-color: white;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
 }
 
 .chat-index {
@@ -236,6 +239,21 @@
   border-top-color: white;
   border-top-width: 1px;
   border-top-style: solid;
+}
+
+.chatroom-faces {
+  margin: 20px auto;
+  width: 88%;
+  height:100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.treat {
+  width: 88%;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: right;
 }
 
 .news-room, .QA-room {

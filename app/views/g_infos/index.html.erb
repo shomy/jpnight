@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>G Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @g_infos.each do |g_info| %>
+      <tr>
+        <td><%= g_info.user %></td>
+        <td><%= g_info.name %></td>
+        <td><%= g_info.age %></td>
+        <td><%= g_info.sex %></td>
+        <td><%= link_to 'Show', g_info %></td>
+        <td><%= link_to 'Edit', edit_g_info_path(g_info) %></td>
+        <td><%= link_to 'Destroy', g_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New G Info', new_g_info_path %>

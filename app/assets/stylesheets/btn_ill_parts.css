@@ -37,8 +37,8 @@
   position: absolute;
   height: 300px;
   width: 300px;
-  top: 200px;
-  left: 50px;
+  top: 170px;
+  right: 50px;
   transform: rotate(0deg);
   z-index: 1;
 }
@@ -271,9 +271,9 @@
   border: none;
 }
 
-.myinfo, .myarea-info, .guide-area-tag-input {
+.myinfo, .myarea-info, .guide-area-tag-input, .guideinfo {
   height: 60px;
-  width: 57%;
+  width: 80%;
   font-size: 26px;
   border: 2px solid;
   border-radius: 5em;
@@ -286,6 +286,14 @@
   transition: 0.3s;
   text-align: left;
   z-index: 10;
+}
+
+.guideinfo {
+  border-bottom: 2px solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
 }
 
 .guide-area-tag-input {

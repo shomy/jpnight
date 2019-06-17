@@ -86,7 +86,7 @@ header {
 }
 
 footer {
-  height: 530px;
+  height: 120vh;
   background-image: -webkit-linear-gradient(-225deg, rgb(38,87,235) 10%, rgb(222,97,190) 80%), url(image/topimage.jpg);
   background-image: linear-gradient(-225deg, rgb(38,87,235) 10%, rgb(222,97,190) 80%);
   background-size: cover;

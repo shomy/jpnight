@@ -5,8 +5,11 @@
 @media (max-width: 1140px) {
 
 .lead {
-  font-size: 30px;
-  line-height: 30px;
+ width: 95%;
+ font-size: 30px;
+ line-height: 30px;
+ text-align: center;
+ margin: 30px auto;
 }
 
 .lead4guide {
@@ -18,11 +21,9 @@
 }
 
 .btn-one {
-  width: 50%;
+  width: 30%;
   margin: 8px;
 }
-
-
 
 #chat-face, .treat-icon, .chat-name, .chat-btn, .chat-delete  {
   display: block;
@@ -46,6 +47,7 @@
 .town-ill {
   height: 90px;
   width: 160px;
+  padding: 10px;
 }
 }
 
@@ -76,7 +78,7 @@
 
 }
 
-@media (max-width: 420px) {
+@media (max-width: 670px) {
 
 header {
   text-align: left;
@@ -88,6 +90,7 @@ header {
   font-size: 20px;
   width: 180px;
   letter-spacing: 5px;
+  padding: 0;
 }
 
 .header-username {
@@ -99,11 +102,8 @@ header {
 }
 
 .top-wrapper {
-  height: 580px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  height: 380px;
   margin: 0;
-  padding: 0;
 }
 
 h1 {
@@ -124,7 +124,8 @@ h3 span {
 .circle {
   width: 70px;
   height: 70px;
-  top: 490px;
+  top: 285px;
+  left: 50%;
 }
 
 .circle span {
@@ -141,7 +142,7 @@ h3 span {
 }
 
 .guide-wrapper {
-  padding: 20px 0;
+  padding: 3px;
 }
 
 .area-btn {
@@ -176,17 +177,11 @@ figcaption {
 
 
 footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
   padding: 20px;
   display: block;
   margin: 0;
-  padding: 20px;
 }
 
-.footer-wrapper{
-  top:130px;
-}
 
 #content, .chat-wrapper, .mailadress-form, .logout-form, .company-profile {
   padding: 10px;
@@ -200,7 +195,7 @@ footer {
 
 .myscene-wrapper {
   width: 200px;
-  height: 250px;
+  height: 150px;
 }
 
 #preview2, #preview3, #preview4, #preview5 {
@@ -252,6 +247,7 @@ footer {
 
 .myinfo-wrapper, .myface-wrapper {
   width:95%;
+  padding: 10px 5px 20px;
 }
 
 
@@ -262,9 +258,10 @@ footer {
 .treat-icon-room {
   width:30px;
   height: 30px;
-  font-size: 22px;
+  font-size: 20px;
   right: 80px;
   top: 40px;
+  padding: 1px;
 }
 
 #chat-face {
@@ -277,21 +274,26 @@ footer {
    text-align: center;
 }
 
-.sixarea {
-  font-size: 20px;
-  line-height: 80%;
-  width: 75%;
-  padding: 30px;
-}
 
-.sp-area-btn {
-  width: 200px;
-  font-size: 20px;
-}
 
-.area-tag {
+.area-tag, .area-search {
   font-size: 20px;
   margin: 10px auto;
 }
 
+footer ul {
+  font-size: 17px;
+}
+
+.footer-list {
+  padding-right: 0px;
+  margin: 5px;
+}
+
+}
+
+@media (max-width: 770px) {
+.footer-wrapper {
+  font-size: 17px;
+}
 }

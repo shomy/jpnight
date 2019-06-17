@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get "/mypage_edit" => "guides#mypage_edit"
   get "/mypage_chat" => "guides#mypage_chat"
   get "/mypage_chatroom" => "guides#mypage_chatroom"
+  get "/mypage_news" => "guides#mypage_news"
+  get "/mypage_q" => "guides#mypage_q"
 end

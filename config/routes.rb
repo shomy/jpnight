@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "/mypage_news" => "guides#mypage_news"
   get "/mypage_q" => "guides#mypage_q"
   get "/offerpage" => "guides#offerpage"
+  get "/logout" => "guides#logout"
 end

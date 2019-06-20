@@ -150,29 +150,13 @@
 .guide:hover {
 
 }
-.mailadress-form, .logout-form, .company-profile {
-  width: 90%;
-  height: 110%;
-  text-align: center;
-  color: rgb(161, 175, 204);
-  background-color: rgb(245, 245, 245);
-  margin: 10px auto;
-  padding: 30px;
-  position: relative;
-  box-shadow: 0 0 10px 8px lightgray;
-  z-index: 1;
-}
 
-.news-room, .QA-room, .logout-form, .company-profile {
+.news-room, .QA-room,  .company-profile {
   margin: 60px auto 10px;
   text-align: left;
 }
 
-.logout-form {
-  text-align: center;
-}
-
-#content, #chatroom, .news-room, .QA-room {
+#content, #chatroom, .news-room, .QA-room, .logout-form {
   width: 90%;
   background-color: rgb(230, 236, 240);
   margin: 0 auto 10px;
@@ -186,6 +170,10 @@
   z-index: 2;
   box-shadow: 0px 0px 40px 40px rgba(255,255,255,0.9);
   box-sizing: border-box;
+}
+
+.logout-form {
+  margin: 40px auto 35px;
 }
 
 #asaguide {

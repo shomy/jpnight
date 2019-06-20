@@ -17,7 +17,7 @@
   position: absolute;
   left: 5%;
   top: 245px;
-  z-index: 30;
+  z-index: 130;
 }
 
 .circle span {
@@ -175,7 +175,7 @@
 .town-ill {
   width: 500px;
   height: 290px;
-  padding: 70px 0 0 0;
+  padding: 65px 0 0 0;
 }
 
 
@@ -320,7 +320,7 @@
   z-index: 10;
 }
 
-.edit {
+.edit, .logout-btn {
   width: 100px;
   line-height: 30px;
   font-size: 20px;
@@ -350,7 +350,7 @@
   cursor: pointer;
 }
 
-.edit:hover, .upload-btn:hover, .chat-btn:hover {
+.edit:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn {
   background-color: white;
   transition: background-color 1s;
   opacity:0.5;
@@ -576,7 +576,7 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 .speech-bubble {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(230, 236, 240);
 }
 
 .speech-bubble:after {
@@ -624,7 +624,7 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 .sb-line3.sb-left:after {
-  background: rgb(245, 245, 245);
+  background: rgb(230, 236, 240);
   border: solid #c5d0e4;
   border-radius: 0 1em 0 0;
   border-width: 2px 2px 0 0;
@@ -649,7 +649,7 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 .sb-line3.sb-right:after {
-  background: rgb(245, 245, 245);
+  background: rgb(230, 236, 240);
   border: solid 2px #c5d0e4;
   border-radius: 1em 0 0 0;
   border-width: 2px 0 0 2px;

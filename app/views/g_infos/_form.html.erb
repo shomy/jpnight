@@ -1,0 +1,37 @@
+<%= form_with(model: g_info, local: true) do |form| %>
+  <% if g_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(g_info.errors.count, "error") %> prohibited this g_info from being saved:</h2>
+
+      <ul>
+      <% g_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

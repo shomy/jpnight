@@ -6,7 +6,7 @@
     font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
   }
 
-  .one-message, .sb-line3.sb-left, .sb-line3.sb-right {
+  .one-message, .sb-line3.sb-left, .sb-line3.sb-right, .Q, .A {
     font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
     color: rgb(164, 179, 239);
   }
@@ -18,6 +18,9 @@
     color: white;
     letter-spacing: 7px;
     line-height: 70px;
+    margin: 130px 0 30px 0;
+    padding: 15px;
+    box-sizing: border-box;
     }
 
   .lead4guide {
@@ -32,8 +35,8 @@
   .guide-area-tag {
     width: 80%;
     text-align: center;
-    font-size: 22px;
-    margin: 10px auto;
+    font-size: 20px;
+    margin: 15px auto;
   }
 
   .guide-name {
@@ -95,10 +98,10 @@
   .title-QA, .title-news, .title-company {
     line-height: 30px;
     width: 200px;
-    margin: 0 auto;
-    margin-bottom: 80px;
-    color: rgb(109, 90, 204) ;
-    border: solid 1px rgb(109, 90, 204);
+    margin: 40px auto;
+    color: rgba(8, 12, 214, 0.5);
+    border: solid 1px rgba(8, 12, 214, 0.5);
+    border-radius: 5em;
     padding: 15px;
   }
 
@@ -110,6 +113,7 @@
     font-size: 20px;
     text-align: left;
     margin: 5px;
+    font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
   }
 
   .Q {

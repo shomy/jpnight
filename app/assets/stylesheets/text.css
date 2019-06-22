@@ -2,7 +2,7 @@
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
 
-  .lead, .btn-one, .circle span, .area-search, .area-tag, h3 span, .signin, .header-username, .mypagecommand, .footer-wrapper{
+  .lead, .btn-one, .circle span, .circle-b span, .area-search, .area-tag, h3 span, .login, .header-username, .mypagecommand, .footer-wrapper{
     font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
   }
 

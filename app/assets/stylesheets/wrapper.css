@@ -69,7 +69,7 @@
   display: grid;
   grid-gap: 3px;
   grid-template-rows: 33.33% 33.33% 33.33%;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-columns: 33.3% 33.3% 33.1%;
 }
 }
 
@@ -156,7 +156,7 @@
   text-align: left;
 }
 
-#content, #chatroom, .news-room, .QA-room, .logout-form {
+.login-form, #content, #chatroom, .news-room, .QA-room, .logout-form {
   width: 90%;
   background-color: rgb(230, 236, 240);
   margin: 0 auto 10px;
@@ -172,6 +172,9 @@
   box-sizing: border-box;
 }
 
+.login-form {
+  margin: 0 auto 35px;
+}
 .logout-form {
   margin: 40px auto 35px;
 }

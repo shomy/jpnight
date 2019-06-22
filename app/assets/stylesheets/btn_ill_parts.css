@@ -1,13 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
-.upload-btn, .edit, .dropdown-content-header, .chat-btn {
+.upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn {
   color: white;
   text-align: center;
   font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
 }
 
-.circle {
+.circle, .circle-b {
   width: 170px;
 	height: 170px;
   margin: 10px;
@@ -20,7 +20,7 @@
   z-index: 130;
 }
 
-.circle span {
+.circle span, .circle-b span {
   font-size: 27px;
   color: white;
   position: absolute;
@@ -207,15 +207,7 @@
    -webkit-border-top-left-radius: 8px;
        -moz-border-radius-topleft: 8px;
            border-top-left-radius: 8px;
-	-webkit-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.02);
-	   -moz-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.02);
-	        box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.02);
 	        	border: 0px solid #000000;
-            -webkit-transition: padding 0.2s ease, margin 0.2s ease;
-                 -moz-transition: padding 0.2s ease, margin 0.2s ease;
-                   -o-transition: padding 0.2s ease, margin 0.2s ease;
-                  -ms-transition: padding 0.2s ease, margin 0.2s ease;
-                      transition: padding 0.2s ease, margin 0.2s ease;
 }
 
 .activetab {
@@ -227,7 +219,9 @@
   transform: scale(1.02, 1.02);
 }
 
-
+.notactivetab {
+  box-shadow:0px -8px 8px -1px rgba(100, 100, 100, 0.3) inset;
+}
 
 #mypageface-icon  {
   height: 200px;
@@ -320,7 +314,7 @@
   z-index: 10;
 }
 
-.edit, .logout-btn {
+.edit, .logout-btn, .offer-btn {
   width: 100px;
   line-height: 30px;
   font-size: 20px;
@@ -350,7 +344,7 @@
   cursor: pointer;
 }
 
-.edit:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn {
+.submit-btn:hover, .edit:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn:hover, .offer-btn:hover {
   background-color: white;
   transition: background-color 1s;
   opacity:0.5;
@@ -515,9 +509,9 @@ label input {
 }
 
 
-.input-email {
+.input-email, .input-password {
   height: 60px;
-  width: 67%;
+  width: 50%;
   font-size: 26px;
   border: 2px solid rgb(170, 170, 170);
   color: rgb(170, 170, 170);
@@ -535,15 +529,11 @@ input[type="text"]:focus, .myinfo-big:focus {
   box-shadow: 0 0 8px 0 dodgerBlue;
 }
 
-.input-email input[type="text"] {
+.input-email input[type="text"], .input-password input[type="text"]{
   padding-left: 40px;
 }
 
-.input-email {
-  position: relative;
-}
-
-.input-email input[type="text"]:focus {
+.input-email input[type="text"]:focus, .input-password input[type="text"]:focus {
   color: dodgerBlue;
 }
 

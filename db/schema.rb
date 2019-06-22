@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_013339) do
+ActiveRecord::Schema.define(version: 2019_06_15_023858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 2019_06_08_013339) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "g_infos", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.integer "age"
+    t.string "sex"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_g_infos_on_user_id"
+  end
+
+  create_table "guide_infos", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_guide_infos_on_user_id"
   end
 
   create_table "guides", force: :cascade do |t|
@@ -47,4 +65,6 @@ ActiveRecord::Schema.define(version: 2019_06_08_013339) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "g_infos", "users"
+  add_foreign_key "guide_infos", "users"
 end

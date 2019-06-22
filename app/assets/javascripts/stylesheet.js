@@ -1,22 +1,6 @@
-(window.onload = function() {
-
-})();
 
 //マイページのガイドとゲストの切り替えタブの処理
-(function($) {
 
-	var tabs =  $(".tabs li a");
-
-	tabs.click(function() {
-		var content = this.hash.replace('/','');
-		tabs.removeClass("active");
-		$(this).addClass("active");
-    $("#content").find('section').hide();
-    $(content).fadeIn(200);
-	}).filter('.active').trigger('click'); // add
-
-
-})(jQuery);
 
 //ファイルのアップロードとプレビューの処理　同じ処理を4回書いているのでまとめたい（＞もっちー）
 $(function(){
@@ -115,5 +99,26 @@ $(function(){
   });
 });
 
+$(function(){
+  $('#img5').change(function(e){
+    //ファイルオブジェクトを取得する
+    var file = e.target.files[0];
+    var reader = new FileReader();
 
-$('#treat').circleType();
+    //画像でない場合は処理終了
+    if(file.type.indexOf("image") < 0){
+      alert("画像ファイルを指定してください。");
+      return false;
+    }
+
+    //アップロードした画像を設定する
+    reader.onload = (function(file){
+      return function(e){
+        $("#preview5").attr("src", e.target.result);
+        $("#preview5").attr("title", file.name);
+      };
+    })(file);
+    reader.readAsDataURL(file);
+
+  });
+});

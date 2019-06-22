@@ -1,34 +1,58 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
+.upload-btn, .edit, .dropdown-content-header, .chat-btn {
+  color: white;
+  text-align: center;
+  font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
+}
 
 .circle {
   width: 170px;
 	height: 170px;
-  margin: 20px;
+  margin: 10px;
 	border-radius: 50%;
   background: linear-gradient(to bottom, rgba(240, 204, 255, 0.7), rgba(204, 255, 213, 0.7));
   text-align:center;
   position: absolute;
+  left: 5%;
+  top: 245px;
   z-index: 30;
 }
 
 .circle span {
-  font-family: 'Anton', sans-serif;
-  font-size: 30px;
+  font-size: 27px;
   color: white;
   position: absolute;
   display: inline-block;
   left: 0;
-  top: 50%;
+  top: 52%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   width :170px;
   text-align:center;
 }
 
+.bottle_w_l {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  top: 170px;
+  right: 50px;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.bottle_w_r {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  top: 1000px;
+  right: 50px;
+  z-index: 1;
+}
+
 .btn-one {
-  font-family: 'Lato', sans-serif;
   width: 300px;
   height: 70px;
   margin: 30px;
@@ -47,6 +71,7 @@
   outline-offset: 0px;
   text-shadow: none;
   transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+  letter-spacing: 3px;
 }
 
 .btn-one:hover {
@@ -54,85 +79,69 @@
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
   outline-color: transparent;
   outline-offset: 12px;
-  text-shadow: 2px 2px 3px #000;
+}
+
+.wine-top-ill {
+  width: 170px;
+  height: 170px;
+  margin: 10px;
+  z-index: 30;
+  position: absolute;
+  right: 5%;
+  top: 240px;
 }
 
 .wine-ill {
   position: absolute;
   width: 120px;
-  height: 120px;
+  height: 180px;
   left: 40px;
-  top: 40px;
+  top: 300px;
+  transform: rotate(-10deg);
 }
 
-.area-btn {
-  font-family: 'Lato', sans-serif;
-  width: 300px;
-  height: 70px;
+.area-search {
+  width: 250px;
+  line-height: 60px;
+  border-radius: 5em;
   margin: 20px;
-  color: rgb(109, 90, 204);
-  font-size: 26px;
+  color: rgb(146, 123, 243);
+  font-size: 32px;
   font-weight: bold;
-  line-height: 70px;
   background-color: white;
   display: inline-block;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
-  border: 2px solid transparent;
-  border-radius: 5em;
-  outline: 2px solid;
-  outline-color: rgb(109, 90, 204);
-  outline-offset: 0px;
-  text-shadow: none;
-  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
-}
-
-.sp-area-btn {
-  font-family: 'Lato', sans-serif;
-  width: 300px;
-  height: 70px;
-  margin: 20px;
-  color: rgb(109, 90, 204);
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 70px;
-  background-color: white;
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  border-radius: 5em;
-  box-shadow: inset 0 0 0px rgb(161, 175, 204), 0 0 20px rgb(161, 175, 204);
-}
-
-.area-btn:hover {
-  border-color: #FFF;
-  box-shadow: inset 0 0 20px rgb(161, 175, 204), 0 0 20px rgb(161, 175, 204);
-  outline-color: transparent;
-  outline-offset: 12px;
 }
 
 .area-tag {
-  font-family:  'Lato', sans-serif;
-  font-size: 30px;
-  color: rgb(161, 175, 204);
+  line-height: 40px;
+  font-size: 26px;
+  font-weight: bolder;
+  color: rgb(146, 123, 243);
+  background-color: white;
+  border-radius: 5em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(226, 226, 226);
   margin: 20px;
+  padding: 10px;
   display: inline-block;
   position: relative;
-  transition: .3s;
 }
 
 .area-tag::after {
   position: absolute;
-  bottom: 0;
   left: 50%;
+  bottom: 0;
   content: '';
   width: 0;
-  height: 2px;
-  background-color: rgb(46, 204, 113);
+  height: 60px;
+  border-radius: 5em;
+  background: linear-gradient(to right, rgba(240, 204, 255, 0.5), rgba(204, 255, 213, 0.5));
   transition: .3s;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  transform: translateX(-50%)
 }
 
 .area-tag:hover::after {
@@ -141,9 +150,9 @@
 
 .fa-angle-double-right {
   font-size: 30px;
-  margin: 0 auto;
+  margin: 10px auto;
   position: relative;
-  color: rgb(109, 90, 204);
+  color: rgba(8, 12, 214, 0.5);
 }
 
 .face-icon {
@@ -165,124 +174,96 @@
 
 .town-ill {
   width: 500px;
-  height: 270px;
-  padding: 10px;
+  height: 290px;
+  padding: 70px 0 0 0;
 }
 
 
-ul.tabs {
-	width: 390px;
-	height: 80px;
-	margin: 30px 20px 0 20px;
-	list-style: none;
-	overflow: hidden;
+.tabs {
+  width: 90%;
+  margin: 0 auto;
+  height: 80px;
+  list-style: none;
   padding: 0;
 }
-ul.tabs li {
-	float: left;
-	width: 130px;
 
-}
-ul.tabs li a {
+.activetab, .notactivetab {
+  display: inline-block;
 	position: relative;
-	display: block;
+  font-family: 'Poiret One', cursive;
+  width: 40%;
 	height: 30px;
-	margin: 40px 0 0 10%;
+	margin: 40px 0 0 0;
 	padding: 10px 0 0 0;
-	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	text-align: center;
 	text-decoration: none;
-	color: #ffffff;
-	background: #6edeef;
+	color: rgb(255,255,255);
+	background: rgb(110, 222, 239);
+  z-index: 4;
+  -webkit-border-top-right-radius: 8px;
+      -moz-border-radius-topright: 8px;
+          border-top-right-radius: 8px;
+   -webkit-border-top-left-radius: 8px;
+       -moz-border-radius-topleft: 8px;
+           border-top-left-radius: 8px;
 	-webkit-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.02);
 	   -moz-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.02);
 	        box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.02);
 	        	border: 0px solid #000000;
-	-webkit-transition: padding 0.2s ease, margin 0.2s ease;
-       -moz-transition: padding 0.2s ease, margin 0.2s ease;
-         -o-transition: padding 0.2s ease, margin 0.2s ease;
-        -ms-transition: padding 0.2s ease, margin 0.2s ease;
-            transition: padding 0.2s ease, margin 0.2s ease;
+            -webkit-transition: padding 0.2s ease, margin 0.2s ease;
+                 -moz-transition: padding 0.2s ease, margin 0.2s ease;
+                   -o-transition: padding 0.2s ease, margin 0.2s ease;
+                  -ms-transition: padding 0.2s ease, margin 0.2s ease;
+                      transition: padding 0.2s ease, margin 0.2s ease;
 }
-.tabs li:first-child a {
-	z-index: 3;
-  -webkit-border-top-right-radius: 8px;
-      -moz-border-radius-topright: 8px;
-          border-top-right-radius: 8px;
-   -webkit-border-top-left-radius: 8px;
-       -moz-border-radius-topleft: 8px;
-           border-top-left-radius: 8px;
-}
-.tabs li:nth-child(2) a {
-	z-index: 2;
-}
-.tabs li:last-child a {
-	z-index: 1;
-  -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-	   -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-	        box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  -webkit-border-top-right-radius: 8px;
-      -moz-border-radius-topright: 8px;
-          border-top-right-radius: 8px;
-   -webkit-border-top-left-radius: 8px;
-       -moz-border-radius-topleft: 8px;
-           border-top-left-radius: 8px;
-}
-ul.tabs li a:hover {
-	margin: 35px 0 0 0;
-	padding: 10px 0 5px 0;
-}
-ul.tabs li a.active {
-	margin: 40px 0 0 10%;
-	padding: 10px 0 10px 0;
-	background: rgb(245, 245, 245);
+
+.activetab {
+	background-color: rgb(230, 236, 240);
 	color: rgb(110, 222, 239);
-	/*color: #ff6831;*/
-	z-index: 4;
-	outline: none;
 }
-.group:before,
-.group:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+
+.notactivetab:hover {
+  transform: scale(1.02, 1.02);
 }
-.group:after {
-    clear: both;
-}
+
+
 
 #mypageface-icon  {
-  height: 150px;
-  width: 150px;
-  margin-top: 27px;
-  margin-bottom: 5px;
-  border-color: rgb(226, 226, 226);
+  height: 200px;
+  width: 200px;
+  margin: 10px auto;
   border-radius: 50%;
-  position: relative;
-  background-color: #ECECEC; /* rgbに変える */
+  border: 2px solid;
+  border-color: rgb(164, 179, 239);
+  background-color: rgb(236, 236, 236);
   background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
   -webkit-background-size: 20px 20px;
-  z-index: 10;
+  display: block;
 }
 
-#preview2, #preview3, #preview4 {
-  width: 330px;
-  height: 230px;
-  margin-bottom: 5px;
-  background-color: #ECECEC; /* rgbに変える */
-  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
-  -webkit-background-size: 20px 20px;
-}
 
 .bottle-ill {
-  width: 120px;
-  height: 200px;
+  width: 200px;
+  height: 350px;
   margin: 20px;
   position: absolute;
-  top: 200px;
+  top: 60px;
   right: 100px;
   transform: rotate(10deg);
+  z-index: 1;
 }
+
+.bottle-ill_l {
+  width: 300px;
+  height: 600px;
+  margin: 10px;
+  position: absolute;
+  top: 500px;
+  left: 40px;
+  transform: rotate(-10deg)
+}
+
 
 .input-upload {
   background: none;
@@ -290,12 +271,11 @@ ul.tabs li a.active {
   border: none;
 }
 
-.myinfo {
+.myinfo, .myarea-info, .guide-area-tag-input, .guideinfo {
   height: 60px;
-  width: 50%;
+  width: 80%;
   font-size: 26px;
-  border: 2px solid rgb(170, 170, 170);
-  color: rgb(170, 170, 170);
+  border: 2px solid;
   border-radius: 5em;
   margin: 20px auto;
   outline: none;
@@ -305,21 +285,39 @@ ul.tabs li a.active {
   box-sizing: border-box;
   transition: 0.3s;
   text-align: left;
-  z-index: 1;
+  z-index: 10;
+}
+
+.guideinfo {
+  border-bottom: 2px solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.guide-area-tag-input {
+  height: 30px;
+  width: 320px;
+  margin: 5px auto;
+  max-width: 310px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .myinfo-big {
-  height: 120px;
-  width: 45%;
-  color: rgb(161, 175, 204);
+  height: 200px;
+  width: 70%;
   text-align: left;
   vertical-align: middle;
-  padding: 30px;
-  font-size: 2em;
+  padding: 20px;
+  font-size: 26px;
   margin: 20px auto;
   border-radius: 30px;
-  border: 2px solid rgb(170, 170, 170);
+  border: 2px solid;
   display: block;
+  z-index: 10;
 }
 
 .edit {
@@ -334,51 +332,37 @@ ul.tabs li a.active {
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%);
   border-radius: 5em;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 .upload-btn {
   width: 150px;
   font-size: 14px;
   color: white;
-  margin: 2px;
+  margin: 5px auto;
   padding: 5px;
   text-align: center;
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%));
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%);
   border-radius: 5em;
-  display: inline-block;
+  display: block;
   cursor: pointer;
 }
 
 .edit:hover, .upload-btn:hover, .chat-btn:hover {
-    background-color: white;
-    transition: background-color 1s;
-    opacity:0.5;
-    filter:alpha(opacity=70);
-    -ms-filter: “alpha( opacity=70 )”;
+  background-color: white;
+  transition: background-color 1s;
+  opacity:0.5;
+  filter:alpha(opacity=70);
+  -ms-filter: “alpha( opacity=70 )”;
   }
 
 label input {
   display: none;
 }
 
-.myarea-info {
-  height: 60px;
-  width: 50%;
-  font-size: 26px;
-  border: 2px solid rgb(170, 170, 170);
-  color: rgb(170, 170, 170);
-  background-color: rgba(0);
-  border-radius: 5em;
-  margin: 20px auto;
-  outline: none;
-  padding: 10px;
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  transition: 0.3s;
-  text-align: left;
-}
+
 
 .dropdown {
     width: 100%;
@@ -400,7 +384,7 @@ label input {
     min-width: 100%;
     padding: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    z-index: 100;
 }
 
 .dropdown-content-header {
@@ -416,7 +400,6 @@ label input {
 
 
 .dropdown-content a {
-    color: rgb(170, 170, 170);
     text-align: left;
     font-size: 26px;
     padding: 12px 16px;
@@ -434,7 +417,7 @@ label input {
 }
 
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {background: linear-gradient(to right, rgba(240, 204, 255, 0.5), rgba(204, 255, 213, 0.5));}
 .dropdown-content-header a:hover {background-color: rgba(255,255,255,0.4);}
 
 .dropdown:hover .dropdown-content {
@@ -450,15 +433,26 @@ label input {
 }
 
 
-#chat-face {
+#chat-indexface {
   height: 130px;
   width: 130px;
   border-radius: 50%;
+  border: 2px solid;
+  border-color: rgb(164, 179, 239);
   display: inline-block;
   margin: 10px auto;
   vertical-align: middle; /* 画像を垂直に */
   text-align: center; /* 画像を中央に */
   line-height: 0; /* ボックス内でのp要素の余分な下スペースを消去 */
+}
+
+#chatroom-myface, #chatroom-theirface {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgb(164, 179, 239);
+  display: inline-block;
 }
 
 .chat-name, .chat-delete, .chat-room-name {
@@ -482,20 +476,15 @@ label input {
   width: 50px;
   height: 50px;
   margin: 10px auto;
+  padding: 2px;
   color: white;
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.1) 10%, rgba(222,97,190,0.7)50%);
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 50%);
-  font-size: 37px;
+  font-size: 34px;
   text-align: center;
   vertical-align: middle;
   border-radius: 50%;
   display: inline-block;
-}
-
-.treat-icon-room {
-   position: absolute;
-   right: 150px;
-   top: 150px;
 }
 
 .chat-btn {
@@ -513,20 +502,6 @@ label input {
   vertical-align: middle;
 }
 
-.chat-room-name, .chat-room-name2 {
-  display: inline-block;
-  width: 50%;
-  text-align: left;
-  margin: 10px;
-}
-
-.chat-room-name2 {
-  text-align: right;
-}
-.chat-room-names {
-   width: 100%;
-   display: flex
-}
 
 #chat-room-face {
   width: 150px;
@@ -669,7 +644,7 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 .sb-line3.sb-right {
-  background: #d5e0f4;
+  background: white;
   border-top-right-radius: 0;
 }
 
@@ -685,7 +660,7 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 .sb-line3.sb-right:before {
-  background: #d5e0f4;
+  background: white;
   border-top: solid 2px #c5d0e4;
   height: .5em;
   left: 100%;

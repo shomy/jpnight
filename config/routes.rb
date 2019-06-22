@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'guides#g_infos'
-  root 'g_infos#index'
+  
   get "/login" => "guides#login"
   get "/mypage" => "guides#mypage"
   get "/mypage_guest" => "guides#mypage_guest"
@@ -16,5 +16,4 @@ Rails.application.routes.draw do
   get "/mypage_news" => "guides#mypage_news"
   get "/mypage_q" => "guides#mypage_q"
   get "/offerpage" => "guides#offerpage"
-  get "/logout" => "guides#logout"
 end

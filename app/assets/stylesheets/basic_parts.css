@@ -5,7 +5,7 @@ body {
    margin: 0;
    padding: 0;
    overflow-x: hidden;
-   background-color: rgba(110, 222, 239, 0.6);
+   background-color: rgb(110, 222, 239);
 }
 
 a {
@@ -27,7 +27,7 @@ background-image {
   color: rgb(197,253,255);
 }
 
-h1, h2, h3, h4, h5, h6, .fa-angle-double-right, .guide, .guideinfo, .myinfo-label, .myinfo, .myinfo-big, .face-message, .myarea-info, .dropdown-content, .dropdown-content-header, .guide-area-tag-input, .chat-delete {
+h1, h2, h3, h4, h5, h6, .fa-angle-double-right, .guide, .guideinfo, .myinfo-label, .myinfo-big, .face-message, .myarea-info, .dropdown-content, .dropdown-content-header, .guide-area-tag-input, .chat-delete {
   color: rgb(164, 179, 239);
   text-align: center;
   font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
@@ -51,6 +51,11 @@ h3 span {
   position: relative;
   box-sizing: border-box;
   z-index: 100;
+}
+
+h4 span {
+  color:rgb(38,87,235);
+  font-size: 26px;
 }
 
 footer ul {

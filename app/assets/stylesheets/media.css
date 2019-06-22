@@ -13,7 +13,7 @@
 }
 
 .lead4guide {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .top-wrapper {
@@ -136,21 +136,16 @@ h3 span {
 }
 
 .wine-top-ill {
-  height: 70px;
-  width: 70px;
-  top: 335px;
+  display: none;
 }
 
-.wine-ill {
-  display: none;
+.pointer {
+  font-size: 20px;
+  left: 20px;
 }
 
 .bottle_w_l, .bottle_w_r, .bottle-ill, .bottle-ill_l {
   display: none;
-}
-
-.guide-wrapper {
-  padding: 3px;
 }
 
 .area-btn {
@@ -303,9 +298,15 @@ footer ul {
 }
 
 @media (max-width: 770px) {
+
 .footer-wrapper {
   font-size: 17px;
 }
+
+.circle {
+  left: 75%
+}
+
 }
 
 @media (max-width: 370px) {

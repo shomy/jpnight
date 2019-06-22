@@ -2,7 +2,7 @@
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
 
-  .lead, .btn-one, .circle span, .circle-b span, .area-search, .area-tag, h3 span, .login, .header-username, .mypagecommand, .footer-wrapper{
+  .lead, .btn-one, .circle span, .circle-b span, .pointer, .area-search, .area-tag, h3 span, .login, .header-username, .mypagecommand, .footer-wrapper{
     font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
   }
 
@@ -12,19 +12,20 @@
   }
 
   .lead {
+    width: 1000px;
     font-size: 70px;
     font-weight: lighter;
     text-align: center;
     color: white;
     letter-spacing: 7px;
     line-height: 70px;
-    margin: 130px 0 30px 0;
+    margin: 130px auto 30px;
     padding: 15px;
     box-sizing: border-box;
     }
 
   .lead4guide {
-    width: 90%;
+    width: 60%;
     font-weight: lighter;
     font-size: 40px;
     color: white;
@@ -70,6 +71,10 @@
     display: block;
     position: relative;
     z-index: 10;
+  }
+
+  .myinfo {
+    color: rgb(164, 179, 239);
   }
 
 

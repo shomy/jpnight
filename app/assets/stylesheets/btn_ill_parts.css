@@ -4,7 +4,6 @@
 .upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn {
   color: white;
   text-align: center;
-  font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;
 }
 
 .circle, .circle-b {
@@ -12,10 +11,10 @@
 	height: 170px;
   margin: 10px;
 	border-radius: 50%;
-  background: linear-gradient(to bottom, rgba(240, 204, 255, 0.7), rgba(204, 255, 213, 0.7));
+  background: linear-gradient(to bottom, rgba(240, 204, 255, 0.7), rgba(204, 255, 213, 0.8));
   text-align:center;
   position: absolute;
-  left: 5%;
+  left: 80%;
   top: 245px;
   z-index: 130;
 }
@@ -35,10 +34,10 @@
 
 .bottle_w_l {
   position: absolute;
-  height: 300px;
-  width: 300px;
-  top: 170px;
-  right: 50px;
+  height: 200px;
+  width: 200px;
+  top: 200px;
+  left: 100px;
   transform: rotate(0deg);
   z-index: 1;
 }
@@ -92,12 +91,26 @@
 }
 
 .wine-ill {
+  width: 50px;
+  height: 70px;
+}
+
+.pointer {
   position: absolute;
-  width: 120px;
-  height: 180px;
   left: 40px;
-  top: 300px;
+  top: -60px;
   transform: rotate(-10deg);
+  font-size: 30px;
+  animation: key1 .6s ease infinite alternate;
+}
+
+@keyframes key1{
+  100% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
+}
+
+.fa-hand-pointer {
+  transform: rotate(180deg);
 }
 
 .area-search {
@@ -128,6 +141,7 @@
   padding: 10px;
   display: inline-block;
   position: relative;
+  box-shadow: 0 1px 20px rgba(32, 33, 36, 0.28);
 }
 
 .area-tag::after {
@@ -212,7 +226,7 @@
 
 .activetab {
 	background-color: rgb(230, 236, 240);
-	color: rgb(110, 222, 239);
+	color: rgb(164, 179, 239);
 }
 
 .notactivetab:hover {
@@ -221,6 +235,7 @@
 
 .notactivetab {
   box-shadow:0px -8px 8px -1px rgba(100, 100, 100, 0.3) inset;
+  background-color: rgb(164, 179, 239);
 }
 
 #mypageface-icon  {

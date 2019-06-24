@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
-.upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn {
+.upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn, .proceed-btn {
   font-family: 'Quicksand', sans-serif,  'Kosugi Maru', sans-serif;
   color: white;
   text-align: center;
@@ -364,7 +364,7 @@
   cursor: pointer;
 }
 
-.submit-btn:hover, .edit:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn:hover, .offer-btn:hover {
+.submit-btn:hover, .edit:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn:hover, .offer-btn:hover, .proceed-btn:hover {
   background-color: white;
   transition: background-color 1s;
   opacity:0.5;

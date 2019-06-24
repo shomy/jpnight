@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get "/guest_regi1" => "guides#guest_regi1"
   get "/guest_regi2" => "guides#guest_regi2"
   get "/guest_regi3" => "guides#guest_regi3"
+  get "/company" => "guides#company"
 end

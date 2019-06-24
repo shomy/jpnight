@@ -100,7 +100,7 @@
   position: absolute;
   left: 40px;
   top: -60px;
-  transform: rotate(-10deg);
+  transform: rotate(-2deg);
   font-size: 30px;
   animation: key1 .6s ease infinite alternate;
 }

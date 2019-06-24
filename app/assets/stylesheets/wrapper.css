@@ -152,12 +152,7 @@
 
 }
 
-.news-room, .QA-room,  .company-profile {
-  margin: 60px auto 10px;
-  text-align: left;
-}
-
-.login-form, .regi-form, #content, #chatroom, .news-room, .QA-room, .logout-form {
+.login-form, .regi-form, #content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
   width: 90%;
   background-color: rgb(230, 236, 240);
   margin: 0 auto 20px;

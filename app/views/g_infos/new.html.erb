@@ -1,5 +1,43 @@
-<h1>New G Info</h1>
+<!DOCTYPE html>
 
-<%= render 'form', g_info: @g_info %>
+<html>
 
-<%= link_to 'Back', g_infos_path %>
+<thead>
+  <meta charset="utf-8">
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel ="stylesheet" href="assets/header_footer.css">
+  <link rel ="stylesheet" href="assets/basic_parts.css">
+  <link rel ="stylesheet" href="assets/btn_ill_parts.css">
+  <link rel ="stylesheet" href="assets/text.css">
+  <link rel ="stylesheet" href="assets/wrapper.css">
+  <link rel ="stylesheet" href="assets/media.css">
+
+  <link rel ="stylesheet" href ="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity ="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ 　<link href="https://fonts.googleapis.com/css?family=Anton|Monoton|Baloo+Bhaijaan|Baloo+Da|Dancing+Script|Kosugi+Maru|Open+Sans|Poiret+One|Questrial|Quicksand|Reem+Kufi|Righteous|Roboto:300i|Staatliches&display=swap" rel="stylesheet">
+
+  <title>JAPANIGHT</title>
+</thead>
+
+<tbody>
+
+ <%= render 'header'%>
+
+ <section class ="top-wrapper">
+   <h1 class="lead">Make Your Trip Special!</h1>
+   <h2 class="lead4guide">You will see other side of Japan with Local Experience at Night. </h2>
+   <div href="" class ="circle"><span>ALL GUIDES<br>FREE<br>ONLY NOW</span></div>
+ </section>
+
+ <%= render 'form', g_info: @g_info %>
+
+ <%= render 'footer'%>
+
+ </tbody>
+ <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
+ <%= javascript_include_tag "stylesheet.js" %>
+ <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
+ <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" %>
+ <%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js" %>
+ <%= javascript_include_tag "http://code.jquery.com/jquery-1.8.1.min.js" %>
+ </html>

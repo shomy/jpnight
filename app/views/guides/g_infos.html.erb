@@ -19,9 +19,9 @@
   <title>JAPANIGHT</title>
 </head>
 
-<body>
+<tbody>
 
- <header> <!-- loginしたらユーザーネーム、マイページコマンドが表示、デフォルトはsignupのみ -->
+ <header> <!-- loginしたらユーザーネーム、マイページコマンドが表示、デフォルトはloginのみ -->
 
   <div class = "dropdown-header">
    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul><!-- 携帯サイズでメニューバー表示、ドロップダウン -->
@@ -36,7 +36,7 @@
     </div>
   </div>
    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-   <ul class ="signin"><a href="">SIGNIN</a></ul>
+   <ul class ="login"><a href="">LOGIN</a></ul>
 
  </header>
 
@@ -44,13 +44,15 @@
   <h1 class ="lead">E<span>N</span>JOY JAPA<span>N</span>ESE <span>N</span>IGHT WITH US</h1>
   <div href ="" class ="circle"><span>ALL GUIDES FREE ONLY NOW</span></div>
   <a href ="" class ="btn-one">LOGIN</a>
-  <a href ="" class ="btn-one">REGISTRATION</a>
-  <img src  = "assets/wine_w.png" class ="wine-top-ill"></img>
+  <a href ="" class ="btn-one">ガイドになる</a>
  </section>
 
 
  <section class = "guide-wrapper">
-  <img src ="assets/bottle_b.png" class = "wine-ill"></img>
+  <div class="pointer">
+    <img src ="assets/bottle_b.png" class = "wine-ill"></img>
+    Night Guides Here !!<i class="far fa-hand-pointer"></i>
+  </div>
   <div href="" class="area-search">AREASEARCH</div>
   <section class = "area-tag-wrapper">
    <a href="" class = "area-tag">#Roppongi~ Azabu~ Akasaka</a>
@@ -61,14 +63,10 @@
    <a href="" class = "area-tag">#Others</a>
   </section>
 
-  <h3><span>▼LET'S MEET YOUR GUIDE▼</span></h3>
+  <h3><span>ALL GUIDES</span></h3>
   <i class="fas fa-angle-double-right"><a></a></i>
 
   <article class ="guide-index">
-<<<<<<< HEAD:app/views/guides/top.html.erb
-  <a href="" class ="guide">
-  <%# <%= link_to guide_path(@guide), class:"guide"  do %>
-=======
    <div class ="guide">
     <h4 class ="guide-area-tag">#Shinjyuku</h4>
     <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
@@ -81,25 +79,17 @@
     </figcaption><a href="#"></a>
    </div>
    <div class ="guide">
->>>>>>> 77caae92841de4ae053bd0d08ec94d6d0db71369:app/views/guides/g_infos.html.erb
     <h4 class ="guide-area-tag">#Shinjyuku</h4>
     <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
     <img src = "assets/izakaya.jpg" class ="photo"></img>
     <h4 class ="guide-name">Mocci</h4>
     <h4 class ="review">★★★★★</h4>
-<<<<<<< HEAD:app/views/guides/top.html.erb
-    <p class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</p>
-   </a>
-   <%# <% end %>
-   <a href="" class ="guide">
-=======
     <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
     <figcaption>
      <p>ASK TO GUIDE</p>
     </figcaption><a href="#"></a>
    </div>
    <div class ="guide">
->>>>>>> 77caae92841de4ae053bd0d08ec94d6d0db71369:app/views/guides/g_infos.html.erb
     <h4 class ="guide-area-tag">#Shinjyuku</h4>
     <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
     <img src = "assets/izakaya.jpg" class ="photo"></img>
@@ -197,6 +187,6 @@
   </wrapper>
  </footer>
 
-</body>
+</tbody>
 
 </html>

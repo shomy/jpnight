@@ -22,33 +22,32 @@
 <body>
 
  <header>
-   <div class = "dropdown-header">
-    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
-     <div class ="dropdown-content-header">
-      <a  href="#">設定編集</a>
-      <a  href="#">マッチ</a>
-      <a  href="#">お知らせ</a>
-      <a  href="#">Q&A</a>
-      <a  href="#">LOGOUT</a>
-     </div>
-   </div>
 
-    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-    <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
-    <ul class ="mypagecommand"><a href="">設定編集</a></ul>　<!-- ログインすることでマイページコマンドが表出　-->
-    <ul class ="mypagecommand"><a href="">マッチ</a></ul>
-    <ul class ="mypagecommand"><a href="">お知らせ</a></ul>
-    <ul class ="mypagecommand"><a href="">Q&A</a></ul>
-    <ul class ="login"><a href="">LOGOUT</a></ul>　
+  <div class = "dropdown-header">
+   <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
+    <div class ="dropdown-content-header">
+     <a href="#">LOGIN</a>
+    </div>
+  </div>
+   <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
+   <ul class ="login"><a href="">LOGNIN</a></ul>
 
  </header>
 
- <form name="Logout" method="post" action="/cgi-bin/Logout.cgi">
-  <section class = "logout-form">
-   <h4>ログアウトしますか?</h4>
-   <input type="submit" value="LOGOUT" class="logout-btn">
-  </section>
- </form>
+ <section class ="top-wrapper">
+  <h1 class ="lead">あなたの日常が<br>ゲストのスペシャル</h1>
+  <h2 class ="lead4guide">よく知る<span>日本</span>を教えてください</h2>
+  <div href="" class ="circle"><span>ガイド<br>無料キャン<br>ペーン</span></div>
+ </section>
+
+ <section class = "login-form">
+  <h4>メールアドレスを入力してください。</h4>
+  <input type="text" placeholder="Email" class="input-email"></input>
+  <h4>パスワードを入力してください。</h4>
+  <input type="text" placeholder="Password" class="input-password"></input>
+  <input type="submit" value="LOGIN" class="submit-btn">
+  <h4>新規登録は<a href=""><span>こちら</span></a></h4>
+ </section>
 
  <footer>　<!-- フッターは同じコードなので省略して記述したい　-->
     <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>

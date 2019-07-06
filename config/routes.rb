@@ -5,12 +5,10 @@ Rails.application.routes.draw do
   resources :guides
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-<<<<<<< HEAD
-  root 'guides#top'
-
-=======
   root 'guides#g_infos'
 
+  get "/login" => "guides#login"
+  get "/logout" => "guides#logout"
   get "/mypage" => "guides#mypage"
   get "/mypage_guest" => "guides#mypage_guest"
   get "/mypage_edit" => "guides#mypage_edit"
@@ -19,5 +17,9 @@ Rails.application.routes.draw do
   get "/mypage_news" => "guides#mypage_news"
   get "/mypage_q" => "guides#mypage_q"
   get "/offerpage" => "guides#offerpage"
->>>>>>> 77caae92841de4ae053bd0d08ec94d6d0db71369
+  get "/guest_regi1" => "guides#guest_regi1"
+  get "/guest_regi2" => "guides#guest_regi2"
+  get "/guest_regi3" => "guides#guest_regi3"
+  get "/company" => "guides#company"
+  get "/delete" => "guides#delete"
 end

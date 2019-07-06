@@ -13,7 +13,7 @@
 }
 
 .lead4guide {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .top-wrapper {
@@ -61,7 +61,7 @@
   display: none;
 }
 
-.signin {
+.login {
   display: none;
 }
 .responsive-menu {
@@ -89,8 +89,14 @@ header {
   font-size: 17px;
 }
 
-.signin {
+.login {
   display: none;
+}
+
+.input-email, .input-password {
+  height: 40px;
+  width: 100%;
+  padding: 15px;
 }
 
 .top-wrapper {
@@ -113,33 +119,33 @@ h3 span {
   margin:3px;
 }
 
-.circle {
+.circle, .circle-b {
   width: 70px;
   height: 70px;
   top: 335px;
 }
 
-.circle span {
+.circle-b {
+  top: 10px;
+  left: 5px;
+}
+
+.circle span, .circle-b span {
   width: 70px;
   font-size: 13px;
 }
 
 .wine-top-ill {
-  height: 70px;
-  width: 70px;
-  top: 335px;
+  display: none;
 }
 
-.wine-ill {
-  display: none;
+.pointer {
+  font-size: 20px;
+  left: 20px;
 }
 
 .bottle_w_l, .bottle_w_r, .bottle-ill, .bottle-ill_l {
   display: none;
-}
-
-.guide-wrapper {
-  padding: 3px;
 }
 
 .area-btn {
@@ -180,7 +186,7 @@ footer {
 }
 
 
-#content, .chat-wrapper, .mailadress-form, .logout-form, .company-profile {
+#content, .chat-wrapper, .logout-form, .company-profile {
   padding: 10px;
 }
 
@@ -292,9 +298,15 @@ footer ul {
 }
 
 @media (max-width: 770px) {
+
 .footer-wrapper {
   font-size: 17px;
 }
+
+.circle {
+  left: 75%
+}
+
 }
 
 @media (max-width: 370px) {

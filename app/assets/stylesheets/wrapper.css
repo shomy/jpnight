@@ -4,8 +4,8 @@
 .top-wrapper {
   width: 100%;
   height: 500px;
-  background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url("topimage.jpg");
-  background-image: linear-gradient(-225deg, rgba(38,87,235,0.7) 10%, rgba(222,97,190,0.7) 80%), url("topimage.jpg");
+  background-image: -webkit-linear-gradient(-225deg,rgba(53, 165, 247, 0.58) 20%, rgba(183, 33, 255, 0.7) 90%), url("topimage.jpg");
+  background-image: linear-gradient(-225deg,rgba(53, 165, 247, 0.58) 20%, rgba(183, 33, 255, 0.7) 90%), url("topimage.jpg");
   background-size: cover;
   background-position: center;
   margin: 0 auto;
@@ -31,9 +31,9 @@
   text-align: center;
   background-color: rgb(230, 236, 240);
   margin: 30px auto;
-  padding: 5px;
+  padding: 2%;
   position: relative;
-  box-shadow: 0px 0px 30px 30px rgba(255,255,255,0.9);
+  box-shadow: 0 1px 20px rgba(32, 33, 36, 0.28)
 }
 
 .area-tag-wrapper {
@@ -60,6 +60,7 @@
   border-color: rgb(226, 226, 226);
   border-radius: 2em;
   z-index: 2;
+  box-shadow: 0 1px 20px rgba(32, 33, 36, 0.28);
 }
 
 
@@ -69,7 +70,7 @@
   display: grid;
   grid-gap: 3px;
   grid-template-rows: 33.33% 33.33% 33.33%;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-columns: 33.3% 33.3% 33.1%;
 }
 }
 
@@ -150,32 +151,11 @@
 .guide:hover {
 
 }
-.mailadress-form, .logout-form, .company-profile {
-  width: 90%;
-  height: 110%;
-  text-align: center;
-  color: rgb(161, 175, 204);
-  background-color: rgb(245, 245, 245);
-  margin: 10px auto;
-  padding: 30px;
-  position: relative;
-  box-shadow: 0 0 10px 8px lightgray;
-  z-index: 1;
-}
 
-.news-room, .QA-room, .logout-form, .company-profile {
-  margin: 60px auto 10px;
-  text-align: left;
-}
-
-.logout-form {
-  text-align: center;
-}
-
-#content, #chatroom, .news-room, .QA-room {
+.login-form, .regi-form, #content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
   width: 90%;
   background-color: rgb(230, 236, 240);
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
   padding: 30px;
   text-align: center;
   position: relative;
@@ -184,8 +164,15 @@
    	   -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
    	        box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
   z-index: 2;
-  box-shadow: 0px 0px 40px 40px rgba(255,255,255,0.9);
+  box-shadow: 0 1px 20px rgba(32, 33, 36, 0.28);
   box-sizing: border-box;
+}
+
+.login-form {
+  margin: 0 auto 35px;
+}
+.logout-form {
+  margin: 40px auto 35px;
 }
 
 #asaguide {

@@ -23,15 +23,12 @@
 
  <%= render 'header'%>
 
- <div class="mypage">
   <ul class="tabs group">
    <a class="activetab" href="#/asaguide">AS A GUIDE</a>
    <a class="notactivetab" href="#/asaguest">AS A GUEST</a>
   </ul>
 
-
-  <div id="content">
-   <section id= "asaguide"><!-- ガイドのタブ -->
+  <div class="content">
     <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
     <div class ="mypage-head">　
      <div class ="myface-wrapper">　
@@ -86,13 +83,7 @@
     </div>
     <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
     <label class ="myinfo-label">正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</label>
-
-
-   </section>
-
   </div>
-
- </div>
 
 <%= render 'footer'%>
 

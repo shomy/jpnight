@@ -152,7 +152,7 @@
 
 }
 
-.login-form, .regi-form, #content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
+.login-form, .regi-form, .content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
   width: 90%;
   background-color: rgb(230, 236, 240);
   margin: 0 auto 20px;
@@ -173,14 +173,6 @@
 }
 .logout-form {
   margin: 40px auto 35px;
-}
-
-#asaguide {
-  margin: 0 auto;
-}
-
-#asaguest {
-  margin: 0 auto;
 }
 
 .mypage-head {

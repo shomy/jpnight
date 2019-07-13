@@ -1,4 +1,4 @@
-<section class = "regi-form">
+<div class = "regi-form">
   <%= form_with(model: g_info, local: true) do |form| %>
     <% if g_info.errors.any? %>
       <div id="error_explanation">
@@ -46,4 +46,4 @@
 <div class ="back"><%= link_to 'Back', @g_info %></div>
 
 <%end%>
-</section>
+</div>

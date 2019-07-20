@@ -200,7 +200,6 @@
   vertical-align: middle;
   margin: 15px;
   position: relative;
-  z-index: 100;
 }
 
 .myinfo-wrapper {
@@ -210,8 +209,6 @@
   border-bottom-color: white;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  z-index: 100;
-  box-sizing: border-box;
 }
 
 .chat-index {

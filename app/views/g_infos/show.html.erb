@@ -23,13 +23,16 @@
 
  <%= render 'header'%>
 
+ <div class="mypage">
   <ul class="tabs group">
    <a class="activetab" href="#/asaguide">AS A GUIDE</a>
    <a class="notactivetab" href="#/asaguest">AS A GUEST</a>
   </ul>
 
+
   <div class="content">
-    <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+   <section id= "asaguide"><!-- ガイドのタブ -->
+    <div class ="edit" ><%= link_to '編集する', edit_g_info_path(@g_info) %></div>
     <div class ="mypage-head">　
      <div class ="myface-wrapper">　
       <img id ="mypageface-icon"></img>
@@ -50,7 +53,7 @@
      <div class ="myinfo"><%= @g_info.age %></div>
 
      <div class ="myinfo-label">電話番号</div>
-     <div class ="myinfo"</div>
+     <div class ="myinfo">00000000000</div>
 
      <div class ="myinfo-label">案内できる場所</div>
      <div class ="myinfo">00000000000</div>
@@ -80,14 +83,22 @@
       <h4 class ="guide-area-tag"><a>#Shinjyuku</a></h4>
       <img id ="preview5"></img>
      </div>
-     <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
-     <label class ="myinfo-label">正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</label>
     </div>
+    <div class ="edit"><%= link_to '編集する', edit_g_info_path(@g_info) %></div>
+    <label class ="myinfo-label">正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</label>
+
+
+   </section>
+
   </div>
 
-<%= render 'footer'%>
+ </div>
+
+
+ <%= render 'footer'%>
 
 </body>
+
 <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
 <%= javascript_include_tag "stylesheet.js" %>
 <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>

@@ -110,8 +110,13 @@ h1 {
   margin-top: 70px;
 }
 
-h3 span, .radioform, .h3media {
+h3 span, .h3media {
   font-size: 20px;
+}
+
+.radio-form {
+  font-size: 15px;
+  width: 100%;
 }
 
 .btn-one {
@@ -307,9 +312,6 @@ footer ul {
   left: 75%
 }
 
-.radioform {
-  width: 100%;
-}
 
 }
 

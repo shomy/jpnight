@@ -680,6 +680,16 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 #treat {
- text-align: right;
- margin: 0;
+  text-align: right;
+  margin: 0;
+}
+
+.radio-form {
+  width: 60%;
+  line-height: 40px;
+  text-align: left;
+  font-size: 26px;
+  font-weight: bolder;
+  margin: 0 auto;
+  color: rgb(164, 179, 239);
 }

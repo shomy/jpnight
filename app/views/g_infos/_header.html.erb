@@ -22,25 +22,32 @@
 <body>
 
  <header>
+  <% @g_infos.each do |g_info| %>
+  <tr>
    <div class = "dropdown-header">
     <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
      <div class ="dropdown-content-header">
-      <a  href="#">設定編集</a>
+      <td><%= link_to '設定編集', edit_g_info_path(g_info) %></td>
       <a  href="#">マッチ</a>
       <a  href="#">お知らせ</a>
       <a  href="#">Q&A</a>
       <a  href="#">LOGOUT</a>
      </div>
    </div>
+  </tr>
+  <% end %>
 
+  <% @g_infos.each do |g_info| %>
+  <tr>
     <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
     <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
-    <ul class ="mypagecommand"><a href="">設定編集</a></ul>　<!-- ログインすることでマイページコマンドが表出　-->
+    <ul class ="mypagecommand"><td><%= link_to '設定編集', edit_g_info_path(g_info) %></td></ul>　<!-- ログインすることでマイページコマンドが表出　-->
     <ul class ="mypagecommand"><a href="">マッチ</a></ul>
     <ul class ="mypagecommand"><a href="">お知らせ</a></ul>
     <ul class ="mypagecommand"><a href="">Q&A</a></ul>
     <ul class ="login"><a href="">LOGOUT</a></ul>　
-
+  </tr>
+  <% end %>
  </header>
 
 

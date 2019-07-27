@@ -21,18 +21,7 @@
 
 <body>
 
- <header>
-
-  <div class = "dropdown-header">
-   <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
-    <div class ="dropdown-content-header">
-     <a href="#">LOGIN</a>
-    </div>
-  </div>
-   <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-   <ul class ="login"><a href="">LOGNIN</a></ul>
-
- </header>
+ <%= render 'header'%>
 
  <section class ="top-wrapper">
   <h1 class ="lead">あなたの日常が<br>ゲストのスペシャル</h1>
@@ -41,27 +30,32 @@
  </section>
 
  <section class = "login-form">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <h4>メールアドレスを入力してください。</h4>
-  <input type="text" placeholder="Email" class="input-email"></input>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'myinfo', :placeholder => 'E-mail' %>
   <h4>パスワードを入力してください。</h4>
-  <input type="text" placeholder="Password" class="input-password"></input>
+  <%= f.password_field :password, autocomplete: "current-password", :class => 'myinfo', :placeholder => 'Password' %>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
   <input type="submit" value="LOGIN" class="submit-btn">
-  <h4>新規登録は<a href=""><span>こちら</span></a></h4>
+  <%= f.submit "Log in" %>
+  <% end %>
+  <%= render "devise/shared/links" %>
+
+  <h4>新規登録は<a href=""><span><u>こちら</u></span></a></h4>
+  <h4>パスワード忘れた場合は<a href=""><span><u>こちら</u></span></a></h4>
+
+
  </section>
 
- <footer>　<!-- フッターは同じコードなので省略して記述したい　-->
-    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-    <img src  = "assets/town.png" class ="town-ill"></img>
-    <wrapper class ="footer-wrapper">
-     <ul class ="footer-list"><a href ="">HELP</a></ul>
-     <ul class ="footer-list"><a href ="">CONTACT</a></ul>
-     <ul class ="footer-list"><a href ="">COMPANY</a></ul>
-     <ul class ="footer-list"><a href ="">OUR PHILOSOPHY</a></ul>
-     <ul class ="footer-list"><a href ="">TERMS OF USE</a></ul>
-     <ul class ="footer-list"><a href ="">SPECIAL COMMERCIAL CODE</a></ul>
-     <ul class ="footer-list"><a href ="">PRIVACY POLICY</a></ul>
-    </wrapper>
- </footer>
+<%= render 'footer'%>
+
 </body>
 <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
 <%= javascript_include_tag "stylesheet.js" %>

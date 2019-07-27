@@ -5,11 +5,13 @@ class GInfosController < ApplicationController
   # GET /g_infos.json
   def index
     @g_infos = GInfo.all
+    @g_info = GInfo.find_by(id: params[:id])
   end
 
   # GET /g_infos/1
   # GET /g_infos/1.json
   def show
+    @g_info = GInfo.find_by(id: params[:id])
   end
 
   # GET /g_infos/new
@@ -19,6 +21,7 @@ class GInfosController < ApplicationController
 
   # GET /g_infos/1/edit
   def edit
+    @g_info = GInfo.find_by(id: params[:id])
   end
 
   # POST /g_infos

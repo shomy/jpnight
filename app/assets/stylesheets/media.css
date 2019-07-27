@@ -110,8 +110,13 @@ h1 {
   margin-top: 70px;
 }
 
-h3 span {
+h3 span, .h3media {
   font-size: 20px;
+}
+
+.radio-form {
+  font-size: 15px;
+  width: 100%;
 }
 
 .btn-one {
@@ -186,7 +191,7 @@ footer {
 }
 
 
-#content, .chat-wrapper, .logout-form, .company-profile {
+.chat-wrapper, .logout-form, .company-profile {
   padding: 10px;
 }
 
@@ -306,6 +311,7 @@ footer ul {
 .circle {
   left: 75%
 }
+
 
 }
 

@@ -1,4 +1,4 @@
-<section class = "regi-form">
+<div class = "regi-form">
   <%= form_with(model: g_info, local: true) do |form| %>
     <% if g_info.errors.any? %>
       <div id="error_explanation">
@@ -12,6 +12,7 @@
       </div>
     <% end %>
 
+ <div class ="back"><%= link_to 'Back', @g_info %></div>
 
  <div class ="myinfo-label"><h4>Please enter your E-mail address.</h4></div>
  <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
@@ -32,7 +33,7 @@
  <%= form.number_field :age, :class => 'myinfo', :placeholder => "Age" %>
 
  <div class ="myinfo-label"><h4>Please choice your Sex</h4></div>
- 
+
 
    <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
  <label class ="upload-btn" for ="img2">
@@ -40,9 +41,9 @@
   <input type="file" id= "img2">
  </label>
 
- <div class ="myinfo-wrapper">　
-  <%= form.submit :class => 'proceed-btn', :value => 'proceed' %>
+<%= form.submit :class => 'proceed-btn', :value => 'proceed' %>
 
-</div>
+<div class ="back"><%= link_to 'Back', @g_info %></div>
+
 <%end%>
-</section>
+</div>

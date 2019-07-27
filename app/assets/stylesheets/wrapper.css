@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
+
+
 .top-wrapper {
+  top: -50px;
   width: 100%;
   height: 500px;
   background-image: -webkit-linear-gradient(-225deg,rgba(53, 165, 247, 0.58) 20%, rgba(183, 33, 255, 0.7) 90%), url("topimage.jpg");
@@ -152,7 +155,7 @@
 
 }
 
-.login-form, .regi-form, #content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
+.login-form, .regi-form, .content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
   width: 90%;
   background-color: rgb(230, 236, 240);
   margin: 0 auto 20px;
@@ -173,14 +176,6 @@
 }
 .logout-form {
   margin: 40px auto 35px;
-}
-
-#asaguide {
-  margin: 0 auto;
-}
-
-#asaguest {
-  margin: 0 auto;
 }
 
 .mypage-head {
@@ -208,19 +203,15 @@
   vertical-align: middle;
   margin: 15px;
   position: relative;
-  z-index: 100;
 }
 
 .myinfo-wrapper {
-  margin-top: 70px;
-  margin: 0 auto;
   width: 90%;
+  margin: 0 auto;
   text-align: center;
   border-bottom-color: white;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  z-index: 100;
-  box-sizing: border-box;
 }
 
 .chat-index {

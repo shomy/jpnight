@@ -30,9 +30,9 @@
   </ul>
 
 
-  <div id="content">
+  <div class="content">
    <section id= "asaguide"><!-- ガイドのタブ -->
-    <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+    <div class ="edit" ><%= link_to '編集する', edit_g_info_path(@g_info) %></div>
     <div class ="mypage-head">　
      <div class ="myface-wrapper">　
       <img id ="mypageface-icon"></img>
@@ -84,7 +84,7 @@
       <img id ="preview5"></img>
      </div>
     </div>
-    <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+    <div class ="edit"><%= link_to '編集する', edit_g_info_path(@g_info) %></div>
     <label class ="myinfo-label">正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</label>
 
 
@@ -94,9 +94,11 @@
 
  </div>
 
-<%= render 'footer'%>
+
+ <%= render 'footer'%>
 
 </body>
+
 <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
 <%= javascript_include_tag "stylesheet.js" %>
 <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>

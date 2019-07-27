@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
-.upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn, .proceed-btn {
+.upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn, .proceed-btn, .back{
   font-family: 'Quicksand', sans-serif,'Kosugi Maru', sans-serif;
   color: white;
   text-align: center;
@@ -333,7 +333,7 @@
   z-index: 10;
 }
 
-.edit, .logout-btn, .offer-btn {
+.edit, .logout-btn, .offer-btn, .back {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
   width: 100px;
   line-height: 30px;
@@ -364,7 +364,7 @@
   cursor: pointer;
 }
 
-.submit-btn:hover, .edit:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn:hover, .offer-btn:hover, .proceed-btn:hover {
+.submit-btn:hover, .edit:hover, .back:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn:hover, .offer-btn:hover, .proceed-btn:hover {
   background-color: white;
   transition: background-color 1s;
   opacity:0.5;
@@ -680,6 +680,52 @@ input[type="text"]:focus, .myinfo-big:focus {
 }
 
 #treat {
- text-align: right;
- margin: 0;
+  text-align: right;
+  margin: 0;
+}
+
+.radio-form {
+  width: 60%;
+  line-height: 50px;
+  text-align: left;
+  font-size: 26px;
+  font-weight: bolder;
+  margin: 0 auto;
+  color: rgb(164, 179, 239);
+}
+
+.checkbox01-input{
+  display: none;
+}
+.checkbox01-parts{
+  padding-left: 20px;
+  position:relative;
+  margin-right: 20px;
+}
+.checkbox01-parts::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: -10px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: white;
+}
+.checkbox01-input:checked + .checkbox01-parts{
+  color: rgb(46, 204, 113);
+}
+.checkbox01-input:checked + .checkbox01-parts::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid rgb(46, 204, 113);
+  border-right: 3px solid rgb(46, 204, 113);
 }

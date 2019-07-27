@@ -65,7 +65,11 @@ h3 span {
 }
 
 h4 span {
+<<<<<<< HEAD
   color:r　gb(197,253,255);
+=======
+  color:rgb(164, 179, 239);
+>>>>>>> 9eb6eda084cf1c446555ebdf05c1d6d034e3178a
   font-size: 20px;
 }
 

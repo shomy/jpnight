@@ -19,27 +19,51 @@
   <title>JAPANIGHT</title>
 </head>
 
+<<<<<<< HEAD
 <body>
 <% if user_signed_in?%>
  <header>
+=======
+<tbody>
+
+ <header>
+
+>>>>>>> 9eb6eda084cf1c446555ebdf05c1d6d034e3178a
   <tr>
    <div class = "dropdown-header">
     <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
      <div class ="dropdown-content-header">
+<<<<<<< HEAD
       <td><%= link_to 'マイページ設定', g_infos_show_path(@g_info) %></td>
       <a  href="#">チャット</a>
+=======
+      <td><%= link_to '設定編集', edit_g_info_path(@g_infos) %></td>
+      <a  href="#">マッチ</a>
+>>>>>>> 9eb6eda084cf1c446555ebdf05c1d6d034e3178a
       <a  href="#">お知らせ</a>
       <a  href="#">Q&A</a>
       <a  href="#">LOGOUT</a>
      </div>
    </div>
   </tr>
+<<<<<<< HEAD
   <tr>
     <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
     <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
     <ul class ="mypagecommand"><td><%= link_to 'マイページ設定', g_infos_show_path(@g_info) %></td></ul>　<!-- ログインすることでマイページコマンドが表出　-->
     <ul class ="mypagecommand"><a href="">チャット</a></ul>
     <ul class ="mypagecommand"><td><%= link_to 'お知らせ', mypage_news_path(@g_info) %></td></ul>
+=======
+
+
+  <% @g_infos.each do |g_info| %>
+  <tr>
+    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
+    <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
+    <ul class ="mypagecommand"><td><%= link_to '設定編集', edit_g_info_path(@g_infos) %></td></ul>　<!-- ログインすることでマイページコマンドが表出　-->
+    <ul class ="mypagecommand"><a href="">マッチ</a></ul>
+    <ul class ="mypagecommand"><a href="">お知らせ</a></ul>
+>>>>>>> 9eb6eda084cf1c446555ebdf05c1d6d034e3178a
     <ul class ="mypagecommand"><a href="">Q&A</a></ul>
     <ul class ="login"><a href="">LOGOUT</a></ul>　
   </tr>
@@ -66,11 +90,6 @@
 <% end %>
 
 
-</body>
-<%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
-<%= javascript_include_tag "stylesheet.js" %>
-<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
-<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" %>
-<%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js" %>
-<%= javascript_include_tag "http://code.jquery.com/jquery-1.8.1.min.js" %>
+</tbody>
+
 </html>

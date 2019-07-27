@@ -20,14 +20,13 @@
 </head>
 
 <body>
-
+<% if user_signed_in?%>
  <header>
-  <% @g_infos.each do |g_info| %>
   <tr>
    <div class = "dropdown-header">
     <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
      <div class ="dropdown-content-header">
-      <td><%= link_to '設定編集', edit_g_info_path(g_info) %></td>
+      <td><%= link_to '設定編集', edit_g_info_path(@g_infos) %></td>
       <a  href="#">マッチ</a>
       <a  href="#">お知らせ</a>
       <a  href="#">Q&A</a>
@@ -35,20 +34,35 @@
      </div>
    </div>
   </tr>
-  <% end %>
-
-  <% @g_infos.each do |g_info| %>
   <tr>
     <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
     <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
-    <ul class ="mypagecommand"><td><%= link_to '設定編集', edit_g_info_path(g_info) %></td></ul>　<!-- ログインすることでマイページコマンドが表出　-->
+    <ul class ="mypagecommand"><td><%= link_to '設定編集', edit_g_info_path(@g_infos) %></td></ul>　<!-- ログインすることでマイページコマンドが表出　-->
     <ul class ="mypagecommand"><a href="">マッチ</a></ul>
     <ul class ="mypagecommand"><a href="">お知らせ</a></ul>
     <ul class ="mypagecommand"><a href="">Q&A</a></ul>
     <ul class ="login"><a href="">LOGOUT</a></ul>　
   </tr>
-  <% end %>
  </header>
+<% end %>
+<% if current_user == nil %>
+ <header> <!-- loginしたらユーザーネーム、マイページコマンドが表示、デフォルトはloginのみ -->
+  <div class = "dropdown-header">
+   <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul><!-- 携帯サイズでメニューバー表示、ドロップダウン -->
+    <div class ="dropdown-content-header">
+
+     <%= link_to 'SIGNUP' ,new_guide_path %>
+     <a href="#">マイページ</a>
+     <a href="#">SIGNIN</a>
+     <a href="#">MYPAGE</a>
+
+    </div>
+  </div>
+   <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
+   <ul class ="login"><%= link_to 'LOGIN' ,login_url %></ul>
+
+ </header>
+<% end %>
 
 
 </body>

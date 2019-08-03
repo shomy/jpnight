@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  resources :news
+  resources :questions
   resources :g_infos
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :admin_users
   resources :guides
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'g_infos#top'
+  root 'g_infos#index'
 
   get "/login" => "g_infos#login"
   get "/logout" => "g_infos#logout"
@@ -23,4 +25,5 @@ Rails.application.routes.draw do
   get "/guest_regi3" => "g_infos#guest_regi3"
   get "/company" => "g_infos#company"
   get "/delete" => "g_infos#delete"
+  
 end

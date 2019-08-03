@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'g_infos#index'
 
+  get '/g_infos/:id' => 'g_infos#show'
+  get '/g_infos/:id/edit' => 'g_infos#edit'
+
   get "/login" => "g_infos#login"
   get "/logout" => "g_infos#logout"
   get "/mypage" => "g_infos#mypage"

@@ -159,25 +159,6 @@
 
 </section >
 
-<p id="notice"><%= notice %></p>
-
-
-
-    <% @g_infos.each do |g_info| %>
-      <tr>
-        <td><%= g_info.user %></td>
-        <td><%= g_info.name %></td>
-        <td><%= g_info.age %></td>
-        <td><%= g_info.sex %></td>
-        <td><%= link_to 'Show', g_info %></td>
-        <td><%= link_to 'Edit', edit_g_info_path(g_info) %></td>
-        <td><%= link_to 'Destroy', g_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-
-
-
-
 <%= render 'footer'%>
 
 </div>

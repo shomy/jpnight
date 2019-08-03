@@ -12,102 +12,60 @@
   <link rel ="stylesheet" href="/assets/text.css">
   <link rel ="stylesheet" href="/assets/wrapper.css">
   <link rel ="stylesheet" href="/assets/media.css">
-
   <link rel ="stylesheet" href ="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity ="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 　<link href="https://fonts.googleapis.com/css?family=Anton|Monoton|Baloo+Bhaijaan|Baloo+Da|Dancing+Script|Kosugi+Maru|Open+Sans|Poiret+One|Questrial|Quicksand|Reem+Kufi|Righteous|Roboto:300i|Staatliches&display=swap" rel="stylesheet">
 
   <title>JAPANIGHT</title>
 </head>
 
-<<<<<<< HEAD
-<body>
-<% if user_signed_in?%>
- <header>
-=======
 <tbody>
-
+<% if user_signed_in? %>
  <header>
-
->>>>>>> 9eb6eda084cf1c446555ebdf05c1d6d034e3178a
   <tr>
    <div class = "dropdown-header">
     <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
      <div class ="dropdown-content-header">
-<<<<<<< HEAD
       <% @g_infos.each do |g_info| %>
-      <td><%= link_to 'マイページ設定', g_info_path(g_info.id) %></td>
+      <td><%= link_to 'マイページ設定', g_info_path(@g_info) %></td>
       <a  href="#">マッチ</a>
       <td><%= link_to 'お知らせ', news_path %></td>
       <td><%= link_to 'Q&A', questions_path %></td>
       <td><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></td>
       <% end %>
-=======
-<<<<<<< HEAD
-      <td><%= link_to 'マイページ設定', g_infos_show_path(@g_info) %></td>
-      <a  href="#">チャット</a>
-=======
-      <td><%= link_to '設定編集', edit_g_info_path(@g_infos) %></td>
-      <a  href="#">マッチ</a>
->>>>>>> 9eb6eda084cf1c446555ebdf05c1d6d034e3178a
-      <a  href="#">お知らせ</a>
-      <a  href="#">Q&A</a>
-      <a  href="#">LOGOUT</a>
->>>>>>> 4e42b9ab9c23e969d2d4d5cd1e6eb87b0d67b42c
      </div>
    </div>
-  </tr>
-<<<<<<< HEAD
-  <tr>
-    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-    <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
-    <ul class ="mypagecommand"><td><%= link_to 'マイページ設定', g_infos_show_path(@g_info) %></td></ul>　<!-- ログインすることでマイページコマンドが表出　-->
-    <ul class ="mypagecommand"><a href="">チャット</a></ul>
-    <ul class ="mypagecommand"><td><%= link_to 'お知らせ', mypage_news_path(@g_info) %></td></ul>
-=======
+   <ul class ="logo"><a href="/">JAPA<span>N</span>IGHT</a></ul>
+   <% @g_infos.each do |g_info| %>
+   <ul class ="mypagecommand"><%= link_to 'マイページ設定', g_infos_show_path(@g_info) %></ul>
+   <ul ul class ="mypagecommand"><a  href="#">チャット</a></ul>
+   <ul ul class ="mypagecommand"><%= link_to '設定編集', edit_g_info_path(@g_infos) %></ul>
+   <ul class ="mypagecommand"><a  href="#">マッチ</a></ul>
+   <ul class ="mypagecommand"><a  href="#">お知らせ</a></ul>
+   <ul class ="mypagecommand"><a  href="#">Q&A</a></ul>
+   <ul class ="mypagecommand"><a  href="#">LOGOUT</a></ul>
+   <% end %>
 
-
-  <% @g_infos.each do |g_info| %>
-  <tr>
-    <% @g_infos.each do |g_info| %>
-    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-    <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
-    <ul class ="mypagecommand"><td><%= link_to 'マイページ設定', g_info_path(g_info.id) %></td></ul>　<!-- ログインすることでマイページコマンドが表出　-->
-    <ul class ="mypagecommand"><a href="">マッチ</a></ul>
-<<<<<<< HEAD
-    <ul class ="mypagecommand"><td><%= link_to 'お知らせ', news_path %></td></ul>
-    <ul class ="mypagecommand"><td><%= link_to 'Q&A', questions_path %></td></ul>
-    <ul class ="login"><td><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></td></ul>
-    <% end %>
-=======
-    <ul class ="mypagecommand"><a href="">お知らせ</a></ul>
->>>>>>> 9eb6eda084cf1c446555ebdf05c1d6d034e3178a
-    <ul class ="mypagecommand"><a href="">Q&A</a></ul>
-    <ul class ="login"><a href="">LOGOUT</a></ul>　
->>>>>>> 4e42b9ab9c23e969d2d4d5cd1e6eb87b0d67b42c
   </tr>
  </header>
 <% end %>
 
 <% if current_user == nil %>
- <header> <!-- loginしたらユーザーネーム、マイページコマンドが表示、デフォルトはloginのみ -->
+ <header>
+  <tr>
+  <ul class ="logo"><a href="/">JAPA<span>N</span>IGHT</a></ul>
   <div class = "dropdown-header">
-   <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul><!-- 携帯サイズでメニューバー表示、ドロップダウン -->
+   <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
     <div class ="dropdown-content-header">
-
      <%= link_to 'SIGNUP' ,new_guide_path %>
      <a href="#">マイページ</a>
      <a href="#">SIGNIN</a>
      <a href="#">MYPAGE</a>
-
     </div>
   </div>
-   <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-   <ul class ="login"><%= link_to 'LOGIN' ,login_url %></ul>
-
+  <ul class ="login"><%= link_to 'LOGIN' ,login_url %></ul>
+  </tr>
  </header>
 <% end %>
-
-
 </tbody>
 
 </html>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'g_infos#index'
 
+  get "/" => "g_infos#index"
   get '/g_infos/:id' => 'g_infos#show'
   get '/g_infos/:id/edit' => 'g_infos#edit'
 
@@ -28,5 +29,5 @@ Rails.application.routes.draw do
   get "/guest_regi3" => "g_infos#guest_regi3"
   get "/company" => "g_infos#company"
   get "/delete" => "g_infos#delete"
-  
+
 end

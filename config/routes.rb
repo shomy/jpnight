@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   get "/" => "g_infos#index"
   get '/g_infos/:id' => 'g_infos#show'
   get '/g_infos/:id/edit' => 'g_infos#edit'
+  get "/login" => "devise#new"
 
-  get "/login" => "g_infos#login"
+
   get "/logout" => "g_infos#logout"
   get "/mypage" => "g_infos#mypage"
   get "/mypage_guest" => "g_infos#mypage_guest"

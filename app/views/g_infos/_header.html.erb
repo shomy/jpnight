@@ -3,19 +3,9 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <link rel ="stylesheet" href="/assets/header_footer.css">
-  <link rel ="stylesheet" href="/assets/basic_parts.css">
-  <link rel ="stylesheet" href="/assets/btn_ill_parts.css">
-  <link rel ="stylesheet" href="/assets/text.css">
-  <link rel ="stylesheet" href="/assets/wrapper.css">
-  <link rel ="stylesheet" href="/assets/media.css">
-  <link rel ="stylesheet" href ="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity ="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-　<link href="https://fonts.googleapis.com/css?family=Anton|Monoton|Baloo+Bhaijaan|Baloo+Da|Dancing+Script|Kosugi+Maru|Open+Sans|Poiret+One|Questrial|Quicksand|Reem+Kufi|Righteous|Roboto:300i|Staatliches&display=swap" rel="stylesheet">
 
-  <title>JAPANIGHT</title>
+
+
 </head>
 
 <tbody>
@@ -36,9 +26,9 @@
    </div>
    <ul class ="logo"><a href="/">JAPA<span>N</span>IGHT</a></ul>
    <% @g_infos.each do |g_info| %>
-   <ul class ="mypagecommand"><%= link_to 'マイページ設定', g_infos_show_path(@g_info) %></ul>
+   <ul class ="mypagecommand"><%= link_to 'マイページ設定', g_info_path(@g_info) %></ul>
    <ul ul class ="mypagecommand"><a  href="#">チャット</a></ul>
-   <ul ul class ="mypagecommand"><%= link_to '設定編集', edit_g_info_path(@g_infos) %></ul>
+   <ul ul class ="mypagecommand"><%= link_to '設定編集', edit_g_info_path(@g_info) %></ul>
    <ul class ="mypagecommand"><a  href="#">マッチ</a></ul>
    <ul class ="mypagecommand"><a  href="#">お知らせ</a></ul>
    <ul class ="mypagecommand"><a  href="#">Q&A</a></ul>

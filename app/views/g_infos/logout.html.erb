@@ -1,52 +1,13 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <link rel ="stylesheet" href="assets/header_footer.css">
-  <link rel ="stylesheet" href="assets/basic_parts.css">
-  <link rel ="stylesheet" href="assets/btn_ill_parts.css">
-  <link rel ="stylesheet" href="assets/text.css">
-  <link rel ="stylesheet" href="assets/wrapper.css">
-  <link rel ="stylesheet" href="assets/media.css">
-
-  <link rel ="stylesheet" href ="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity ="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-　<link href="https://fonts.googleapis.com/css?family=Anton|Monoton|Baloo+Bhaijaan|Baloo+Da|Dancing+Script|Kosugi+Maru|Open+Sans|Poiret+One|Questrial|Quicksand|Reem+Kufi|Righteous|Roboto:300i|Staatliches&display=swap" rel="stylesheet">
-
-  <title>JAPANIGHT</title>
-</head>
-
 <body>
 
- <header>
-   <div class = "dropdown-header">
-    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
-     <div class ="dropdown-content-header">
-      <a  href="#">設定編集</a>
-      <a  href="#">マッチ</a>
-      <a  href="#">お知らせ</a>
-      <a  href="#">Q&A</a>
-      <a  href="#">LOGOUT</a>
-     </div>
-   </div>
-
-    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
-    <ul class ="header-username"><a href ="">Mocci</a></ul>　<!-- ログインすることでユーザー名が表出　-->
-    <ul class ="mypagecommand"><a href="">設定編集</a></ul>　<!-- ログインすることでマイページコマンドが表出　-->
-    <ul class ="mypagecommand"><a href="">マッチ</a></ul>
-    <ul class ="mypagecommand"><a href="">お知らせ</a></ul>
-    <ul class ="mypagecommand"><a href="">Q&A</a></ul>
-    <ul class ="login"><a href="">LOGOUT</a></ul>　
-
- </header>
 
  <form name="Logout" method="post" action="/cgi-bin/Logout.cgi">
   <section class = "logout-form">
    <h4>ログアウトしますか?</h4>
-   <input type="submit" value="LOGOUT" class="logout-btn">
+   <btn class="logout-btn"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %><btn>
   </section>
  </form>
 

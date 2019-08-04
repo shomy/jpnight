@@ -22,6 +22,7 @@
     margin: 130px auto 30px;
     padding: 15px;
     box-sizing: border-box;
+    z-index: 9999;
     }
 
   .lead4guide {

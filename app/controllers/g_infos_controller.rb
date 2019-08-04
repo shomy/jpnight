@@ -6,8 +6,6 @@ class GInfosController < ApplicationController
   def index
     @g_infos = GInfo.all
 
-    @g_info = GInfo.find(params[:id])
-
   end
 
   # GET /g_infos/1

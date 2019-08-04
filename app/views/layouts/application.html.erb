@@ -26,30 +26,34 @@
 </head>
 
 <tbody>
+<div class ="wrap">
 <% if user_signed_in? %>
  <header>
   <tr>
    <div class = "dropdown-header">
     <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
      <div class ="dropdown-content-header">
+      <% if @g_infos.present? %>
       <% @g_infos.each do |g_info| %>
-      <td><%= link_to 'マイページ設定', g_info_path(@g_info) %></td>
+      <td><%= link_to 'マイページ設定', g_info_path(g_info.id) %></td>
       <a  href="#">マッチ</a>
-      <td><%= link_to 'お知らせ', news_path %></td>
-      <td><%= link_to 'Q&A', questions_path %></td>
+      <td></td>
+      <td></td>
       <td><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></td>
+      <% end %>
       <% end %>
      </div>
    </div>
    <ul class ="logo"><a href="/">JAPA<span>N</span>IGHT</a></ul>
+   <% if @g_infos.present? %>
    <% @g_infos.each do |g_info| %>
-   <ul class ="mypagecommand"><%= link_to 'マイページ設定', g_info_path(@g_info) %></ul>
+   <ul class ="mypagecommand"><%= link_to 'マイページ設定', g_info_path(g_info.id) %></ul>
    <ul ul class ="mypagecommand"><a  href="#">チャット</a></ul>
-   <ul ul class ="mypagecommand"><%= link_to '設定編集', edit_g_info_path(@g_info) %></ul>
    <ul class ="mypagecommand"><a  href="#">マッチ</a></ul>
    <ul class ="mypagecommand"><a  href="#">お知らせ</a></ul>
    <ul class ="mypagecommand"><a  href="#">Q&A</a></ul>
-   <ul class ="mypagecommand"><a  href="#">LOGOUT</a></ul>
+   <ul class ="mypagecommand"><a  href="/logout">LOGOUT</a></ul>
+   <% end %>
    <% end %>
   </tr>
  </header>
@@ -68,7 +72,7 @@
      <a href="#">MYPAGE</a>
     </div>
   </div>
-  <ul class ="login"><%= link_to 'LOGIN' ,login_url %></ul>
+  <ul class ="login"><%= link_to 'LOGIN' ,'http://localhost:3000/users/sign_in' %></ul>
   </tr>
  </header>
 <% end %>
@@ -89,6 +93,7 @@
    </wrapper>
 </footer>
 
+</div>
 </tbody>
 <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
 <%= javascript_include_tag "stylesheet.js" %>

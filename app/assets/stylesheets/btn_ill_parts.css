@@ -333,11 +333,11 @@
   z-index: 10;
 }
 
-.edit, .logout-btn, .offer-btn, .back {
+.edit, .offer-btn, .back, .proceed-btn,.login-btn, .logout-btn {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
-  width: 100px;
+  width: 120px;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 17px;
   color: white;
   margin: 30px auto;
   padding: 5px;
@@ -364,7 +364,7 @@
   cursor: pointer;
 }
 
-.submit-btn:hover, .edit:hover, .back:hover, .upload-btn:hover, .chat-btn:hover, .logout-btn:hover, .offer-btn:hover, .proceed-btn:hover {
+.submit-btn:hover, .edit:hover, .back:hover, .upload-btn:hover, .chat-btn:hover, .login-btn:hover, .logout-btn:hover, .offer-btn:hover, .proceed-btn:hover {
   background-color: white;
   transition: background-color 1s;
   opacity:0.5;
@@ -557,18 +557,19 @@ input[type="text"]:focus, .myinfo-big:focus {
   color: dodgerBlue;
 }
 
-.submit-btn, .logout-btn {
+.submit-btn, ,.login-btn, .logout-btn {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
-  width: 100px;
+  width: 120px;
   height: 50px;
-  font-size: 20px;
+  font-size: 17px;
   color: white;
+  padding: 5px;
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%));
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%);
   border-radius: 5em;
 }
 
-.logout-btn {
+.login-btn, .logout-btn {
   width: 150px;
 }
 

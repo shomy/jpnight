@@ -317,7 +317,8 @@ footer ul {
 @media (max-width: 370px) {
 
 .lead {
-  margin: 40px auto 5px;
+  margin: 80px auto 5px;
+  font-size: 20px;
 }
 
 .myscene-wrapper {

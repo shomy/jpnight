@@ -1,5 +1,5 @@
 Pace.on('done', function(){
-  $('.wrap').fadeIn(500);
+  $('.wrap').fadeIn(400);
 });
 
 

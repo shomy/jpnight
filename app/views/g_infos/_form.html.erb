@@ -21,28 +21,69 @@
  <%= form.password_field :password, :class => 'myinfo', :placeholder => 'Password' %>
 
  <div class ="myinfo-label"><h4>Please enter your Password,again.</h4></div>
- <%= form.password_field :repassword, :class => 'myinfo', :placeholder => 'Password' %>
+ <%= form.text_field :repassword, :class => 'myinfo', :placeholder => 'Password' %>
 
  <div class ="myinfo-label"><h4>Please enter your Name</h4></div>
  <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
 
  <div class ="myinfo-label"><h4>Please enter your Phone Number</h4></div>
- <%= form.telephone_field :number, :class => 'myinfo', :placeholder => 'Phone Number' %>
+ <%= form.text_field :number, :class => 'myinfo', :placeholder => 'Phone Number' %>
 
  <div class ="myinfo-label"><h4>Please enter your Age</h4></div><!-- 18歳以下は登録不可制御-->
- <%= form.number_field :age, :class => 'myinfo', :placeholder => "Age" %>
+ <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
 
  <div class ="myinfo-label"><h4>Please choice your Sex</h4></div>
 
 
-   <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
+ <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
  <label class ="upload-btn" for ="img2">
   Uproad
-  <input type="file" id= "img2">
  </label>
 
-<%= form.submit :class => 'proceed-btn', :value => 'proceed' %>
+ <div class ="myinfo-label">ひと言紹介文(　文字)</div>
+ <input type = "text" class ="myinfo" placeholder="ゲストの検索画面に表示されます"></input>
 
+ <div class ="myinfo-label">紹介文（　文字）</div>
+ <textarea type = "text" class ="myinfo-big" placeholder="詳しい場所やオススメの店、注意事項などをご記入ください"></textarea>
+
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview2"></img>
+  <div class = "face-message">風景写真をアップロードしてください</div>
+  <label class ="upload-btn" for ="img2">
+   ファイルを選択
+   <input type="file" id= "img2">
+  </label>
+ </div>
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview3"></img>
+  <div class = "face-message">風景写真をアップロードしてください</div>
+  <label class ="upload-btn" for ="img3">
+   ファイルを選択
+   <input type="file" id= "img3">
+  </label>
+ </div>
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview4"></img>
+  <div class = "face-message">風景写真をアップロードしてください</div>
+  <label class ="upload-btn" for ="img4">
+   ファイルを選択
+   <input type="file" id= "img4">
+  </label>
+ </div>
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview5"></img>
+  <div class = "face-message">風景写真をアップロードしてください</div>
+  <label class ="upload-btn" for ="img5">
+   ファイルを選択
+   <input type="file" id= "img5">
+  </label>
+ </div>
+
+<div><%= form.submit :class => 'proceed-btn', :value => 'Update' %></div>
 <div class ="back"><%= link_to 'Back', @g_info %></div>
 
 <%end%>

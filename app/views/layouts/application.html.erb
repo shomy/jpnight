@@ -19,7 +19,7 @@
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 
 <title>JAPANIGHT</title>
 
@@ -30,31 +30,31 @@
 <% if user_signed_in? %>
  <header>
   <tr>
-   <div class = "dropdown-header">
-    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
-     <div class ="dropdown-content-header">
-      <% if @g_infos.present? %>
-      <% @g_infos.each do |g_info| %>
-      <td><%= link_to 'マイページ設定', g_info_path(g_info.id) %></td>
-      <a  href="#">マッチ</a>
-      <td></td>
-      <td></td>
-      <td><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></td>
-      <% end %>
-      <% end %>
-     </div>
-   </div>
-   <ul class ="logo"><a href="/">JAPA<span>N</span>IGHT</a></ul>
+
+
    <% if @g_infos.present? %>
-   <% @g_infos.each do |g_info| %>
-   <ul class ="mypagecommand"><%= link_to 'マイページ設定', g_info_path(g_info.id) %></ul>
-   <ul ul class ="mypagecommand"><a  href="#">チャット</a></ul>
-   <ul class ="mypagecommand"><a  href="#">マッチ</a></ul>
-   <ul class ="mypagecommand"><a  href="#">お知らせ</a></ul>
-   <ul class ="mypagecommand"><a  href="#">Q&A</a></ul>
-   <ul class ="mypagecommand"><a  href="/logout">LOGOUT</a></ul>
-   <% end %>
-   <% end %>
+    <% @g_infos.each do |g_info| %>
+      <div class = "dropdown-header">
+        <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
+        <div class ="dropdown-content-header">
+          <td><%= link_to 'Mypage', g_info_path(g_info.id) %></td>
+          <a  href="#">Chat</a>
+          <td><%= link_to 'News', news_path(g_info.id) %></td>
+          <td><%= link_to 'Q&A', questions_path %></td>
+          <td><%= link_to "LOGOUT", 'http://localhost:3000/users/sign_out' %></td>
+        </div>
+      </div>
+   <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
+
+      <ul class ="header-username"><%= g_info.name %></ul>
+      <ul class ="mypagecommand"><%= link_to 'Mypage', g_info_path(g_info.id) %></ul>
+      <ul ul class ="mypagecommand"><a  href="#">Chat</a></ul>
+      <ul class ="mypagecommand"><%= link_to 'News', news_path(g_info.id) %></ul>
+      <ul class ="mypagecommand"><%= link_to 'Q&A', questions_path %></ul>
+      <ul class ="mypagecommand"><%= link_to "LOGOUT", 'http://localhost:3000/users/sign_out' %></ul>
+    <% end %>
+  <% end %>
+
   </tr>
  </header>
 <% end %>
@@ -62,14 +62,12 @@
 <% if current_user == nil %>
  <header>
   <tr>
-  <ul class ="logo"><a href="/">JAPA<span>N</span>IGHT</a></ul>
+  <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
   <div class = "dropdown-header">
    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
     <div class ="dropdown-content-header">
      <%= link_to 'SIGNUP' ,new_guide_path %>
-     <a href="#">マイページ</a>
-     <a href="#">SIGNIN</a>
-     <a href="#">MYPAGE</a>
+     <a href="#">LOGIN</a>
     </div>
   </div>
   <ul class ="login"><%= link_to 'LOGIN' ,'http://localhost:3000/users/sign_in' %></ul>

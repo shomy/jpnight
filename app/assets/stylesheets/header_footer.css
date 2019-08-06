@@ -34,7 +34,7 @@ header {
 }
 
 .mypagecommand {
-  font-size: 20px;
+  font-size: 17px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -50,10 +50,10 @@ header {
 
 .logo {
   font-family: 'Monoton', cursive;
-  font-size: 36px;
+  font-size: 20px;
   text-align: left;
   color: white;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   margin: 0;
   height: 50px;
 }
@@ -70,6 +70,10 @@ header {
   margin: 0 auto;
   margin-right: 10px;
   padding: 0 10px;
+}
+
+.dropdown-header {
+  display: none;
 }
 
 .responsive-menu {

@@ -14,7 +14,7 @@
 
   <div class="content">
    <section id= "asaguide"><!-- ガイドのタブ -->
-    <div class ="edit" ><%= link_to '編集する', edit_g_info_path(@g_info) %></div>
+    <div class ="edit" ><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
     <div class ="mypage-head">　
      <div class ="myface-wrapper">　
       <img id ="mypageface-icon"></img>
@@ -25,31 +25,31 @@
 
     <div class ="myinfo-wrapper">
 
-     <div class ="myinfo-label">メールアドレス</div>
+     <div class ="myinfo-label">Email</div>
      <div class ="myinfo"></div>    　
 
-     <div class ="myinfo-label">名前</div>
+     <div class ="myinfo-label">Name</div>
      <div class ="myinfo"><%= @g_info.name %></div>
 
-     <div class ="myinfo-label">性別</div>
+     <div class ="myinfo-label">Sex</div>
      <div class ="myinfo"><%= @g_info.sex %></div>
 
-     <div class ="myinfo-label">年齢</div>
+     <div class ="myinfo-label">Age</div>
      <div class ="myinfo"><%= @g_info.age %></div>
 
-     <div class ="myinfo-label">電話番号</div>
+     <div class ="myinfo-label">Tel</div>
      <div class ="myinfo"></div>
 
-     <div class ="myinfo-label">案内できる場所</div>
+     <div class ="myinfo-label">Where you can guide</div>
      <div class ="myinfo">00000000000</div>
 
-     <div class ="myinfo-label">使用可能言語</div>
+     <div class ="myinfo-label">Language</div>
      <div class ="myinfo">00000000000</div>
 
-     <div class ="myinfo-label">ひと言紹介文(　文字)</div>
+     <div class ="myinfo-label">One message(　)</div>
      <div class ="myinfo">00000000000</div>
 
-     <div class ="myinfo-label">紹介文（　文字）</div>
+     <div class ="myinfo-label">Introduction（　）</div>
      <div class ="myinfo-big"></div>
 
      <div class ="myscene-wrapper">
@@ -69,8 +69,8 @@
       <img id ="preview5"></img>
      </div>
     </div>
-    <div class ="edit"><%= link_to '編集する', edit_g_info_path(@g_info) %></div>
-    <label class ="myinfo-label">正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</label>
+    <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+    <label class ="myinfo-label"><h4>正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</h4></label>
 
 
    </section>
@@ -78,6 +78,6 @@
   </div>
 
  </div>
-</div> 
+</div>
 </body>
 </html>

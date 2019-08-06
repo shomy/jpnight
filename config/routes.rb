@@ -12,16 +12,18 @@ Rails.application.routes.draw do
   get "/" => "g_infos#index"
   get '/g_infos/:id' => 'g_infos#show'
   get '/g_infos/:id/edit' => 'g_infos#edit'
-  get "/login" => "devise#new"
+  get "/users/sign_in" => "devise/sessions#new"
+  get "/users/sign_out" => "devise/sessions#destroy"
 
 
-  get "/logout" => "g_infos#logout"
-  get "/mypage" => "g_infos#mypage"
+
+
+
   get "/mypage_guest" => "g_infos#mypage_guest"
-  get "/mypage_edit" => "g_infos#mypage_edit"
+
   get "/mypage_chat" => "g_infos#mypage_chat"
   get "/mypage_chatroom" => "g_infos#mypage_chatroom"
-  get "/mypage_news" => "g_infos#mypage_news"
+
   get "/mypage_q" => "g_infos#mypage_q"
   get "/offerpage" => "g_infos#offerpage"
   get "/offerpage_treat" => "g_infos#offerpage_treat"

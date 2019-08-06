@@ -12,9 +12,12 @@ Rails.application.routes.draw do
   get "/" => "g_infos#index"
   get '/g_infos/:id' => 'g_infos#show'
   get '/g_infos/:id/edit' => 'g_infos#edit'
-  get "/users/sign_in" => "devise/sessions#new"
-  get "/users/sign_out" => "devise/sessions#destroy"
 
+  devise_scope :user do
+  get "/login" => "devise/sessions#new"
+  get "/logout" => "devise/sessions#logout"
+  get "/users/sign_out" => "devise/sessions#destroy"
+  end
 
 
 

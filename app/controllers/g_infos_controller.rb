@@ -32,7 +32,8 @@ class GInfosController < ApplicationController
   # POST /g_infos
   # POST /g_infos.json
   def create
-    @g_info = GInfo.new(g_info_params)
+    @g_info = GInfo.new(params.require(:g_info).permit(:email, :password, :name, :number, :age, :sex))
+    @g_info.save
 
     respond_to do |format|
       if @g_info.save

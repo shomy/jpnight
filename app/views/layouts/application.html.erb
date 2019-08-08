@@ -27,12 +27,11 @@
 
 <tbody>
 <div class ="wrap">
-<% if user_signed_in? %>
- <header>
+
+<header>
+ <% if user_signed_in? %>
   <tr>
-
-
-   <% if @g_infos.present? %>
+    <% if @g_infos.present? %>
     <% @g_infos.each do |g_info| %>
       <div class = "dropdown-header">
         <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
@@ -53,16 +52,15 @@
       <ul class ="mypagecommand"><%= link_to 'Q&A', questions_path %></ul>
       <ul class ="mypagecommand"><%= link_to "LOGOUT", 'http://localhost:3000/logout' %></ul>
     <% end %>
-  <% end %>
-
+    <% end %>
   </tr>
- </header>
-<% end %>
+ <% end %>
+</header>
 
-<% if current_user == nil %>
- <header>
+
+<header>
+ <% if current_user == nil %>
   <tr>
-  <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
   <div class = "dropdown-header">
    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
     <div class ="dropdown-content-header">
@@ -70,10 +68,11 @@
      <a href="#">LOGIN</a>
     </div>
   </div>
+  <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
   <ul class ="login"><%= link_to 'LOGIN' ,'http://localhost:3000/login' %></ul>
   </tr>
- </header>
-<% end %>
+ <% end %>
+</header>
 
 <%= yield %>
 

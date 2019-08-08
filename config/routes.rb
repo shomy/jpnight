@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root 'g_infos#index'
 
   get "/" => "g_infos#index"
+  get "/g_infos/new" => "g_infos#new"
   get '/g_infos/:id' => 'g_infos#show'
   get '/g_infos/:id/edit' => 'g_infos#edit'
 
@@ -34,6 +35,6 @@ Rails.application.routes.draw do
   get "/guest_regi2" => "g_infos#guest_regi2"
   get "/guest_regi3" => "g_infos#guest_regi3"
   get "/company" => "g_infos#company"
-  get "/delete" => "g_infos#delete"
+
 
 end

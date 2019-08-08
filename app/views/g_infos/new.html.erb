@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    "header_footer","basic_parts","btn_ill_parts","text","wrapper","media", :media => "all" %>
+</head>
 <tbody>
-
- <%= render 'header'%>
+<div class ="wrap">
 
  <section class ="top-wrapper">
-   <h1 class ="lead">E<span>N</span>JOY JAPA<span>N</span>ESE <span>N</span>IGHT WITH US</h1>
+   <h1 class ="lead">E<span>N</span>JOY JAPA<span>N</span>ESE <span>N</span>IGHT WITH GUIDE</h1>
    <div href="" class ="circle"><span>ALL GUIDES<br>FREE<br>ONLY NOW</span></div>
  </section>
 
- <%= render 'form', g_info: @g_info %>
+ <section class = "regi-form">
+   <%= form_for @g_info do |f| %>
+    <div class ="myinfo-label">Please enter your E-mail address.</div>
+    <%= f.email_field :name, :class => 'myinfo', :placeholder => 'E-mail' %>
+    <div class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</div>
+    <%= f.password_field :password, :class => "myinfo", :placeholder => "Password"%>
+    <div class ="myinfo-label">Please enter your Password,again.</div>
+    <%= f.password_field :repassword, :class => 'myinfo', :placeholder => 'Password' %>
+    <div class ="myinfo-label">Please enter your Name</div>
+    <%= f.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
+    <div class ="myinfo-label">Please enter your Phone Number</div>
+    <%= f.text_field :name, :class => 'myinfo', :placeholder => 'Phone Number' %>
+    <div class ="myinfo-label">Please enter your Age</div>
+    <%= f.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
+    <div class ="myinfo-label">Please choice your Sex</div>
+    <div class ="dropdown"> <!--ドロップダウンリストから選択したら選択したものがテキストエリアに入る仕様で（未実装）-->
+    <button class ="myarea-info">性別を選択</button>
+     <div class ="dropdown-content">
+      <a href="#">男性</a>
+      <a href="#">女性</a>
+      <a href="#">その他</a>
+     </div>
+    </div>
+    <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
+    <label class ="upload-btn" for ="img2">
+    Uproad
+    <input type="file" id= "img2">
+    </label>
+    <br>
+    <br>
+    <%= f.submit "Register as a GEST" , :class => "regi-btn" %>
+    <%= f.submit "Register as a GUIDE", :class => "regi-btn" %>
 
- <%= render 'footer'%>
+   <% end %>
+ </section>
 
- </tbody>
- <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
- <%= javascript_include_tag "stylesheet.js" %>
- <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
- <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" %>
- <%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js" %>
- <%= javascript_include_tag "http://code.jquery.com/jquery-1.8.1.min.js" %>
- </html>
+</div>
+</tbody>
+</html>

@@ -40,10 +40,10 @@ header {
   vertical-align: middle;
   margin: 0 auto;
   padding: 0 10px;
+  position: relative;
 }
 
-
-.mypagecommand:hover, .login:hover {
+.login:hover, .mypagecommand:hover {
   background-color: rgba(255, 255, 255, 0.4);
   transition: background-color 1s;
 }

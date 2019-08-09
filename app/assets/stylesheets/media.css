@@ -5,11 +5,12 @@
 @media (max-width: 1140px) {
 
 .lead {
- width: 95%;
- font-size: 30px;
- line-height: 30px;
- text-align: center;
- margin: 55px auto 10px;
+  width: 70%;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  margin: 50px auto 10px;
+  letter-spacing: 5px;
 }
 
 .lead4guide {

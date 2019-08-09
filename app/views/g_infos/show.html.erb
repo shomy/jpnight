@@ -12,14 +12,12 @@
 <body>
 <div class ="wrap">
 
- <div class="mypage">
-  <ul class="tabs group">
-   <a class="activetab" href="#/asaguide">AS A GUIDE</a>
-   <a class="notactivetab" href="#/asaguest">AS A GUEST</a>
+ <div id="mypage">
+  <ul id="tabsgroup">
+   <a class ="activetab" title ="asaguide" href ="#/asaguide">AS A GUIDE</a>
+   <a class ="notactivetab" title ="asaguest" href ="#/asaguest">AS A GUEST</a>
   </ul>
-
-
-  <div class="content">
+  <div id ="content">
    <section id= "asaguide"><!-- ガイドのタブ -->
     <div class ="edit" ><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
     <div class ="mypage-head">　
@@ -79,12 +77,38 @@
     <div class ="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
     <label class ="myinfo-label"><h4>正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</h4></label>
 
+   <section id= "asaguest">　
+     <div class ="mypage-head">　
+      <div class ="edit">編集する</div>
+      <div class ="myface-wrapper">　
+       <img id ="mypageface-icon"></img>
+      </div>
+      <img src ="/assets/bottle.png" class ="bottle-ill"></img>
+     <div class ="myinfo-wrapper">
+      <img src ="/assets/bottle.png" class ="bottle-ill_l"></img>
 
+
+      <label class ="myinfo-label">名前</label>
+      <div class ="myinfo">000</div>
+
+      <label class ="myinfo-label">性別</label>
+      <div class ="myinfo">00000000000</div>
+
+      <label class ="myinfo-label">年齢</label>
+      <div class ="myinfo">00000000000</div>
+
+      <label class ="myinfo-label">電話番号</label>
+      <div class ="myinfo">00000000000</div>
+
+      <div class ="edit">編集する</div>
+    </div>
+    <label class ="myinfo-label">After the official launch, guide fee (charged guide)function & payment function will be added.</label>
    </section>
 
+   </section>
   </div>
-
  </div>
+
 </div>
 </body>
 </html>

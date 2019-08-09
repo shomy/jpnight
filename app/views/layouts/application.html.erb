@@ -19,8 +19,8 @@
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag "stylesheet.js" %>
 <title>JAPANIGHT</title>
 
 </head>
@@ -28,8 +28,9 @@
 <tbody>
 <div class ="wrap">
 
-<header>
+
  <% if user_signed_in? %>
+ <header>
   <tr>
     <% if @g_infos.present? %>
     <% @g_infos.each do |g_info| %>
@@ -40,7 +41,7 @@
           <a  href="#">Chat</a>
           <td><%= link_to 'News', news_path(g_info.id) %></td>
           <td><%= link_to 'Q&A', questions_path %></td>
-          <td><%= link_to "LOGOUT", 'http://localhost:3000/logout' %></td>
+          <td><%= link_to "LOGOUT", logout_path %></td>
         </div>
       </div>
    <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
@@ -50,16 +51,15 @@
       <ul ul class ="mypagecommand"><a  href="#">Chat</a></ul>
       <ul class ="mypagecommand"><%= link_to 'News', news_path(g_info.id) %></ul>
       <ul class ="mypagecommand"><%= link_to 'Q&A', questions_path %></ul>
-      <ul class ="mypagecommand"><%= link_to "LOGOUT", 'http://localhost:3000/logout' %></ul>
+      <ul class ="mypagecommand"><%= link_to "LOGOUT", logout_path %></ul>
     <% end %>
     <% end %>
   </tr>
+ </header>
  <% end %>
-</header>
 
-
-<header>
  <% if current_user == nil %>
+ <header>
   <tr>
   <div class = "dropdown-header">
    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
@@ -69,10 +69,11 @@
     </div>
   </div>
   <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
-  <ul class ="login"><%= link_to 'LOGIN' ,'http://localhost:3000/login' %></ul>
+  <ul class ="login"><%= link_to 'LOGIN', login_path %></ul>
   </tr>
- <% end %>
 </header>
+ <% end %>
+
 
 <%= yield %>
 
@@ -93,7 +94,6 @@
 </div>
 </tbody>
 <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
-<%= javascript_include_tag "stylesheet.js" %>
 <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
 <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" %>
 <%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js" %>

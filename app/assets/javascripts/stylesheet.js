@@ -3,6 +3,42 @@ Pace.on('done', function(){
 });
 
 
+$(document).on('ready page:load', function(){
+  $('#guide-form').hide();
+  $('#guest-form').hide();
+
+  $('#resi-btn-guide').on('click', function(){
+   $('#common-form').hide();
+   $('#guide-form').show();
+　｝）；
+
+  $('#resi-btn-guest').on('click', function(){
+   $('#common-form').hide();
+   $('#guest-form').show();
+　｝）；
+
+　$('#resiback').on('click', function(){
+    $('#guide-form').hide();
+    $('#guest-form').hide();
+    $('#common-form').show();
+　｝）；
+});
+
+$(document).on ('turbolinks:load', function() {
+    $("#content div").hide(); // Initially hide all content
+    $("#tabsgroup li:first").attr("id","current"); // Activate first tab
+    $("#content div:first").fadeIn(); // Show first tab content
+
+    $('#mypage a').click(function(e) {
+        e.preventDefault();
+        $("#content div").hide(); //Hide all content
+        $("#tabsgroup li").attr("id",""); //Reset id's
+        $(this).parent().attr("#id","current"); // Activate this
+        $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+    });
+})();
+
+
 //ファイルのアップロードとプレビューの処理　同じ処理を4回書いているのでまとめたい（＞もっちー）
 $(function(){
   $('#img1').change(function(e){

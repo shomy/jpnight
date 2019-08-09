@@ -4,17 +4,18 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-
+    @g_infos = GInfo.all
   end
 
   # GET /questions/1
   # GET /questions/1.json
   def show
+    @g_infos = GInfo.all
   end
 
   # GET /questions/new
   def new
-    
+
   end
 
   # GET /questions/1/edit

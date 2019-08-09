@@ -11,19 +11,20 @@ class GInfosController < ApplicationController
   # GET /g_infos/1
   # GET /g_infos/1.json
   def show
-
+    @g_infos = GInfo.all
     @g_info = GInfo.find(params[:id])
 
   end
 
   # GET /g_infos/new
   def new
+    @g_infos = GInfo.all
     @g_info = GInfo.new
   end
 
   # GET /g_infos/1/edit
   def edit
-
+    @g_infos = GInfo.all
     @g_info = GInfo.find(params[:id])
 
 
@@ -73,6 +74,7 @@ class GInfosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_g_info
+      @g_infos = GInfo.all
       @g_info = GInfo.find(params[:id])
     end
 

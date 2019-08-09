@@ -155,7 +155,7 @@
 
 }
 
-.login-form, .regi-form, .content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
+.login-form, .regi-form, #content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
   width: 90%;
   background-color: rgb(230, 236, 240);
   margin: 0 auto 20px;
@@ -266,4 +266,8 @@
 .news:hover {
   background: linear-gradient(to right, rgba(240, 204, 255, 0.5), rgba(204, 255, 213, 0.5));
   cursor: pointer;
+}
+
+#tabsgroup {
+  margin: 0 2%;
 }

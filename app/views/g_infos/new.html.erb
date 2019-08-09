@@ -6,6 +6,7 @@
 <%= csp_meta_tag %>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag    "header_footer","basic_parts","btn_ill_parts","text","wrapper","media", :media => "all" %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <tbody>
 <div class ="wrap">
@@ -17,6 +18,7 @@
 
  <section class = "regi-form">
    <%= form_for @g_info do |f| %>
+   <section id ="common-form">
     <div class ="myinfo-label">Please enter your E-mail address.</div>
     <%= f.email_field :name, :class => 'myinfo', :placeholder => 'E-mail' %>
     <div class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</div>
@@ -45,12 +47,66 @@
     </label>
     <br>
     <br>
-    <%= f.submit "Register as a GEST" , :class => "regi-btn" %>
-    <%= f.submit "Register as a GUIDE", :class => "regi-btn" %>
+    <btn id  ="regi-btn-guest">Register as a GEST</btn>
+    <btn id ="regi-btn-guide">Register as a GUIDE</btn>
+   </section>
 
+   <section id ="guide-form">
+     <div class = "myinfo-label">One message(max 700 words)</div>
+     <%= f.text_field :name, :class =>'myinfo', :placeholder =>'it will be shown in search page of guest' %>
+
+     <div class ="myinfo-label">Introduction(max 700 words)</div>
+     <%= f.text_field :name, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.' %>
+
+     <div class ="myscene-wrapper">
+      <%= f.text_field :name, :class =>'guide-area-tag-input', :placeholder =>'#' %>
+      <img id ="preview2"></img>
+      <div class = "face-message">Please upload a landscape photo</div>
+      <label class ="upload-btn" for ="img2">
+       Upload
+       <input type="file" id= "img2">
+      </label>
+     </div>
+
+     <div class ="myscene-wrapper">
+      <%= f.text_field :name, :class =>'guide-area-tag-input', :placeholder =>'#' %>
+      <img id ="preview3"></img>
+      <div class = "face-message">Please upload a landscape photo</div>
+      <label class ="upload-btn" for ="img3">
+       Upload
+       <input type="file" id= "img3">
+      </label>
+     </div>
+     <div class ="myscene-wrapper">
+      <%= f.text_field :name, :class =>'guide-area-tag-input', :placeholder =>'#' %>
+      <img id ="preview4"></img>
+      <div class = "face-message">Please upload a landscape photo</div>
+      <label class ="upload-btn" for ="img4">
+       Upload
+       <input type="file" id= "img4">
+      </label>
+     </div>
+     <div class ="myscene-wrapper">
+      <%= f.text_field :name, :class =>'guide-area-tag-input', :placeholder =>'#' %>
+      <img id ="preview5"></img>
+      <div class = "face-message">Please upload a landscape photo</div>
+      <label class ="upload-btn" for ="img5">
+       Upload
+       <input type="file" id= "img5">
+      </label>
+     </div>
+     <div id ="resiback">Back</div>
+   </section>
+
+   <section id ="guest-form">
+   </section>
+
+
+    <%= link_to f.submit :class => "regi-btn" %>
    <% end %>
  </section>
 
 </div>
 </tbody>
+
 </html>

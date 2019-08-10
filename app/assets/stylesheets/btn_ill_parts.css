@@ -100,7 +100,7 @@
 .pointer {
   position: absolute;
   left: 40px;
-  top: -60px;
+  top: -75px;
   color: rgba(8, 12, 214, 0.5);
   transform: rotate(-2deg);
   font-size: 20px;

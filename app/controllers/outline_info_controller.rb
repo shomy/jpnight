@@ -5,6 +5,11 @@ class OutlineInfoController < ApplicationController
 
   end
 
+  def company
+    @g_infos = GInfo.all
+
+  end
+
   def contact
     @g_infos = GInfo.all
 
@@ -18,11 +23,14 @@ class OutlineInfoController < ApplicationController
   def team
     @g_infos = GInfo.all
 
-  
+  end
+
+  def code
+    @g_infos = GInfo.all
 
   end
 
-  def company
+  def policy
     @g_infos = GInfo.all
 
   end

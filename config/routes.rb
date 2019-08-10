@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   get "/g_infos/new" => "g_infos#new"
   get '/g_infos/:id' => 'g_infos#show'
   get '/g_infos/:id/edit' => 'g_infos#edit'
+  get '/outline_info/company' => 'outline_info#company'
+  get '/outline_info/help' => 'outline_info#help'
+  get '/outline_info/code' => 'outline_info#code'
+  get '/outline_info/philosophy' => 'outline_info#philosophy'
+  get '/outline_info/policy' => 'outline_info#policy'
+  get '/outline_info/team' => 'outline_info#team'
+  get '/outline_info/contact' => 'outline_info#contact'
 
   devise_scope :user do
   get "/login" => "devise/sessions#new"

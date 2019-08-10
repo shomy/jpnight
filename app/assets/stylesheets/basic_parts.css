@@ -9,7 +9,7 @@ body {
    margin: 0;
    padding: 0;
    overflow-x: hidden;
-   background-color: rgb(110, 222, 239);
+   background-color: #ADD8E6;
 }
 
 a {
@@ -51,11 +51,11 @@ h2 span {
 h3 span {
   width: 95%;
   font-weight: lighter;
-  font-size: 50px;
-  color: rgb(164, 179, 239);
+  font-size: 20px;
+  color: rgba(8, 12, 214, 0.5);
   letter-spacing: 5px;
-  border-top: solid 2px white;
-  border-bottom: solid 2px white;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
   padding: 15px;
   margin: 10px auto;
   display: inline-block;
@@ -65,8 +65,10 @@ h3 span {
 }
 
 h4 span {
-  color:rgb(38,87,235);
-  font-size: 26px;
+
+  color:r　gb(197,253,255);
+  color:rgb(164, 179, 239);
+  font-size: 20px;
 }
 
 footer ul {
@@ -77,8 +79,7 @@ line-height: 30px;
   width: 330px;
   height: 230px;
   margin-bottom: 5px;
-  border: 1px solid;
-  border-color: rgb(164, 179, 239);
+  border: solid 1px rgb(164, 179, 239);
   background-color: rgb(236, 236, 236);
   background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
   -webkit-background-size: 20px 20px;

@@ -5,11 +5,12 @@
 @media (max-width: 1140px) {
 
 .lead {
- width: 95%;
- font-size: 30px;
- line-height: 30px;
- text-align: center;
- margin: 55px auto 40px;
+  width: 70%;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  margin: 50px auto 10px;
+  letter-spacing: 5px;
 }
 
 .lead4guide {
@@ -57,16 +58,14 @@
   font-size: 26px;
 }
 
-.mypagecommand {
+.mypagecommand, .login {
   display: none;
 }
 
-.login {
-  display: none;
-}
-.responsive-menu {
+.dropdown-header, .responsive-menu {
   display: inline-block;
 }
+
 
 }
 
@@ -74,12 +73,11 @@
 
 header {
   text-align: left;
-  justify-content: flex-start;
 }
 
 .logo {
   text-align: center;
-  font-size: 20px;
+  font-size: 17px;
   width: 180px;
   letter-spacing: 5px;
   padding: 0;
@@ -120,14 +118,17 @@ h3 span, .h3media {
 }
 
 .btn-one {
-  width: 60%;
-  margin:3px;
+  width: 50%;
+  margin: 10px;
+  font-size: 20px;
+  line-height: 45px;
+  height: 45px;
 }
 
 .circle, .circle-b {
   width: 70px;
   height: 70px;
-  top: 335px;
+  top: 300px;
 }
 
 .circle-b {
@@ -138,6 +139,7 @@ h3 span, .h3media {
 .circle span, .circle-b span {
   width: 70px;
   font-size: 13px;
+  line-height: 14px;
 }
 
 .wine-top-ill {
@@ -145,8 +147,9 @@ h3 span, .h3media {
 }
 
 .pointer {
-  font-size: 20px;
-  left: 20px;
+  font-size: 15px;
+  left: 0px;
+  letter-spacing: 3px;
 }
 
 .bottle_w_l, .bottle_w_r, .bottle-ill, .bottle-ill_l {
@@ -284,10 +287,12 @@ footer {
    text-align: center;
 }
 
-
+.guide-area-tag {
+  font-size: 15px;
+}
 
 .area-tag, .area-search {
-  font-size: 20px;
+  font-size: 15px;
   margin: 10px auto;
 }
 
@@ -318,7 +323,8 @@ footer ul {
 @media (max-width: 370px) {
 
 .lead {
-  margin: 20px auto 5px;
+  margin: 30px auto 5px;
+  font-size: 20px;
 }
 
 .myscene-wrapper {

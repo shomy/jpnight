@@ -14,36 +14,75 @@
 
  <div class ="back"><%= link_to 'Back', @g_info %></div>
 
- <div class ="myinfo-label"><h4>Please enter your E-mail address.</h4></div>
- <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
-
- <div class ="myinfo-label"><h4>Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</h4></div>
- <%= form.password_field :password, :class => 'myinfo', :placeholder => 'Password' %>
-
- <div class ="myinfo-label"><h4>Please enter your Password,again.</h4></div>
- <%= form.password_field :repassword, :class => 'myinfo', :placeholder => 'Password' %>
-
- <div class ="myinfo-label"><h4>Please enter your Name</h4></div>
- <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
-
- <div class ="myinfo-label"><h4>Please enter your Phone Number</h4></div>
- <%= form.telephone_field :number, :class => 'myinfo', :placeholder => 'Phone Number' %>
-
- <div class ="myinfo-label"><h4>Please enter your Age</h4></div><!-- 18歳以下は登録不可制御-->
- <%= form.number_field :age, :class => 'myinfo', :placeholder => "Age" %>
-
- <div class ="myinfo-label"><h4>Please choice your Sex</h4></div>
-
-
-   <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
+ <div class ="myinfo-label"><h3>Please upload your face picture.</h3></div>
  <label class ="upload-btn" for ="img2">
   Uproad
-  <input type="file" id= "img2">
  </label>
 
-<%= form.submit :class => 'proceed-btn', :value => 'proceed' %>
+ <div class ="myinfo-label">Please enter your E-mail address.</div>
+ <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
 
-<div class ="back"><%= link_to 'Back', @g_info %></div>
+ <div class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</div>
+ <%= form.password_field :password, :class => 'myinfo', :placeholder => 'Password' %>
+
+ <div class ="myinfo-label">Please enter your Password,again.</div>
+ <%= form.password_field :repassword, :class => 'myinfo', :placeholder => 'Password' %>
+
+ <div class ="myinfo-label">Please enter your Name</div>
+ <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
+
+ <div class ="myinfo-label">Please enter your Phone Number</div>
+ <%= form.text_field :tel, :class => 'myinfo', :placeholder => 'Phone Number' %>
+
+ <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
+ <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
+
+ <div class ="myinfo-label">Please choice your Sex</div>
+
+ <div class ="myinfo-label">One message(max 700 words)</div>
+ <input type = "text" class ="myinfo" placeholder="it will be shown in search page of guest"></input>
+
+ <div class ="myinfo-label">Introduction(max 700 words)</div>
+ <textarea type = "text" class ="myinfo-big" placeholder="Please fill in detailed location, recommended store, notes etc."></textarea>
+
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview2"></img>
+  <div class = "face-message">Please upload a landscape photo</div>
+  <label class ="upload-btn" for ="img2">
+   Upload
+   <input type="file" id= "img2">
+  </label>
+ </div>
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview3"></img>
+  <div class = "face-message">Please upload a landscape photo</div>
+  <label class ="upload-btn" for ="img3">
+   Upload
+   <input type="file" id= "img3">
+  </label>
+ </div>
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview4"></img>
+  <div class = "face-message">Please upload a landscape photo</div>
+  <label class ="upload-btn" for ="img4">
+   Upload
+   <input type="file" id= "img4">
+  </label>
+ </div>
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+  <img id ="preview5"></img>
+  <div class = "face-message">Please upload a landscape photo</div>
+  <label class ="upload-btn" for ="img5">
+   Upload
+   <input type="file" id= "img5">
+  </label>
+ </div>
+
+<div><%= form.submit :class => 'edit', :value => 'Update' %></div>
 
 <%end%>
 </div>

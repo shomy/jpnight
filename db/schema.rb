@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_03_020550) do
+ActiveRecord::Schema.define(version: 2019_08_15_112319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,12 +29,22 @@ ActiveRecord::Schema.define(version: 2019_08_03_020550) do
 
   create_table "g_infos", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "email"
     t.string "name"
     t.integer "age"
     t.string "sex"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nationality"
+    t.string "tel_number"
+    t.string "face_picture"
+    t.text "use_language_list"
+    t.string "hitokoto_shoukai"
+    t.text "shoukaibun"
+    t.string "picture"
+    t.string "picture1"
+    t.string "picture2"
+    t.string "picture3"
+    t.string "picture4"
     t.index ["user_id"], name: "index_g_infos_on_user_id"
   end
 
@@ -52,6 +62,16 @@ ActiveRecord::Schema.define(version: 2019_08_03_020550) do
     t.string "tel"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.integer "from_id"
+    t.integer "to_id"
+    t.string "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id", "created_at"], name: "index_messages_on_room_id_and_created_at"
   end
 
   create_table "news", force: :cascade do |t|

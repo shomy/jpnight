@@ -1,3 +1,13 @@
+<html>
+<head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "/assets/stylesheet.js" %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "header_footer","basic_parts","btn_ill_parts","text","wrapper","media", :media => "all" %>
+</head>
+
+<tbody>
 <div class = "regi-form">
 
     <% if g_info.errors.any? %>
@@ -25,10 +35,10 @@
  <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
 
  <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
- <%= form.password_field :password, :class => 'myinfo', :placeholder => 'Password' %>
+ <%= form.password_field :encrypted_password, :class => 'myinfo', :placeholder => 'Password' %>
 
  <div class ="myinfo-label">Please enter your Password,again.</div>
- <%= form.password_field :repassword, :class => 'myinfo', :placeholder => 'Password' %>
+ <%= form.password_field :reset_password_token, :class => 'myinfo', :placeholder => 'Password' %>
 
  <div class ="myinfo-label">Please enter your Name</div>
  <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
@@ -52,13 +62,17 @@
 
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-  <img id ="preview2"></img>
-  <div class = "face-message">Please upload a landscape photo</div>
-  <label class ="upload-btn" for ="img2">
-   Upload
-   <input type="file" id= "img2">
-  </label>
+
+  <div class ="preview" onClick="$('#file').click()" >
+   <% if @g_info.picture.present? %>
+    <%= image_tag(@g_info.picture) %>
+    <% else %>
+    <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+   <% end %>
+   <%= form.file_field :picture, :style => "display:none;", id: "file" %>
+  </div>
  </div>
+
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>
   <img id ="preview3"></img>
@@ -92,3 +106,10 @@
 <% end %>
 
 </div>
+</tbody>
+<%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" %>
+<%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js" %>
+<%= javascript_include_tag "http://code.jquery.com/jquery-1.8.1.min.js" %>
+</html>

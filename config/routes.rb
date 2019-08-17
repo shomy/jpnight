@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :create_g_infos
   resources :news
   resources :questions
   resources :g_infos
@@ -24,15 +25,15 @@ Rails.application.routes.draw do
   devise_scope :user do
   get "/login" => "devise/sessions#new"
   get "/logout" => "devise/sessions#logout"
-  
+
   end
 
-  get "/mypage_guest" => "g_infos#mypage_guest"
+
   get "/mypage_chat" => "g_infos#mypage_chat"
   get "/mypage_chatroom" => "g_infos#mypage_chatroom"
   get "/offerpage" => "g_infos#offerpage"
   get "/offerpage_treat" => "g_infos#offerpage_treat"
-  get "/company" => "g_infos#company"
+
 
 
 end

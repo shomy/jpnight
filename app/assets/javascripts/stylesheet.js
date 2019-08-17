@@ -15,6 +15,10 @@ jQuery(function($){
 	});
 });
 
+window.onload(function(){
+  $('.panel div').css('display','block')
+});
+
 
 $(document).on('ready page:load', function(){
   $('#guide-form').hide();

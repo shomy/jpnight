@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_08_15_112319) do
     t.string "sex"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "nationality"
     t.string "tel_number"
     t.string "face_picture"
     t.text "use_language_list"
@@ -62,16 +61,6 @@ ActiveRecord::Schema.define(version: 2019_08_15_112319) do
     t.string "tel"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.text "content"
-    t.integer "from_id"
-    t.integer "to_id"
-    t.string "room_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_id", "created_at"], name: "index_messages_on_room_id_and_created_at"
   end
 
   create_table "news", force: :cascade do |t|

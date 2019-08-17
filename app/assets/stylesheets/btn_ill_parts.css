@@ -734,3 +734,10 @@ input[type="text"]:focus, .myinfo-big:focus {
   border-bottom: 3px solid rgb(46, 204, 113);
   border-right: 3px solid rgb(46, 204, 113);
 }
+.radio-btn {
+  width: 80%;
+  margin: 20px 10% 0;
+  text-align: left;
+  color: rgb(164, 179, 239);
+  font-size: 18px;
+}

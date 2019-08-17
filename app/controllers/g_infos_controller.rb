@@ -20,6 +20,7 @@ class GInfosController < ApplicationController
   def new
     @g_infos = GInfo.all
     @g_info = GInfo.new
+
   end
 
   # GET /g_infos/1/edit

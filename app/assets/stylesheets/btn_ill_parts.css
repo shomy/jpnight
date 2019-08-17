@@ -100,11 +100,11 @@
 .pointer {
   position: absolute;
   left: 40px;
-  top: -60px;
+  top: -75px;
   color: rgba(8, 12, 214, 0.5);
   transform: rotate(-2deg);
   font-size: 20px;
-  letter-spacing: 7px;
+  letter-spacing: 3px;
   animation: key1 .6s ease infinite alternate;
 }
 
@@ -121,6 +121,7 @@
   width: 250px;
   line-height: 60px;
   border-radius: 5em;
+  border: solid 1px;
   margin: 20px;
   color: rgb(146, 123, 243);
   font-size: 18px;

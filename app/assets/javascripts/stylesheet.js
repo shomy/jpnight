@@ -51,7 +51,6 @@ $(document).on ('turbolinks:load', function() {
     });
 })();
 
-
 //ファイルのアップロードとプレビューの処理　同じ処理を4回書いているのでまとめたい（＞もっちー）
 $(function(){
   $('#img1').change(function(e){

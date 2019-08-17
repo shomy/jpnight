@@ -25,9 +25,8 @@
 
 </head>
 
-<tbody>
+<body>
 <div class ="wrap">
-
 
  <% if user_signed_in? %>
  <header>
@@ -46,11 +45,11 @@
       </div>
    <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
 
-      <ul class ="header-username"><%= g_info.name %></ul>
-      <ul class ="mypagecommand"><%= link_to 'Mypage', g_info_path(g_info.id) %></ul>
-      <ul ul class ="mypagecommand"><a  href="#">Chat</a></ul>
-      <ul class ="mypagecommand"><%= link_to 'News', news_path(g_info.id) %></ul>
-      <ul class ="mypagecommand"><%= link_to 'Q&A', questions_path %></ul>
+      <ul class ="header-username"><span>Hello, </span><%= g_info.name %></ul>
+      <ul class ="mypagecommand"><i class="fas fa-user-edit fa-fw"></i> <%= link_to 'Mypage', g_info_path(g_info.id) %></ul>
+      <ul ul class ="mypagecommand"><i class="fas fa-comments fa-fw"></i> <a  href="#">Chat</a></ul>
+      <ul class ="mypagecommand"><i class="fas fa-envelope-open fa-fw"></i> <%= link_to 'News', news_path(g_info.id) %></ul>
+      <ul class ="mypagecommand"><i class="fas fa-question-circle fa-fw"></i> <%= link_to 'Q&A', questions_path %></ul>
       <ul class ="mypagecommand"><%= link_to "LOGOUT", logout_path %></ul>
     <% end %>
     <% end %>
@@ -81,18 +80,18 @@
    <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
    <img src  = "/assets/town.png" class ="town-ill"></img>
    <wrapper class ="footer-wrapper">
-    <ul class ="footer-list"><a href ="">HELP</a></ul>
-    <ul class ="footer-list"><a href ="">CONTACT</a></ul>
-    <ul class ="footer-list"><a href ="">COMPANY</a></ul>
-    <ul class ="footer-list"><a href ="">OUR PHILOSOPHY</a></ul>
-    <ul class ="footer-list"><a href ="">TERMS OF USE</a></ul>
-    <ul class ="footer-list"><a href ="">SPECIAL COMMERCIAL CODE</a></ul>
-    <ul class ="footer-list"><a href ="">PRIVACY POLICY</a></ul>
+    <ul class ="footer-list"><%= link_to 'HELP', outline_info_help_path %></ul>
+    <ul class ="footer-list"><%= link_to 'CONTACT', outline_info_contact_path %></ul>
+    <ul class ="footer-list"><%= link_to 'COMPANY', outline_info_company_path %></ul>
+    <ul class ="footer-list"><%= link_to 'OUR PHILOSOPHY', outline_info_philosophy_path %></ul>
+    <ul class ="footer-list"><%=  link_to 'TERMS OF USE', outline_info_team_path %></ul>
+    <ul class ="footer-list"><%= link_to 'COMMERCIAL CODE', outline_info_code_path %></ul>
+    <ul class ="footer-list"><%= link_to 'PRIVACY POLICY', outline_info_policy_path %></ul>
    </wrapper>
 </footer>
 
 </div>
-</tbody>
+</body>
 <%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
 <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
 <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" %>

@@ -22,7 +22,7 @@
  <div class ="myinfo-label">Please enter your E-mail address.</div>
  <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
 
- <div class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</div>
+ <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
  <%= form.password_field :password, :class => 'myinfo', :placeholder => 'Password' %>
 
  <div class ="myinfo-label">Please enter your Password,again.</div>
@@ -32,18 +32,23 @@
  <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
 
  <div class ="myinfo-label">Please enter your Phone Number</div>
- <%= form.text_field :tel, :class => 'myinfo', :placeholder => 'Phone Number' %>
+ <%= form.text_field :tel_number, :class => 'myinfo', :placeholder => 'Phone Number' %>
 
  <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
  <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
 
  <div class ="myinfo-label">Please choice your Sex</div>
+ <%= form_for %>
+ <label><%= f.radio_button :sex, "1" %>men</label>
+ <label><%= f.radio_button :sex, "2" %>women</label>
+ <label><%= f.radio_button :sex, "3" %>others</label>
+ <% end %>
 
- <div class ="myinfo-label">One message(max 700 words)</div>
- <input type = "text" class ="myinfo" placeholder="it will be shown in search page of guest"></input>
+ <div class ="myinfo-label">One message(max 50 words)</div>
+ <%= form.text_firld :hitokoto_shoukai, :class ='myinfo', :placeholder => 'it will be shown in search page of guest' %>
 
  <div class ="myinfo-label">Introduction(max 700 words)</div>
- <textarea type = "text" class ="myinfo-big" placeholder="Please fill in detailed location, recommended store, notes etc."></textarea>
+ <%= form.text_field :shoukaibun, :class ='myinfo-big', :placeholder=> 'Please fill in detailed location, recommended store, notes etc.' %>
 
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>

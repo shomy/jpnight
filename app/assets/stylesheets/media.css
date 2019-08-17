@@ -6,11 +6,11 @@
 
 .lead {
   width: 70%;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 40px;
+  line-height: 45px;
   text-align: center;
-  margin: 50px auto 10px;
-  letter-spacing: 5px;
+  margin: 80px auto 40px;
+  letter-spacing: 7px;
 }
 
 .lead4guide {
@@ -66,6 +66,22 @@
   display: inline-block;
 }
 
+.circle, .circle-b {
+  width: 70px;
+  height: 70px;
+  top: 300px;
+}
+
+.circle-b {
+  top: 10px;
+  left: 5px;
+}
+
+.circle span, .circle-b span {
+  width: 70px;
+  font-size: 13px;
+  line-height: 14px;
+}
 
 }
 
@@ -125,22 +141,6 @@ h3 span, .h3media {
   height: 45px;
 }
 
-.circle, .circle-b {
-  width: 70px;
-  height: 70px;
-  top: 300px;
-}
-
-.circle-b {
-  top: 10px;
-  left: 5px;
-}
-
-.circle span, .circle-b span {
-  width: 70px;
-  font-size: 13px;
-  line-height: 14px;
-}
 
 .wine-top-ill {
   display: none;

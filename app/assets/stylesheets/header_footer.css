@@ -30,6 +30,10 @@ header {
   cursor: default;
 }
 
+.header-username span{
+  color: white;
+}
+
 .mypagecommand {
   font-size: 17px;
   display: inline-block;

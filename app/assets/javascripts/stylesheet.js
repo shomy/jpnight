@@ -2,6 +2,19 @@ Pace.on('done', function(){
   $('.wrap').fadeIn(400);
 });
 
+jQuery(function($){
+	$('.tab').click(function(){
+		$('.is-active').removeClass('is-active');
+		$(this).addClass('is-active');
+		$('.is-show').removeClass('is-show');
+        // クリックしたタブからインデックス番号を取得
+		const index = $(this).index();
+        // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+		$('.panel').eq(index).addClass('is-show');
+    $('.panel div').css('display','block')
+	});
+});
+
 
 $(document).on('ready page:load', function(){
   $('#guide-form').hide();
@@ -10,18 +23,18 @@ $(document).on('ready page:load', function(){
   $('#resi-btn-guide').on('click', function(){
    $('#common-form').hide();
    $('#guide-form').show();
-　｝）；
+　});
 
   $('#resi-btn-guest').on('click', function(){
    $('#common-form').hide();
    $('#guest-form').show();
-　｝）；
+　});
 
 　$('#resiback').on('click', function(){
     $('#guide-form').hide();
     $('#guest-form').hide();
     $('#common-form').show();
-　｝）；
+　});
 });
 
 $(document).on ('turbolinks:load', function() {

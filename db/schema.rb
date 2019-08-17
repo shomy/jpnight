@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2019_08_03_020550) do
 
   create_table "g_infos", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "email"
     t.string "name"
     t.integer "age"
     t.string "sex"

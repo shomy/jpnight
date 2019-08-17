@@ -197,7 +197,7 @@
 }
 
 
-.tabs {
+.tab-group {
   width: 90%;
   margin: 0 auto;
   height: 80px;
@@ -205,7 +205,7 @@
   padding: 0;
 }
 
-.activetab, .notactivetab {
+.tab {
   display: inline-block;
 	position: relative;
   font-family: 'Poiret One', cursive;
@@ -218,6 +218,8 @@
 	text-decoration: none;
 	color: rgb(255,255,255);
 	background: rgb(110, 222, 239);
+  box-shadow:0px -8px 8px -1px rgba(100, 100, 100, 0.3) inset;
+  background-color: rgb(164, 179, 239);
   z-index: 4;
   -webkit-border-top-right-radius: 8px;
       -moz-border-radius-topright: 8px;
@@ -228,18 +230,21 @@
 	        	border: 0px solid #000000;
 }
 
-.activetab {
+.is-active {
 	background-color: rgb(230, 236, 240);
 	color: rgb(164, 179, 239);
 }
 
-.notactivetab:hover {
+.tab:hover {
   transform: scale(1.02, 1.02);
 }
 
-.notactivetab {
-  box-shadow:0px -8px 8px -1px rgba(100, 100, 100, 0.3) inset;
-  background-color: rgb(164, 179, 239);
+.panel {
+  display: none;
+}
+
+.panel.is-show{
+  display:block;
 }
 
 #mypageface-icon  {

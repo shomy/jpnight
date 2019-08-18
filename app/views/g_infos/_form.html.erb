@@ -1,10 +1,5 @@
 <html>
 <head>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag "/assets/stylesheet.js" %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_link_tag "header_footer","basic_parts","btn_ill_parts","text","wrapper","media", :media => "all" %>
 </head>
 
 <tbody>
@@ -63,14 +58,14 @@
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>
 
-  <div class ="preview" onClick="$('#file').click()" >
+  <div id="img_field" onClick="$('#file').click()" >
    <% if @g_info.picture.present? %>
-    <%= image_tag(@g_info.picture) %>
+    <%= image_tag'@g_info.picture' %>
     <% else %>
-    <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
-   <% end %>
-   <%= form.file_field :picture, :style => "display:none;", id: "file" %>
+    <i class="fas fa-image"></i>
   </div>
+  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+  <% end %>
  </div>
 
  <div class ="myscene-wrapper">
@@ -107,9 +102,4 @@
 
 </div>
 </tbody>
-<%= javascript_include_tag "http://code.jquery.com/jquery-2.2.3.min.js" %>
-<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
-<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" %>
-<%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js" %>
-<%= javascript_include_tag "http://code.jquery.com/jquery-1.8.1.min.js" %>
 </html>

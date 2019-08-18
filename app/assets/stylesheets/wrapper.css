@@ -186,7 +186,7 @@
   width: 90%;
   margin: 0 auto;
   border-top-color: white;
-  border-top-width: 2px;
+  border-top-width: 1px;
   border-top-style: solid;
   text-align: center;
 }
@@ -291,7 +291,7 @@
   font-family: 'Poiret One', cursive;
   width: 40%;
 	height: 30px;
-	margin: 40px 0 0 0;
+	margin: 60px 0 0 0;
 	padding: 10px 0 0 0;
 	font-size: 18px;
 	text-align: center;
@@ -300,6 +300,7 @@
 	background: rgb(110, 222, 239);
   background-color: rgb(164, 179, 239);
   z-index: 4;
+  cursor: pointer;
   -webkit-border-top-right-radius: 8px;
       -moz-border-radius-topright: 8px;
           border-top-right-radius: 8px;

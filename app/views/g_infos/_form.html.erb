@@ -3,7 +3,7 @@
 </head>
 
 <tbody>
-<div class = "regi-form">
+<div id = "regi-form">
 
     <% if g_info.errors.any? %>
       <div id="error_explanation">
@@ -21,7 +21,7 @@
 
  <%= form_with(model: g_info, local: true) do |form| %>
 
- <div class ="myinfo-label"><h3>Please upload your face picture.</h3></div>
+ <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
  <label class ="upload-btn" for ="img2">
   Uproad
  </label>
@@ -39,7 +39,7 @@
  <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
 
  <div class ="myinfo-label">Please enter your Tel Number</div>
- <%= form.text_field :tel_number, :class => 'myinfo', :placeholder => 'Phone Number' %>
+ <%= form.text_field :tel_number, :class => 'myinfo', :placeholder => 'Tel Number' %>
 
  <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
  <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
@@ -55,12 +55,13 @@
  <div class ="myinfo-label">Introduction(max 700 words)</div>
  <%= form.text_field :shoukaibun, :class => 'myinfo-big', :placeholder => 'Please fill in detailed location, recommended store, notes etc.' %>
 
+ <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>
 
   <div id="img_field" onClick="$('#file').click()" >
    <% if @g_info.picture.present? %>
-    <%= image_tag'@g_info.picture' %>
+    <%= image_tag(@g_info.picture)%>
     <% else %>
     <i class="fas fa-image"></i>
   </div>
@@ -70,31 +71,69 @@
 
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-  <img id ="preview3"></img>
-  <div class = "face-message">Please upload a landscape photo</div>
-  <label class ="upload-btn" for ="img3">
-   Upload
-   <input type="file" id= "img3">
-  </label>
+
+  <div id="img_field" onClick="$('#file').click()" >
+   <% if @g_info.picture.present? %>
+    <%= image_tag(@g_info.picture)%>
+    <% else %>
+    <i class="fas fa-image"></i>
+  </div>
+  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+  <% end %>
  </div>
+
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-  <img id ="preview4"></img>
-  <div class = "face-message">Please upload a landscape photo</div>
-  <label class ="upload-btn" for ="img4">
-   Upload
-   <input type="file" id= "img4">
-  </label>
+
+  <div id="img_field" onClick="$('#file').click()" >
+   <% if @g_info.picture.present? %>
+    <%= image_tag(@g_info.picture)%>
+    <% else %>
+    <i class="fas fa-image"></i>
+  </div>
+  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+  <% end %>
  </div>
+
  <div class ="myscene-wrapper">
   <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-  <img id ="preview5"></img>
-  <div class = "face-message">Please upload a landscape photo</div>
-  <label class ="upload-btn" for ="img5">
-   Upload
-   <input type="file" id= "img5">
-  </label>
+
+  <div id="img_field" onClick="$('#file').click()" >
+   <% if @g_info.picture.present? %>
+    <%= image_tag(@g_info.picture)%>
+    <% else %>
+    <i class="fas fa-image"></i>
+  </div>
+  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+  <% end %>
  </div>
+
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+
+  <div id="img_field" onClick="$('#file').click()" >
+   <% if @g_info.picture.present? %>
+    <%= image_tag(@g_info.picture)%>
+    <% else %>
+    <i class="fas fa-image"></i>
+  </div>
+  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+  <% end %>
+ </div>
+
+ <div class ="myscene-wrapper">
+  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
+
+  <div id="img_field" onClick="$('#file').click()" >
+   <% if @g_info.picture.present? %>
+    <%= image_tag(@g_info.picture)%>
+    <% else %>
+    <i class="fas fa-image"></i>
+  </div>
+  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+  <% end %>
+ </div>
+
 
 <div><%= form.submit :class => 'edit', :value => 'Update' %></div>
 

@@ -79,9 +79,15 @@
   }
 
   .myinfo {
-    color: rgb(164, 179, 239);
+    color: rgb(164, 179, 239)!important;
   }
 
+  input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(164, 179, 239) !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    border-color:rgb(164, 179, 239) !important;
+    font-size: 20px;
+  }
 
   .chatroom-names {
     position: relative;

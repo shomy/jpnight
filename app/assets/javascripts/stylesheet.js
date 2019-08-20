@@ -15,47 +15,12 @@ jQuery(function($){
 	});
 });
 
-window.onload(function(){
+$( document ).ready(function(){
   $('.panel div').css('display','block')
 });
 
 
-$(document).on('ready page:load', function(){
-  $('#guide-form').hide();
-  $('#guest-form').hide();
-
-  $('#resi-btn-guide').on('click', function(){
-   $('#common-form').hide();
-   $('#guide-form').show();
-　});
-
-  $('#resi-btn-guest').on('click', function(){
-   $('#common-form').hide();
-   $('#guest-form').show();
-　});
-
-　$('#resiback').on('click', function(){
-    $('#guide-form').hide();
-    $('#guest-form').hide();
-    $('#common-form').show();
-　});
-});
-
-$(document).on ('turbolinks:load', function() {
-    $("#content div").hide(); // Initially hide all content
-    $("#tabsgroup li:first").attr("id","current"); // Activate first tab
-    $("#content div:first").fadeIn(); // Show first tab content
-
-    $('#mypage a').click(function(e) {
-        e.preventDefault();
-        $("#content div").hide(); //Hide all content
-        $("#tabsgroup li").attr("id",""); //Reset id's
-        $(this).parent().attr("#id","current"); // Activate this
-        $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
-    });
-})();
-
-$(function() {
+$(document).on ('turbolinks:load', (function() {
   $fileField = $('#file')
 
   // 選択された画像を取得し表示
@@ -77,4 +42,4 @@ $(function() {
     })(file);
     reader.readAsDataURL(file);
   });
-})();
+}));

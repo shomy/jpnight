@@ -6,7 +6,7 @@
   <div class="wrap">
 
     <div id="mypage">
-      <div id="tab-group">
+      <div class ="tab-group">
         <li class="tab is-active" id="guidetab" title="asaguide" >AS A GUIDE</li>
         <li class="tab" id="guesttab" title="asaguest">AS A GUEST</li>
       </div>
@@ -49,10 +49,10 @@
             <div class="myinfo-label">Language</div>
             <div class="myinfo"><%= @g_info.use_language_list %></div>
 
-            <div class="myinfo-label">One message( )</div>
+            <div class="myinfo-label">One message(max words)</div>
             <div class="myinfo"><%= @g_info.hitokoto_shoukai %></div>
 
-            <div class="myinfo-label">Introduction（ ）</div>
+            <div class="myinfo-label">Introduction（max words）</div>
             <div class="myinfo-big"><% @g_info.shoukaibun %></div>
 
             <div class="myscene-wrapper">

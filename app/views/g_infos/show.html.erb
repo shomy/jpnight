@@ -20,11 +20,17 @@
 
           <div class="mypage-head">
             <div class="myface-wrapper">
-              <div id="face_img_field"><%= @g_info.face_picture %></div>
+              <div id="face_img_field">
+                <% if @g_info.face_picture.present? %>
+                 <%= image_tag(@g_info.face_picture)%>
+                 <% else %>
+                 <i class="fas fa-smile"></i>
+                 <% end %>
+              </div>
             </div>
           </div>
           <img src="/assets/wine_w.png" class="bottle_w_l"></img>
-          <img src="/assets/wine_w.png" class="bottle_w_r"></img>
+        
 
           <div class="myinfo-wrapper">
 
@@ -57,9 +63,13 @@
 
             <div class="myscene-wrapper">
               <h4 class="guide-area-tag"><a>#Shinjyuku</a></h4>
-              <% @g_infos.picture.each do |picture| %>
+              <% @g_infos.each do |picture| %>
               <div id="img_field">
-              <%= image_tag(@g_info.picture[])%>
+                <% if @g_info.picture.present? %>
+                 <%= image_tag(@g_info.picture)%>
+                <% else %>
+                 <i class="fas fa-image"></i>
+                <% end %>
               </div>
               <% end %>
             </div>
@@ -81,7 +91,13 @@
 
           <div class="mypage-head">
             <div class="myface-wrapper">
-              <img id="mypageface-icon"><%= @g_info.face_picture %>
+              <div id="face_img_field">
+                <% if @g_info.face_picture.present? %>
+                 <%= image_tag(@g_info.face_picture)%>
+                 <% else %>
+                 <i class="fas fa-smile"></i>
+                 <% end %>
+              </div>
             </div>
           </div>
           <img src="/assets/wine_w.png" class="bottle-ill"></img>

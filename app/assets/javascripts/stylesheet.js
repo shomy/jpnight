@@ -15,9 +15,9 @@ jQuery(function($){
 	});
 });
 
-$( document ).ready(function(){
+$( document ).on ('turbolinks:load', (function(){
   $('.panel div').css('display','block')
-});
+}));
 
 
 $(document).on ('turbolinks:load', (function() {

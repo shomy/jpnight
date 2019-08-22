@@ -3,142 +3,186 @@
 </head>
 
 <tbody>
-<div id = "regi-form">
+<div class ="tab-group">
+    <li class="tab is-active" id="guidetab" title="asaguide" >AS A GUIDE</li>
+    <li class="tab" id="guesttab" title="asaguest">AS A GUEST</li>
+</div>
 
-    <% if g_info.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(g_info.errors.count, "error") %> prohibited this g_info from being saved:</h2>
+<div id="content" class='panel-group'>
 
-        <ul>
-        <% g_info.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
+  <% if g_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(g_info.errors.count, "error") %> prohibited this g_info from being saved:</h2>
+
+      <ul>
+      <% g_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id = "asaguide" class='panel is-show'>
+
+   <div class ="back"><%= link_to 'Back', @g_info %></div>
+
+   <%= form_with(model: g_info, local: true) do |form| %>
+
+    <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
+
+       <div id="face_img_field" onClick="$('#file').click()" >
+        <% if @g_info.face_picture.present? %>
+         <%= image_tag(@g_info.face_picture)%>
+         <% else %>
+         <i class="fas fa-smile"></i>
+         <% end %>
+       </div>
+       <%= form.file_field :picture, class: "face_preview", style: "display:none;", id: "file"%>
+
+
+    <div class ="myinfo-label">Please enter your E-mail address.</div>
+    <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
+
+    <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
+    <%= form.password_field :encrypted_password, :class => 'myinfo', :placeholder => 'Password' %>
+
+    <div class ="myinfo-label">Please enter your Password,again.</div>
+    <%= form.password_field :reset_password_token, :class => 'myinfo', :placeholder => 'Password' %>
+
+    <div class ="myinfo-label">Please enter your Name</div>
+    <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
+
+    <div class ="myinfo-label">Please enter your Tel Number</div>
+    <%= form.text_field :tel_number, :class => 'myinfo', :placeholder => 'Tel Number' %>
+
+    <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
+    <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
+
+    <div class ="myinfo-label">Please choice your Sex</div>
+    <div class ="radio-btn"><%= form.radio_button :sex, "男" %> Men</div>
+    <div class ="radio-btn"><%= form.radio_button :sex, "女" %> Women</div>
+    <div class ="radio-btn"><%= form.radio_button :sex, "その他" %> Others</div>
+
+    <div class ="myinfo-label">One message(max 50 words)</div>
+    <%= form.text_field :hitokoto_shoukai, :class => 'myinfo', :placeholder => 'it will be shown in search page of guest' %>
+
+    <div class ="myinfo-label">Introduction(max 700 words)</div>
+    <%= form.text_field :shoukaibun, :class => 'myinfo-big', :placeholder => 'Please fill in detailed location, recommended store, notes etc.' %>
+
+    <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
+
+    <div class ="myscene">
+      <div class ="myscene-wrapper">
+        <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
+        <div id="img_field" onClick="$('#file').click()" >
+         <% if @g_info.picture.present? %>
+          <%= image_tag(@g_info.picture)%>
+          <% else %>
+          <i class="fas fa-image"></i>
+          <% end %>
+        </div>
+        <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
       </div>
-    <% end %>
+      <div class ="myscene-wrapper">
+         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
+         <div id="img_field" onClick="$('#file').click()" >
+          <% if @g_info.picture.present? %>
+           <%= image_tag(@g_info.picture)%>
+           <% else %>
+           <i class="fas fa-image"></i>
+           <% end %>
+         </div>
+         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+      </div>
+      <div class ="myscene-wrapper">
+         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
+         <div id="img_field" onClick="$('#file').click()" >
+          <% if @g_info.picture.present? %>
+           <%= image_tag(@g_info.picture)%>
+           <% else %>
+           <i class="fas fa-image"></i>
+           <% end %>
+         </div>
+         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+      </div>
+      <div class ="myscene-wrapper">
+         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
+         <div id="img_field" onClick="$('#file').click()" >
+          <% if @g_info.picture.present? %>
+           <%= image_tag(@g_info.picture)%>
+           <% else %>
+           <i class="fas fa-image"></i>
+           <% end %>
+         </div>
+         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+      </div>
+      <div class ="myscene-wrapper">
+         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
+         <div id="img_field" onClick="$('#file').click()" >
+          <% if @g_info.picture.present? %>
+           <%= image_tag(@g_info.picture)%>
+           <% else %>
+           <i class="fas fa-image"></i>
+           <% end %>
+         </div>
+         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+      </div>
+      <div class ="myscene-wrapper">
+         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
+         <div id="img_field" onClick="$('#file').click()" >
+          <% if @g_info.picture.present? %>
+           <%= image_tag(@g_info.picture)%>
+           <% else %>
+           <i class="fas fa-image"></i>
+           <% end %>
+         </div>
+         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+      </div>
+    </div>
 
- <div class ="back"><%= link_to 'Back', @g_info %></div>
-
- <%= form_with(model: g_info, local: true) do |form| %>
-
- <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
- <label class ="upload-btn" for ="img2">
-  Uproad
- </label>
-
- <div class ="myinfo-label">Please enter your E-mail address.</div>
- <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
-
- <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
- <%= form.password_field :encrypted_password, :class => 'myinfo', :placeholder => 'Password' %>
-
- <div class ="myinfo-label">Please enter your Password,again.</div>
- <%= form.password_field :reset_password_token, :class => 'myinfo', :placeholder => 'Password' %>
-
- <div class ="myinfo-label">Please enter your Name</div>
- <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
-
- <div class ="myinfo-label">Please enter your Tel Number</div>
- <%= form.text_field :tel_number, :class => 'myinfo', :placeholder => 'Tel Number' %>
-
- <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
- <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
-
- <div class ="myinfo-label">Please choice your Sex</div>
- <div class ="radio-btn"><%= form.radio_button :sex, "男" %> Men</div>
- <div class ="radio-btn"><%= form.radio_button :sex, "女" %> Women</div>
- <div class ="radio-btn"><%= form.radio_button :sex, "その他" %> Others</div>
-
- <div class ="myinfo-label">One message(max 50 words)</div>
- <%= form.text_field :hitokoto_shoukai, :class => 'myinfo', :placeholder => 'it will be shown in search page of guest' %>
-
- <div class ="myinfo-label">Introduction(max 700 words)</div>
- <%= form.text_field :shoukaibun, :class => 'myinfo-big', :placeholder => 'Please fill in detailed location, recommended store, notes etc.' %>
-
- <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
- <div class ="myscene-wrapper">
-  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-
-  <div id="img_field" onClick="$('#file').click()" >
-   <% if @g_info.picture.present? %>
-    <%= image_tag(@g_info.picture)%>
-    <% else %>
-    <i class="fas fa-image"></i>
+    <div><%= form.submit :class => 'edit', :value => 'Update' %></div>
+   <% end %>
   </div>
-  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-  <% end %>
+
+ <div id="asaguest" class='panel'>
+
+   <div class ="back"><%= link_to 'Back', @g_info %></div>
+
+   <%= form_with(model: g_info, local: true) do |form| %>
+
+     <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
+     <label class ="upload-btn" for ="img2">
+     Uproad
+     </label>
+
+     <div class ="myinfo-label">Please enter your E-mail address.</div>
+     <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
+
+     <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
+     <%= form.password_field :encrypted_password, :class => 'myinfo', :placeholder => 'Password' %>
+
+     <div class ="myinfo-label">Please enter your Password,again.</div>
+     <%= form.password_field :reset_password_token, :class => 'myinfo', :placeholder => 'Password' %>
+
+     <div class ="myinfo-label">Please enter your Name</div>
+     <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
+
+     <div class ="myinfo-label">Please enter your Tel Number</div>
+     <%= form.text_field :tel_number, :class => 'myinfo', :placeholder => 'Tel Number' %>
+
+     <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
+     <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
+
+     <div class ="myinfo-label">Please choice your Sex</div>
+     <div class ="radio-btn"><%= form.radio_button :sex, "男" %> Men</div>
+     <div class ="radio-btn"><%= form.radio_button :sex, "女" %> Women</div>
+     <div class ="radio-btn"><%= form.radio_button :sex, "その他" %> Others</div>
+
+
+     <div><%= form.submit :class => 'edit', :value => 'Update' %></div>
+
+   <% end %>
  </div>
-
- <div class ="myscene-wrapper">
-  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-
-  <div id="img_field" onClick="$('#file').click()" >
-   <% if @g_info.picture.present? %>
-    <%= image_tag(@g_info.picture)%>
-    <% else %>
-    <i class="fas fa-image"></i>
-  </div>
-  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-  <% end %>
- </div>
-
- <div class ="myscene-wrapper">
-  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-
-  <div id="img_field" onClick="$('#file').click()" >
-   <% if @g_info.picture.present? %>
-    <%= image_tag(@g_info.picture)%>
-    <% else %>
-    <i class="fas fa-image"></i>
-  </div>
-  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-  <% end %>
- </div>
-
- <div class ="myscene-wrapper">
-  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-
-  <div id="img_field" onClick="$('#file').click()" >
-   <% if @g_info.picture.present? %>
-    <%= image_tag(@g_info.picture)%>
-    <% else %>
-    <i class="fas fa-image"></i>
-  </div>
-  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-  <% end %>
- </div>
-
- <div class ="myscene-wrapper">
-  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-
-  <div id="img_field" onClick="$('#file').click()" >
-   <% if @g_info.picture.present? %>
-    <%= image_tag(@g_info.picture)%>
-    <% else %>
-    <i class="fas fa-image"></i>
-  </div>
-  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-  <% end %>
- </div>
-
- <div class ="myscene-wrapper">
-  <input type = "text" class ="guide-area-tag-input" value ="#"></input>
-
-  <div id="img_field" onClick="$('#file').click()" >
-   <% if @g_info.picture.present? %>
-    <%= image_tag(@g_info.picture)%>
-    <% else %>
-    <i class="fas fa-image"></i>
-  </div>
-  <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-  <% end %>
- </div>
-
-
-<div><%= form.submit :class => 'edit', :value => 'Update' %></div>
-
-<% end %>
-
 </div>
 </tbody>
 </html>

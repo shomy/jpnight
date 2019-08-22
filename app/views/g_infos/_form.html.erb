@@ -37,7 +37,7 @@
          <i class="fas fa-smile"></i>
          <% end %>
        </div>
-       <%= form.file_field :picture, class: "face_preview", style: "display:none;", id: "file"%>
+       <%= form.file_field :face_picture, class: "face_preview", style: "display:none;", id: "file"%>
 
 
     <div class ="myinfo-label">Please enter your E-mail address.</div>
@@ -74,70 +74,16 @@
     <div class ="myscene">
       <div class ="myscene-wrapper">
         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
-        <div id="img_field" onClick="$('#file').click()" >
+        <div id="img_field" onClick="$('#files').click()" >
          <% if @g_info.picture.present? %>
           <%= image_tag(@g_info.picture)%>
           <% else %>
           <i class="fas fa-image"></i>
           <% end %>
         </div>
-        <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+        <%= form.file_field :picture, class: "image", style: "display:none;", id: "files", :multiple => true %>
       </div>
-      <div class ="myscene-wrapper">
-         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
-         <div id="img_field" onClick="$('#file').click()" >
-          <% if @g_info.picture.present? %>
-           <%= image_tag(@g_info.picture)%>
-           <% else %>
-           <i class="fas fa-image"></i>
-           <% end %>
-         </div>
-         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-      </div>
-      <div class ="myscene-wrapper">
-         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
-         <div id="img_field" onClick="$('#file').click()" >
-          <% if @g_info.picture.present? %>
-           <%= image_tag(@g_info.picture)%>
-           <% else %>
-           <i class="fas fa-image"></i>
-           <% end %>
-         </div>
-         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-      </div>
-      <div class ="myscene-wrapper">
-         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
-         <div id="img_field" onClick="$('#file').click()" >
-          <% if @g_info.picture.present? %>
-           <%= image_tag(@g_info.picture)%>
-           <% else %>
-           <i class="fas fa-image"></i>
-           <% end %>
-         </div>
-         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-      </div>
-      <div class ="myscene-wrapper">
-         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
-         <div id="img_field" onClick="$('#file').click()" >
-          <% if @g_info.picture.present? %>
-           <%= image_tag(@g_info.picture)%>
-           <% else %>
-           <i class="fas fa-image"></i>
-           <% end %>
-         </div>
-         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-      </div>
-      <div class ="myscene-wrapper">
-         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
-         <div id="img_field" onClick="$('#file').click()" >
-          <% if @g_info.picture.present? %>
-           <%= image_tag(@g_info.picture)%>
-           <% else %>
-           <i class="fas fa-image"></i>
-           <% end %>
-         </div>
-         <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
-      </div>
+
     </div>
 
     <div><%= form.submit :class => 'edit', :value => 'Update' %></div>
@@ -151,9 +97,15 @@
    <%= form_with(model: g_info, local: true) do |form| %>
 
      <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
-     <label class ="upload-btn" for ="img2">
-     Uproad
-     </label>
+     <div id="face_img_field" onClick="$('#file').click()" >
+      <% if @g_info.face_picture.present? %>
+       <%= image_tag(@g_info.face_picture)%>
+       <% else %>
+       <i class="fas fa-smile"></i>
+       <% end %>
+     </div>
+     <%= form.file_field :face_picture, class: "face_preview", style: "display:none;", id: "file"%>
+
 
      <div class ="myinfo-label">Please enter your E-mail address.</div>
      <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>

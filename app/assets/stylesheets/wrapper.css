@@ -246,7 +246,7 @@
 .myface-wrapper {
   display: block;
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto 10px;
   position: relative;
   z-index: 10;
 }

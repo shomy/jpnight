@@ -20,7 +20,7 @@
 
           <div class="mypage-head">
             <div class="myface-wrapper">
-              <img id="mypageface-icon"><%= @g_info.face_picture %>
+              <div id="face_img_field"><%= @g_info.face_picture %></div>
             </div>
           </div>
           <img src="/assets/wine_w.png" class="bottle_w_l"></img>
@@ -56,29 +56,15 @@
             <div class="myinfo-big"><% @g_info.shoukaibun %></div>
 
             <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview2"></img>
+              <h4 class="guide-area-tag"><a>#Shinjyuku</a></h4>
+              <% @g_infos.picture.each do |picture| %>
+              <div id="img_field">
+              <%= image_tag(@g_info.picture[])%>
+              </div>
+              <% end %>
             </div>
-            <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview3"></img>
-            </div>
-            <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview4"></img>
-            </div>
-            <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview5"></img>
-            </div>
+
+
 
           </div>
 

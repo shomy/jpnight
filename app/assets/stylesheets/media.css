@@ -204,7 +204,7 @@ footer {
   padding: 10px;
 }
 
-#mypageface-icon, #chat-room-face, #face_img_field, #face_img_field i, .face_preview {
+#chat-room-face, #face_img_field, #face_img_field i, .face_preview {
   font-size: 100px;
   width: 100px !important;
   height: 100px !important;
@@ -238,7 +238,7 @@ footer {
 .myinfo, .guideinfo {
   width: 100% !important;
   height: 40px !important;
-  padding: 6px 6px 6px 10px!important;
+  padding: 8px 6px 6px 10px!important;
   font-size: 1em !important;
   margin: 10px 0 !important;
   box-sizing: border-box !important;

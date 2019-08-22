@@ -86,6 +86,6 @@ class GInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def g_info_params
-      params.require(:g_info).permit(:user_id, :name, :age, :sex)
+      params.require(:g_info).permit(:user_id, :name, :age, :sex, {picture: []})
     end
 end

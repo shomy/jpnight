@@ -21,7 +21,7 @@ $( document ).ready(function(){
 
 
 $(document).on ('turbolinks:load', (function() {
-  $fileField = $('#file')
+  $fileField = $('#files')
 
   // 選択された画像を取得し表示
   $($fileField).on('change', $fileField, function(e) {

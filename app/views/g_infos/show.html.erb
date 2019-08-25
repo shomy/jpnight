@@ -7,14 +7,14 @@
 
     <div id="mypage">
       <div class ="tab-group">
-        <li class="tab is-active" id="guidetab" title="asaguide" >AS A GUIDE</li>
-        <li class="tab" id="guesttab" title="asaguest">AS A GUEST</li>
+        <li class="tab is-active">BASIC INFO</li>
+        <li class="tab">INFO AS A GUIDE</li>
       </div>
 
       <% @g_infos.each do |g_info| %>
       <div id="content" class='panel-group'>
 
-        <section id="asaguide" class='panel is-show'>
+        <section class='panel is-show'>
           <!-- ガイドのタブ -->
           <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
 
@@ -30,7 +30,7 @@
             </div>
           </div>
           <img src="/assets/wine_w.png" class="bottle_w_l"></img>
-        
+
 
           <div class="myinfo-wrapper">
 
@@ -48,6 +48,23 @@
 
             <div class="myinfo-label">Tel Number</div>
             <div class="myinfo"><%= @g_info.tel_number %></div>
+
+          </div>
+
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+          <label class="myinfo-label">
+            <h4>After the official launch, guide fee (charged guide)function & payment function will be added.</h4>
+          </label>
+
+        </section>
+
+        <section class='panel'>
+
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+
+          <img src="/assets/wine_w.png" class="bottle-ill"></img>
+
+          <div class="myinfo-wrapper">
 
             <div class="myinfo-label">Where you can guide</div>
             <div class="myinfo">00000000000</div>
@@ -74,50 +91,6 @@
               <% end %>
             </div>
 
-
-
-          </div>
-
-          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
-          <label class="myinfo-label">
-            <h4>After the official launch, guide fee (charged guide)function & payment function will be added.</h4>
-          </label>
-
-        </section>
-
-        <section id="asaguest" class='panel'>
-
-          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
-
-          <div class="mypage-head">
-            <div class="myface-wrapper">
-              <div id="face_img_field">
-                <% if @g_info.face_picture.present? %>
-                 <%= image_tag(@g_info.face_picture)%>
-                 <% else %>
-                 <i class="fas fa-smile"></i>
-                 <% end %>
-              </div>
-            </div>
-          </div>
-          <img src="/assets/wine_w.png" class="bottle-ill"></img>
-
-          <div class="myinfo-wrapper">
-
-            <div class="myinfo-label">Email</div>
-            <div class="myinfo"></div>
-
-            <div class="myinfo-label">Name</div>
-            <div class="myinfo"><%= @g_info.name %></div>
-
-            <div class="myinfo-label">Sex</div>
-            <div class="myinfo"><%= @g_info.sex %></div>
-
-            <div class="myinfo-label">Age</div>
-            <div class="myinfo"><%= @g_info.age %></div>
-
-            <div class="myinfo-label">Tel Number</div>
-            <div class="myinfo"><%= @g_info.tel_number %></div>
           </div>
 
           <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>

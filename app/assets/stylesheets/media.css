@@ -211,6 +211,10 @@ footer {
   margin: 0 auto;
 }
 
+.tab {
+  width: 141px;
+}
+
 
 .myscene-wrapper {
   width: 270px;

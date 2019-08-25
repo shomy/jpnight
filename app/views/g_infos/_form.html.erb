@@ -4,8 +4,8 @@
 
 <tbody>
 <div class ="tab-group">
-    <li class="tab is-active" id="guidetab" title="asaguide" >AS A GUIDE</li>
-    <li class="tab" id="guesttab" title="asaguest">AS A GUEST</li>
+    <li class="tab is-active">BASIC INFO</li>
+    <li class="tab">INFO AS A GUIDE</li>
 </div>
 
 <div id="content" class='panel-group'>
@@ -22,7 +22,7 @@
     </div>
   <% end %>
 
-  <div id = "asaguide" class='panel is-show'>
+  <div class='panel is-show'>
 
    <div class ="back"><%= link_to 'Back', @g_info %></div>
 
@@ -63,73 +63,38 @@
     <div class ="radio-btn"><%= form.radio_button :sex, "女" %> Women</div>
     <div class ="radio-btn"><%= form.radio_button :sex, "その他" %> Others</div>
 
-    <div class ="myinfo-label">One message(max 50 words)</div>
-    <%= form.text_field :hitokoto_shoukai, :class => 'myinfo', :placeholder => 'it will be shown in search page of guest' %>
-
-    <div class ="myinfo-label">Introduction(max 700 words)</div>
-    <%= form.text_field :shoukaibun, :class => 'myinfo-big', :placeholder => 'Please fill in detailed location, recommended store, notes etc.' %>
-
-    <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
-
-    <div class ="myscene">
-      <div class ="myscene-wrapper">
-        <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
-        <div id="img_field" onClick="$('#files').click()" >
-         <% if @g_info.picture.present? %>
-          <%= image_tag(@g_info.picture)%>
-          <% else %>
-          <i class="fas fa-image"></i>
-          <% end %>
-        </div>
-        <%= form.file_field :picture, class: "image", style: "display:none;", id: "files", :multiple => true %>
-      </div>
-
-    </div>
-
     <div><%= form.submit :class => 'edit', :value => 'Update' %></div>
    <% end %>
   </div>
 
- <div id="asaguest" class='panel'>
+ <div class='panel'>
 
    <div class ="back"><%= link_to 'Back', @g_info %></div>
 
    <%= form_with(model: g_info, local: true) do |form| %>
 
-     <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
-     <div id="face_img_field" onClick="$('#file').click()" >
-      <% if @g_info.face_picture.present? %>
-       <%= image_tag(@g_info.face_picture)%>
-       <% else %>
-       <i class="fas fa-smile"></i>
-       <% end %>
+     <div class ="myinfo-label">One message(max 50 words)</div>
+     <%= form.text_field :hitokoto_shoukai, :class => 'myinfo', :placeholder => 'it will be shown in search page of guest' %>
+
+     <div class ="myinfo-label">Introduction(max 700 words)</div>
+     <%= form.text_field :shoukaibun, :class => 'myinfo-big', :placeholder => 'Please fill in detailed location, recommended store, notes etc.' %>
+
+     <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
+
+     <div class ="myscene">
+       <div class ="myscene-wrapper">
+         <input type = "text" class ="guide-area-tag-input" value ="#title"></input>
+         <div id="img_field" onClick="$('#files').click()" >
+          <% if @g_info.picture.present? %>
+           <%= image_tag(@g_info.picture)%>
+           <% else %>
+           <i class="fas fa-image"></i>
+           <% end %>
+         </div>
+         <%= form.file_field :picture, class: "image", style: "display:none;", id: "files", :multiple => true %>
+       </div>
+
      </div>
-     <%= form.file_field :face_picture, class: "face_preview", style: "display:none;", id: "file"%>
-
-
-     <div class ="myinfo-label">Please enter your E-mail address.</div>
-     <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
-
-     <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
-     <%= form.password_field :encrypted_password, :class => 'myinfo', :placeholder => 'Password' %>
-
-     <div class ="myinfo-label">Please enter your Password,again.</div>
-     <%= form.password_field :reset_password_token, :class => 'myinfo', :placeholder => 'Password' %>
-
-     <div class ="myinfo-label">Please enter your Name</div>
-     <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
-
-     <div class ="myinfo-label">Please enter your Tel Number</div>
-     <%= form.text_field :tel_number, :class => 'myinfo', :placeholder => 'Tel Number' %>
-
-     <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
-     <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
-
-     <div class ="myinfo-label">Please choice your Sex</div>
-     <div class ="radio-btn"><%= form.radio_button :sex, "男" %> Men</div>
-     <div class ="radio-btn"><%= form.radio_button :sex, "女" %> Women</div>
-     <div class ="radio-btn"><%= form.radio_button :sex, "その他" %> Others</div>
-
 
      <div><%= form.submit :class => 'edit', :value => 'Update' %></div>
 

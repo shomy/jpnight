@@ -13,6 +13,7 @@
  <section id= "regi-form" class='panel-group'>
 
   <div class= "panel is-show">
+    <h3 style ="font-family: 'Poiret One', cursive;">BASIC INFO</h3>
 
     <div class ="myinfo-label">Please enter your Email</div>
     <%= form.email_field :email, autofocus: true, autocomplete: "email", class: "myinfo"%>
@@ -40,13 +41,32 @@
     <div class ="radio-btn"><%= form.radio_button :sex, "女" %> Women</div>
     <div class ="radio-btn"><%= form.radio_button :sex, "その他" %> Others</div>
 
+    <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
 
-    <%= form.submit 'SIGNUP as a GEST?', :id => 'regi-btn-guest', :class => 'tab is-active' %><br>
-    <div id= "regi-btn-guide" class ="tab">SIGNUP as a GUIDE?</div>
+       <div id="face_img_field" onClick="$('#file').click()" >
+        <% if @g_info.face_picture.present? %>
+         <%= image_tag(@g_info.face_picture)%>
+         <% else %>
+         <i class="fas fa-smile"></i>
+         <% end %>
+       </div>
+       <%= form.file_field :face_picture, class: "face_preview", style: "display:none;", id: "file"%>
+
+       <div class ="regi-group">
+         <li class ="regi is-active"><%= form.submit 'REGIST as a GEST', :id => 'regi-btn-guest' %></li>
+         <li class ="regi" id= "regi-btn-guide">REGIST as a GUIDE</li>
+       </div>
+
+
 
   </div>
 
   <div class ="panel">
+        <li class ="regi is-active" id ="back">Back</li>
+
+     <h3 style ="font-family: 'Poiret One', cursive;">GUIDE INFO</h3>
+
+     <div class = "myinfo-label">Whre you can guide</div>
 
      <div class = "myinfo-label">One message(max 700 words)</div>
      <%= form.text_field :name, :class =>'myinfo', :placeholder =>'it will be shown in search page of guest' %>
@@ -54,22 +74,23 @@
      <div class ="myinfo-label">Introduction(max 700 words)</div>
      <%= form.text_field :name, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.' %>
 
+     <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
      <div class ="myscene-wrapper">
-      <%= form.text_field :name, :class =>'guide-area-tag-input', :placeholder =>'#' %>
-
-      <img id ="preview2"></img>
-      <div class = "face-message">Please upload a landscape photo</div>
-      <label class ="upload-btn" for ="img2">
-       Upload
-       <input type="file" id= "img2">
-      </label>
+       <div id="img_field" onClick="$('#files').click()" >
+        <% if @g_info.picture.present? %>
+         <%= image_tag(@g_info.picture)%>
+         <% else %>
+         <i class="fas fa-image"></i>
+         <% end %>
+       </div>
+       <%= form.file_field :picture, class: "image", style: "display:none;", id: "files", :multiple => true %>
      </div>
 
-     <div id ="resiback">Back</div>
-     <%= link_to form.submit :class => "regi-btn" %>
+
+     <div><%= link_to form.submit 'Regist', :class => "regi-btn" %></div>
 
   </div>
- </section>  
+ </section>
  <% end %>
 
 </div>

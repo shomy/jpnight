@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
-.upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn, .proceed-btn, .back{
+.upload-btn, .edit, .dropdown-content-header, .chat-btn, .offer-btn, .proceed-btn, .back, #back {
   font-family: 'Quicksand', sans-serif,'Kosugi Maru', sans-serif;
   color: white;
   text-align: center;
@@ -119,11 +119,11 @@
 }
 
 .area-search {
-  width: 250px;
-  line-height: 60px;
+  line-height: 40px;
   border-radius: 5em;
   border: solid 1px;
   margin: 20px;
+  padding: 10px 20px 10px 20px;
   color: rgb(146, 123, 243);
   font-size: 18px;
   font-weight: bold;
@@ -267,7 +267,7 @@
   z-index: 10;
 }
 
-.edit, .offer-btn, .back, .login-btn, .logout-btn, .regi-btn, #regi-btn-guest, #regi-btn-guide, .resiback {
+.edit, .offer-btn, .back, #back, .login-btn, .logout-btn, .regi-btn, #regi-btn-guest, #regi-btn-guide, .resiback {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
   width: 120px;
   line-height: 30px;
@@ -288,7 +288,7 @@
   z-index: 10;
 }
 
- #regi-btn-guide {
+ #regi-btn-guide, .back, #back{
    background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%));
    background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%);
  }
@@ -314,7 +314,7 @@
   cursor: pointer;
 }
 
-.regi-btn:hover, .submit-btn:hover, .edit:hover, .back:hover, .upload-btn:hover, .chat-btn:hover, .login-btn:hover, .logout-btn:hover, .offer-btn:hover, .proceed-btn:hover,#regi-btn-guest:hover, #regi-btn-guide:hover, #regiback:hover{
+.regi-btn:hover, .submit-btn:hover, .edit:hover, .back:hover, #back:hover, .upload-btn:hover, .chat-btn:hover, .login-btn:hover, .logout-btn:hover, .offer-btn:hover, .proceed-btn:hover,#regi-btn-guest:hover, #regi-btn-guide:hover, #regiback:hover{
   background-color: white;
   transition: background-color 1s;
   opacity:0.5;

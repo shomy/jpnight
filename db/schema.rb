@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2019_08_25_021757) do
     t.string "sex"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "nationality"
     t.string "tel_number"
     t.string "face_picture"
     t.text "use_language_list"
@@ -53,12 +52,7 @@ ActiveRecord::Schema.define(version: 2019_08_25_021757) do
     t.string "picture3"
     t.string "picture4"
     t.string "place"
-    t.string "Roppongi_area"
-    t.string "Shinjyuku_area"
-    t.string "Shibuya_area"
-    t.string "Ginza_area"
-    t.string "Akihabara_area"
-    t.string "Others_area"
+    v
     t.index ["user_id"], name: "index_g_infos_on_user_id"
   end
 
@@ -76,16 +70,6 @@ ActiveRecord::Schema.define(version: 2019_08_25_021757) do
     t.string "tel"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.text "content"
-    t.integer "from_id"
-    t.integer "to_id"
-    t.string "room_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_id", "created_at"], name: "index_messages_on_room_id_and_created_at"
   end
 
   create_table "news", force: :cascade do |t|

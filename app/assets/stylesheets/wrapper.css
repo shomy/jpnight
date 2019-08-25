@@ -171,6 +171,10 @@
   box-sizing: border-box;
 }
 
+#regi-form {
+  margin: 0px auto 50px;
+}
+
 
 
 .tab-group {

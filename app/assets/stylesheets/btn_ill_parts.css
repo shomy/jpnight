@@ -36,21 +36,21 @@
 
 .bottle_w_l {
   position: absolute;
-  height: 200px;
+  height: 170px;
   width: 200px;
   top: 200px;
   left: 100px;
   transform: rotate(0deg);
-  z-index: 1;
+  z-index: 0;
 }
 
 .bottle_w_r {
   position: absolute;
-  height: 500px;
-  width: 500px;
-  top: 1000px;
+  height: 400px;
+  width: 400px;
+  top: 1850px;
   right: 50px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .btn-one {
@@ -71,12 +71,13 @@
   outline-color: rgb(255, 255, 255);
   outline-offset: 0px;
   text-shadow: none;
-  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 3);
   letter-spacing: 3px;
 }
 
 .btn-one:hover {
-  border-color: White;
+  border-color: rgb(197,253,255);
+  color: rgb(197,253,255);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
   outline-color: transparent;
   outline-offset: 12px;
@@ -167,7 +168,7 @@
   width: 100%;
 }
 
-.fa-angle-double-right {
+.fa-chevron-right {
   font-size: 30px;
   margin: 10px auto;
   position: relative;
@@ -197,92 +198,16 @@
   padding: 65px 0 0 0;
 }
 
-
-.tab-group {
-  width: 90%;
-  margin: 0 auto;
-  height: 80px;
-  list-style: none;
-  padding: 0;
-}
-
-.tab {
-  display: inline-block;
-	position: relative;
-  font-family: 'Poiret One', cursive;
-  width: 40%;
-	height: 30px;
-	margin: 40px 0 0 0;
-	padding: 10px 0 0 0;
-	font-size: 18px;
-	text-align: center;
-	text-decoration: none;
-	color: rgb(255,255,255);
-	background: rgb(110, 222, 239);
-  box-shadow:0px -8px 8px -1px rgba(100, 100, 100, 0.3) inset;
-  background-color: rgb(164, 179, 239);
-  z-index: 4;
-  -webkit-border-top-right-radius: 8px;
-      -moz-border-radius-topright: 8px;
-          border-top-right-radius: 8px;
-   -webkit-border-top-left-radius: 8px;
-       -moz-border-radius-topleft: 8px;
-           border-top-left-radius: 8px;
-	        	border: 0px solid #000000;
-}
-
-.is-active {
-	background-color: rgb(230, 236, 240);
-	color: rgb(164, 179, 239);
-}
-
-.tab:hover {
-  transform: scale(1.02, 1.02);
-}
-
-.panel {
-  display: none;
-}
-
-.panel.is-show{
-  display:block;
-}
-
-#mypageface-icon  {
-  height: 200px;
-  width: 200px;
-  margin: 10px auto;
-  border-radius: 50%;
-  border: 1px solid;
-  border-color: rgb(164, 179, 239);
-  background-color: rgb(236, 236, 236);
-  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
-  -webkit-background-size: 20px 20px;
-  display: block;
-}
-
-
 .bottle-ill {
   width: 200px;
-  height: 350px;
+  height: 200px;
   margin: 20px;
   position: absolute;
-  top: 60px;
+  top: 150px;
   right: 100px;
   transform: rotate(10deg);
-  z-index: 1;
+  z-index: 0;
 }
-
-.bottle-ill_l {
-  width: 300px;
-  height: 600px;
-  margin: 10px;
-  position: absolute;
-  top: 500px;
-  left: 40px;
-  transform: rotate(-10deg)
-}
-
 
 .input-upload {
   background: none;
@@ -290,16 +215,16 @@
   border: none;
 }
 
-.myinfo, .myarea-info, .guide-area-tag-input, .guideinfo {
+.myinfo, .myarea-info, .guide-area-tag-input, .guideinfo, input:-internal-autofill-selected {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
   height: 50px;
   width: 80%;
-  font-size: 20px;
+  font-size: 20px!important;
   border: 1px solid;
   border-radius: 5em;
   margin: 10px auto;
   outline: none;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -342,11 +267,11 @@
   z-index: 10;
 }
 
-.edit, .offer-btn, .back, .login-btn, .logout-btn, .regi-btn, #regi-btn-guest, #regi-btn-guide, #resiback {
+.edit, .offer-btn, .back, .login-btn, .logout-btn, .regi-btn, #regi-btn-guest, #regi-btn-guide, .resiback {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
   width: 120px;
   line-height: 30px;
-  font-size: 17px;
+  font-size: 1em;
   color: white;
   margin: 30px auto;
   padding: 5px;
@@ -354,14 +279,26 @@
   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%));
   background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(222,97,190,0.8) 80%);
   border-radius: 5em;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
   cursor: pointer;
   position: relative;
   z-index: 10;
 }
 
-#regi-btn-guest, #regi-btn-guide {
-  width: 200px;
-}
+ #regi-btn-guide {
+   background-image: -webkit-linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%));
+   background-image: linear-gradient(-225deg, rgba(38,87,235,0.8) 10%, rgba(110, 222, 239, 0.8) 80%);
+ }
+
+ #regi-btn-guest, #regi-btn-guide {
+   width: 200px;
+   height: 40px;
+   box-sizing: border-box;
+ }
+
 
 .upload-btn {
   width: 150px;
@@ -738,4 +675,11 @@ input[type="text"]:focus, .myinfo-big:focus {
   transform: rotate(40deg);
   border-bottom: 3px solid rgb(46, 204, 113);
   border-right: 3px solid rgb(46, 204, 113);
+}
+.radio-btn {
+  width: 80%;
+  margin: 20px 10% 0;
+  text-align: left;
+  color: rgb(164, 179, 239);
+  font-size: 18px;
 }

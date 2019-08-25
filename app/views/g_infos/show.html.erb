@@ -1,22 +1,36 @@
+<html>
+<head>
+
+</head>
 <body>
   <div class="wrap">
 
     <div id="mypage">
-      <ul id="tab-group">
-        <li class="tab is-active" id="guidetab" title="asaguide" href="#asaguide">AS A GUIDE</li>
-        <li class="tab" id="guesttab" title="asaguest" href="#asaguest">AS A GUEST</li>
-      </ul>
+      <div class ="tab-group">
+        <li class="tab is-active">BASIC INFO</li>
+        <li class="tab">INFO AS A GUIDE</li>
+      </div>
+
+      <% @g_infos.each do |g_info| %>
       <div id="content" class='panel-group'>
-        <section id="asaguide" class='panel is-show'>
+
+        <section class='panel is-show'>
           <!-- ガイドのタブ -->
           <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+
           <div class="mypage-head">
             <div class="myface-wrapper">
-              <img id="mypageface-icon"></img>
+              <div id="face_img_field">
+                <% if @g_info.face_picture.present? %>
+                 <%= image_tag(@g_info.face_picture)%>
+                 <% else %>
+                 <i class="fas fa-smile"></i>
+                 <% end %>
+              </div>
             </div>
           </div>
           <img src="/assets/wine_w.png" class="bottle_w_l"></img>
-          <img src="/assets/wine_w.png" class="bottle_w_r"></img>
+
 
           <div class="myinfo-wrapper">
 
@@ -32,79 +46,59 @@
             <div class="myinfo-label">Age</div>
             <div class="myinfo"><%= @g_info.age %></div>
 
-            <div class="myinfo-label">Tel</div>
-            <div class="myinfo"></div>
+            <div class="myinfo-label">Tel Number</div>
+            <div class="myinfo"><%= @g_info.tel_number %></div>
+
+          </div>
+
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+          <label class="myinfo-label">
+            <h4>After the official launch, guide fee (charged guide)function & payment function will be added.</h4>
+          </label>
+
+        </section>
+
+        <section class='panel'>
+
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+
+          <img src="/assets/wine_w.png" class="bottle-ill"></img>
+
+          <div class="myinfo-wrapper">
 
             <div class="myinfo-label">Where you can guide</div>
             <div class="myinfo">00000000000</div>
 
             <div class="myinfo-label">Language</div>
-            <div class="myinfo">00000000000</div>
+            <div class="myinfo"><%= @g_info.use_language_list %></div>
 
-            <div class="myinfo-label">One message( )</div>
-            <div class="myinfo">00000000000</div>
+            <div class="myinfo-label">One message(max words)</div>
+            <div class="myinfo"><%= @g_info.hitokoto_shoukai %></div>
 
-            <div class="myinfo-label">Introduction（ ）</div>
-            <div class="myinfo-big"></div>
+            <div class="myinfo-label">Introduction（max words）</div>
+            <div class="myinfo-big"><% @g_info.shoukaibun %></div>
 
             <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview2"></img>
+              <h4 class="guide-area-tag"><a>#Shinjyuku</a></h4>
+              <% @g_infos.each do |picture| %>
+              <div id="img_field">
+                <% if @g_info.picture.present? %>
+                 <%= image_tag(@g_info.picture)%>
+                <% else %>
+                 <i class="fas fa-image"></i>
+                <% end %>
+              </div>
+              <% end %>
             </div>
-            <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview3"></img>
-            </div>
-            <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview4"></img>
-            </div>
-            <div class="myscene-wrapper">
-              <h4 class="guide-area-tag">
-                <a>#Shinjyuku</a>
-              </h4>
-              <img id="preview5"></img>
-            </div>
+
           </div>
+
           <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
-          <label class="myinfo-label">
-            <h4>正式ローンチ後、ガイドフィー（有償ガイド）・決済機能が追加されます</h4>
-          </label>
+         <label class="myinfo-label"><h4>After the official launch, guide fee (charged guide)function & payment function will be added.</h4></label>
         </section>
-
-        <section id="asaguest" class='panel'>
-          <div class="mypage-head">
-            <div class="edit">編集する</div>
-            <div class="myface-wrapper">
-              <img id="mypageface-icon"></img>
-            </div>
-            <img src="/assets/bottle.png" class="bottle-ill"></img>
-            <div class="myinfo-wrapper">
-              <img src="/assets/bottle.png" class="bottle-ill_l"></img>
-
-              <label class="myinfo-label">名前</label>
-              <div class="myinfo">000</div>
-
-              <label class="myinfo-label">性別</label>
-              <div class="myinfo">00000000000</div>
-
-              <label class="myinfo-label">年齢</label>
-              <div class="myinfo">00000000000</div>
-
-              <label class="myinfo-label">電話番号</label>
-              <div class="myinfo">00000000000</div>
-
-              <div class="edit">編集する</div>
-            </div>
-            <label class="myinfo-label">After the official launch, guide fee (charged guide)function & payment function will be added.</label>
-          </section>
-        </div>
       </div>
+      <% end %>
     </div>
-  </body>
+  </div>
+</body>
+</html>

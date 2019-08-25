@@ -12,7 +12,7 @@ class GInfosController < ApplicationController
   # GET /g_infos/1.json
   def show
     @g_infos = GInfo.all
-    @g_info = GInfo.find(params[:id])
+    @g_info = GInfo.find_by(id: params[:id])
 
   end
 
@@ -39,13 +39,18 @@ class GInfosController < ApplicationController
 
     respond_to do |format|
       if @g_info.save
-        format.html { redirect_to @g_info, notice: 'G info was successfully created.' }
+        format.html { redirect_to @g_info, notice: 'Your info was successfully created.' }
         format.json { render :show, status: :created, location: @g_info }
       else
         format.html { render :new }
         format.json { render json: @g_info.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:content, :image)
   end
 
   # PATCH/PUT /g_infos/1
@@ -81,6 +86,6 @@ class GInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def g_info_params
-      params.require(:g_info).permit(:user_id, :name, :age, :sex)
+      params.require(:g_info).permit(:user_id, :name, :age, :sex, {picture: []})
     end
 end

@@ -494,18 +494,6 @@ label input {
   transition: 0.3s;
 }
 
-input[type="text"]:focus, .myinfo-big:focus {
-  border-color: dodgerBlue;
-  box-shadow: 0 0 8px 0 dodgerBlue;
-}
-
-.input-email input[type="text"], .input-password input[type="text"]{
-  padding-left: 40px;
-}
-
-.input-email input[type="text"]:focus, .input-password input[type="text"]:focus {
-  color: dodgerBlue;
-}
 
 .submit-btn, ,.login-btn, .logout-btn {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;

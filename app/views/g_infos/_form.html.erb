@@ -44,10 +44,10 @@
     <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
 
     <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
-    <%= form.password_field :encrypted_password, :class => 'myinfo', :placeholder => 'Password' %>
+    <%= form.password_field :password, :class => 'myinfo', :placeholder => 'Password' %>
 
     <div class ="myinfo-label">Please enter your Password,again.</div>
-    <%= form.password_field :reset_password_token, :class => 'myinfo', :placeholder => 'Password' %>
+    <%= form.password_field :rpassword_confirmation, :class => 'myinfo', :placeholder => 'Password' %>
 
     <div class ="myinfo-label">Please enter your Name</div>
     <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>

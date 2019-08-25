@@ -5,7 +5,7 @@
 
  <section class ="top-wrapper">
   <h1 class ="lead">MAKE A FRIE<span>N</span>DS A<span>N</span>D E<span>N</span>JOY JAPA<span>N</span>ESE <span>N</span>IGHT</h1>
-  <h2 class ="lead4guide">Resgistraition is very easy & rakes only a minute.<h2>
+  <h2 class ="lead4guide">Resgistraition is very easy & takes only a minute.<h2>
   <div href="" class ="circle"><span>ALL GUIDES<br>FREE<br>ONLY<br>NOW</span></div>
  </section>
 
@@ -13,10 +13,10 @@
  <section id= "regi-form" class='panel-group'>
 
   <div class= "panel is-show">
-    <h3 style ="font-family: 'Poiret One', cursive;">BASIC INFO</h3>
+    <h3 style ="font-family: 'Poiret One', cursive;"><i class="fas fa-cog fa-fw"></i> BASIC INFO</h3>
 
     <div class ="myinfo-label">Please enter your Email</div>
-    <%= form.email_field :email, autofocus: true, autocomplete: "email", class: "myinfo"%>
+    <%= form.text_field :email, autofocus: true, autocomplete: "email", class: "myinfo"%>
 
     <div class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</div>
     <% if @minimum_password_length %>
@@ -64,7 +64,7 @@
   <div class ="panel">
         <li class ="regi is-active" id ="back">Back</li>
 
-     <h3 style ="font-family: 'Poiret One', cursive;">GUIDE INFO</h3>
+     <h3 style ="font-family: 'Poiret One', cursive;"><i class="fas fa-hat-wizard fa-fw"></i> GUIDE INFO</h3>
 
      <div class = "myinfo-label">Whre you can guide</div>
 

@@ -165,3 +165,21 @@ line-height: 30px;
   border-color: rgb(164, 179, 239);
   z-index:
 }
+
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, .myinfo-big:focus {
+  border-color: dodgerBlue !important;
+  box-shadow: 0 0 8px 0 dodgerBlue !important;
+}
+
+input:-internal-autofill-selected {
+  background-color: white !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: rgb(164, 179, 239) !important;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  border-color:rgb(164, 179, 239) !important;
+  font-size: 20px  !important;
+  background-color: white !important;
+}

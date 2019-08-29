@@ -16,7 +16,7 @@
   text-align:center;
   position: absolute;
   left: 80%;
-  top: 245px;
+  top: 220px;
   z-index: 130;
 }
 
@@ -54,13 +54,13 @@
 }
 
 .btn-one {
-  width: 300px;
-  height: 70px;
+  width: 220px;
+  height: 50px;
   margin: 30px;
   color: white;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  line-height: 70px;
+  line-height: 50px;
   display: inline-block;
   position: relative;
   text-decoration: none;
@@ -71,7 +71,7 @@
   outline-color: rgb(255, 255, 255);
   outline-offset: 0px;
   text-shadow: none;
-  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 3);
+  transition: all 0.7s cubic-bezier(0.2, 1, 0.2, 3);
   letter-spacing: 3px;
 }
 
@@ -99,12 +99,13 @@
 }
 
 .pointer {
-  position: absolute;
+  font-family: 'Mountains of Christmas', cursive !important;
+  /*position: absolute;
   left: 40px;
-  top: -75px;
-  color: rgba(8, 12, 214, 0.5);
+  top: -75px;*/
+  color: #3b393c;
   transform: rotate(-2deg);
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 3px;
   animation: key1 .6s ease infinite alternate;
 }
@@ -216,6 +217,24 @@
 }
 
 .myinfo, .myarea-info, .guide-area-tag-input, .guideinfo, input:-internal-autofill-selected {
+  font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
+  height: 50px;
+  width: 80%;
+  font-size: 20px!important;
+  border: 1px solid;
+  border-radius: 5em;
+  margin: 10px auto;
+  outline: none;
+  padding: 10px 10px 10px 20px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  transition: 0.3s;
+  text-align: left;
+  z-index: 10;
+}
+
+_::-webkit-full-page-media, _:future, :root .myinfo {
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
   height: 50px;
   width: 80%;

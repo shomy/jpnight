@@ -27,6 +27,7 @@ class GInfosController < ApplicationController
   def edit
     @g_infos = GInfo.all
     @g_info = GInfo.find(params[:id])
+    @g_info.sex = true
 
   end
 

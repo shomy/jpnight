@@ -183,3 +183,27 @@ input:-webkit-autofill {
   font-size: 20px  !important;
   background-color: white !important;
 }
+
+.radio_btn {
+  display: none;
+}
+
+.radio_btn + label {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 10px auto;
+  padding: 10px;
+  color: rgb(76, 114, 226);
+  border: solid 1px rgb(76, 114, 226);
+  border-radius: 5em;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.radio_btn:checked + label  {
+  color: #fff;
+  background-color: rgb(76, 114, 226);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}

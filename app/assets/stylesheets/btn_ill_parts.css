@@ -683,10 +683,3 @@ label input {
   border-bottom: 3px solid rgb(46, 204, 113);
   border-right: 3px solid rgb(46, 204, 113);
 }
-.radio-btn {
-  width: 80%;
-  margin: 20px 10% 0;
-  text-align: left;
-  color: rgb(76, 114, 226);
-  font-size: 15px;
-}

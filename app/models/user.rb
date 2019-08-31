@@ -6,6 +6,7 @@ class User < ApplicationRecord
   #has_many :guides, dependent: :destroy
   has_many :guide_infos, dependent: :destroy
   has_many :g_infos, dependent: :destroy
-
   
+
+
 end

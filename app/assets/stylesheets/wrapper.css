@@ -160,7 +160,7 @@
 .login-form, #regi-form, #content, #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
   background-color: rgb(230, 236, 240);
   /*margin: 100px auto 50px;*/
-  padding: 60px 30px;
+  padding: 20px 30px;
   text-align: center;
   position: relative;
   /*box-shadow: 0 0 10px 8px lightgray;*/
@@ -171,8 +171,8 @@
   box-sizing: border-box;
 }
 
-#regi-form {
-  /*margin: 0px auto 50px;*/
+#content {
+  padding: 60px 30px;
 }
 
 

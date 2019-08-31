@@ -76,22 +76,22 @@
 
    <%= form_with(model: g_info, local: true) do |form| %>
 
-     <div class ="myinfo-label">Please select all area where you can guide.</div>
-     <section class ="area-tag-wrapper">
-     <%= form.radio_button :Roppongi_area, "Roppongi_area", :class=> "radio_btn", :id => "radio1" %>
-     <%= form.label 'Roppongi~Azabu~Akaska', :for => "radio1" %>
-     <%= form.radio_button :Shinjyuku_area, "Shinjyuku_area", :class=> "radio_btn", :id => "radio2" %>
-     <%= form.label 'Shinjyuku~Ikebukuro', :for => "radio2" %>
-     <%= form.radio_button :Shibuya_area, "Shibuya_area", :class=> "radio_btn", :id => "radio3" %>
-     <%= form.label 'Shibuya~Ebis~Meguro', :for => "radio3" %>
-     <%= form.radio_button :Ginza_area, "Ginza_area", :class=> "radio_btn", :id => "radio4" %>
-     <%= form.label 'Ginza~Tokyo Station', :for => "radio4" %>
-     <%= form.radio_button :Akihabara_area, "Akihabara_area", :class=> "radio_btn", :id => "radio5" %>
-     <%= form.label 'Akihabara~Ueno~Asakusa', :for => "radio5" %>
-     <%= form.radio_button :Others_area, "Others_area", :class=> "radio_btn", :id => "radio6" %>
-     <%= form.label 'Others', :for => "radio6" %>
-     <h4><a href="javascript:void(0);" onclick="resetradio()"><i class="fas fa-times-circle fa-fw"></i> Reset</a></h4>
-     </section>
+   <div class ="myinfo-label">Please select all area where you can guide.</div>
+   <section class ="area-tag-wrapper">
+   <%= form.radio_button :Roppongi_area, "Roppongi_area", :class=> "radio_btn", :id => "radio1" %>
+   <label for ="radio1">Roppongi~Azabu~Asakusa</label>
+   <%= form.radio_button :Shinjyuku_area, "Shinjyuku_area", :class=> "radio_btn", :id => "radio2" %>
+   <label for ="radio2">Shinjyuku~Ikebukuro</label>
+   <%= form.radio_button :Shibuya_area, "Shibuya_area", :class=> "radio_btn", :id => "radio3" %>
+   <label for ="radio3">Shibuya~Ebis~Meguro</label>
+   <%= form.radio_button :Ginza_area, "Ginza_area", :class=> "radio_btn", :id => "radio4" %>
+   <label for ="radio4">Ginza~Tokyo Station</label>
+   <%= form.radio_button :Akihabara_area, "Akihabara_area", :class=> "radio_btn", :id => "radio5" %>
+   <label for ="radio5">Akihabara~Ueno~Asakusa</label>
+   <%= form.radio_button :Others_area, "Others_area", :class=> "radio_btn", :id => "radio6" %>
+   <label for ="radio6">Others</label>
+   <h4><a href="javascript:void(0);" onclick="resetradio()"><i class="fas fa-times-circle fa-fw"></i> Reset</a></h4>
+   </section>
 
      <div class ="myinfo-label">Please select all language  you can speak.</div>
      <%= form.check_box :use_language_list, :value => "English", :class=> "radio_btn", :id => "checkboxl1" %>

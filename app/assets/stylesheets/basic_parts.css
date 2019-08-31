@@ -191,6 +191,7 @@ input:-webkit-autofill {
 .radio_btn + label {
   display: inline-block;
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
   font-size: 1em;
   font-weight: normal;
   margin: 10px auto;

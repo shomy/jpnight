@@ -37,7 +37,7 @@ h1, h2, .guide figcaption {
   text-align: center;
 }
 
-h3, h4, h5, h6, .login, .header-username, .mypagecommand, .fa-angle-double-right, .guide, .guideinfo, .myinfo-label, .myinfo-big, .face-message, .myarea-info, .dropdown-content, .dropdown-content-header, .guide-area-tag-input, .chat-delete {
+h3, h4, h5, h6, .login, .header-username, .mypagecommand, .fa-angle-double-right, .guide, .guideinfo, .myinfo-label, .face-message, .myarea-info, .dropdown-content, .dropdown-content-header, .guide-area-tag-input, .chat-delete {
   font-family: 'Quicksand', sans-serif,  'Kosugi Maru', sans-serif;
   color: rgb(164, 179, 239);
   text-align: center;

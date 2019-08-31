@@ -9,6 +9,14 @@ function resetradio() {
     }
 }
 
+function resetcheckboxl() {
+    for (i = 1; i <= 3; i++) {
+        document.getElementById('checkboxl' + i).checked = false;
+    }
+}
+
+//複数選択セレクトボックス
+
 jQuery(function($){
 	$('.tab').click(function(){
 		$('.is-active').removeClass('is-active');

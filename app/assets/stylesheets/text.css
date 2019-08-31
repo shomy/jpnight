@@ -78,8 +78,8 @@
     color: rgb(164, 179, 239);
   }
 
-  .myinfo {
-    color: rgb(164, 179, 239)!important;
+  .myinfo, .myinfo-big {
+    color: rgb(76, 114, 226)!important;
   }
 
 

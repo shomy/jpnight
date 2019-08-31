@@ -28,7 +28,6 @@ class GInfosController < ApplicationController
     @g_infos = GInfo.all
     @g_info = GInfo.find(params[:id])
 
-
   end
 
   # POST /g_infos

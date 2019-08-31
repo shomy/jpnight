@@ -2,6 +2,13 @@ Pace.on('done', function(){
   $('.wrap').fadeIn(400);
 });
 
+//ラジオボタンリセット
+function resetradio() {
+    for (i = 1; i <= 6; i++) {
+        document.getElementById('radio' + i).checked = false;
+    }
+}
+
 jQuery(function($){
 	$('.tab').click(function(){
 		$('.is-active').removeClass('is-active');

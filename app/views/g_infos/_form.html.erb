@@ -73,6 +73,15 @@
 
    <%= form_with(model: g_info, local: true) do |form| %>
 
+     <div class ="myinfo-label">Please select all places where you can guide.</div>
+     <div class ="radio-btn"><%= form.radio_button :Roppongi_area, "Roppongi_area", :id => "radio1" %> Roppongi~ Azabu~ Akaska</div>
+     <div class ="radio-btn"><%= form.radio_button :Shinjyuku_area, "Shinjyuku_area", :id => "radio2" %> Shinjyuku~ Ikebukuro</div>
+     <div class ="radio-btn"><%= form.radio_button :Shibuya_area, "Shibuya_area", :id => "radio3" %> Shibuya~ Ebis~ Meguro</div>
+     <div class ="radio-btn"><%= form.radio_button :Ginza_area, "Ginza_area", :id => "radio4" %> Ginza~ Tokyo Station</div>
+     <div class ="radio-btn"><%= form.radio_button :Akihabara_area, "Akihabara_area", :id => "radio5" %> Akihabara~ Ueno~ Asakusa</div>
+     <div class ="radio-btn"><%= form.radio_button :Others_area, "Others_area", :id => "radio6"%> Others</div>
+     <a class ="myinfo-label" href="javascript:void(0);" onclick="resetradio()"><i class="fas fa-times-circle fa-fw"></i> Reset</a>
+
      <div class ="myinfo-label">One message(max 50 words)</div>
      <%= form.text_field :hitokoto_shoukai, :class => 'myinfo', :placeholder => 'it will be shown in search page of guest' %>
 
@@ -83,12 +92,6 @@
 
      <div class ="myscene">
        <div class ="myscene-wrapper">
-
-
-
-
-
-
          <div id="img_field" onClick="$('#files').click()" >
           <% if @g_info.picture.present? %>
            <%= image_tag(@g_info.picture)%>
@@ -97,6 +100,18 @@
            <% end %>
          </div>
          <%= form.file_field :picture, class: "image", style: "display:none;", id: "files", :multiple => true %>
+
+       </div>
+       <div class ="myscene-wrapper">
+         <div id="img_field" onClick="$('#files1').click()" >
+          <% if @g_info.picture1.present? %>
+           <%= image_tag(@g_info.picture1)%>
+           <% else %>
+           <i class="fas fa-image"></i>
+           <% end %>
+         </div>
+         <%= form.file_field :picture1, class: "image", style: "display:none;", id: "files1", :multiple => true %>
+
        </div>
 
      </div>

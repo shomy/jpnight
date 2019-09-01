@@ -103,7 +103,7 @@
      <div class ="myinfo-label">Introduction(max 700 words)</div>
      <%= form.text_field :shoukaibun, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.', :maxlength =>"700" %>
 
-     <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
+     <div class ="myinfo-label">Please upload photos of the spots you know well.</div>
      <div class ="myscene-wrapper">
        <div id="img_field" onClick="$('#files').click()" >
         <% if @g_info.picture.present? %>

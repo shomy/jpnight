@@ -214,6 +214,10 @@ footer {
   margin: 0;
 }
 
+.footer-list::after {
+  left: 60%;
+}
+
 
 .chat-wrapper, .logout-form, .company-profile {
   padding: 10px;

@@ -104,7 +104,7 @@
   }
 
   .title-QA, .title-news, .title-company {
-    width: 100px;
+    display: inline-block;
     line-height: 1em;
     margin: 70px auto 40px;
     color: rgba(8, 12, 214, 0.5);

@@ -125,7 +125,7 @@ footer {
   left: 50%;
   content: '';
   width: 0;
-  height: 2px;
+  height: 1px;
   background: linear-gradient(to right, rgba(240, 204, 255, 0.5), rgba(204, 255, 213, 0.5));
   transition: .3s;
   -webkit-transform: translateX(-50%);

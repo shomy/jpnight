@@ -28,7 +28,7 @@
 
    <%= form_with(model: g_info, local: true) do |form| %>
 
-    <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
+    <div class ="myinfo-label">Please upload your face picture.</div>
 
        <div id="face_img_field" onClick="$('#file').click()" >
         <% if @g_info.face_picture.present? %>
@@ -49,16 +49,16 @@
     <div class ="myinfo-label">Please enter your Password,again.</div>
     <%= form.password_field :rpassword_confirmation, :class => 'myinfo_basic', :placeholder => 'Password' %>
 
-    <div class ="myinfo-label">Please enter your Name</div>
+    <div class ="myinfo-label">Please enter your Name.</div>
     <%= form.text_field :name, :value => @g_info.name, :class => 'myinfo_basic', :placeholder => 'Name', :maxlength =>"20" %>
 
-    <div class ="myinfo-label">Please enter your Tel Number</div>
+    <div class ="myinfo-label">Please enter your Tel Number.</div>
     <%= form.text_field :tel_number, :value => @g_info.tel_number, :class => 'myinfo_basic', :placeholder => 'Tel Number', :maxlength =>"15" %>
 
-    <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
+    <div class ="myinfo-label">Please enter your Age.</div><!-- 18歳以下は登録不可制御-->
     <%= form.text_field :age, :value => @g_info.age, :class => 'myinfo_basic_age', :placeholder => "Age", :maxlength =>"3" %>
 
-    <div class ="myinfo-label">Please choice your Sex</div>
+    <div class ="myinfo-label">Please choice your Sex.</div>
     <%= form.radio_button :sex, "男" , :class=> "radio_btn", :id => "rlabel1" %>
     <%= form.label ' Men', :for => "rlabel1" %>
     <%= form.radio_button :sex, "女", :class=> "radio_btn", :id => "rlabel2" %>

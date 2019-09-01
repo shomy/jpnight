@@ -12,7 +12,7 @@
   }
 
   .lead {
-    width: 1200px;
+    width: 85%;
     font-size: 40px;
     font-weight: lighter;
     text-align: center;
@@ -68,8 +68,6 @@
   }
 
   .myinfo-label {
-    width: 80%;
-    text-align: left;
     font-size: 18px;
     margin: 30px 10% 0;
     display: block;

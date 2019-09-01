@@ -16,25 +16,25 @@
     <h3 style ="font-family: 'Poiret One', cursive;"><u><i class="fas fa-cog fa-fw"></i> BASIC INFO</u></h3>
 
     <div class ="myinfo-label">Please enter your Email</div>
-    <%= form.text_field :email, autofocus: true, autocomplete: "email", class: "myinfo"%>
+    <%= form.text_field :email, autofocus: true, autocomplete: "email", class: "myinfo_basic"%>
 
     <div class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</div>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= form.password_field :password, autocomplete: "new-password", class: "myinfo" %>
+    <%= form.password_field :password, autocomplete: "new-password", class: "myinfo_basic" %>
 
     <div class ="myinfo-label">Please enter your Password,again.</div>
-    <%= form.password_field :password_confirmation, autocomplete: "new-password", class: "myinfo" %>
+    <%= form.password_field :password_confirmation, autocomplete: "new-password", class: "myinfo_basic" %>
 
     <div class ="myinfo-label">Please enter your Name</div>
-    <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
+    <%= form.text_field :name, :class => "myinfo_basic", :placeholder => 'Name', :maxlength =>"20" %>
 
     <div class ="myinfo-label">Please enter your Phone Number</div>
-    <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Phone Number' %>
+    <%= form.text_field :tel_number, :class => "myinfo_basic", :placeholder => 'Tel Number', :maxlength =>"15" %>
 
     <div class ="myinfo-label">Please enter your Age</div>
-    <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
+    <%= form.text_field :age, :class => "myinfo_basic_age", :placeholder => "Age", :maxlength =>"3" %>
 
     <div class ="myinfo-label">Please choice your Sex</div>
     <%= form.radio_button :sex, "男" , :class=> "radio_btn", :id => "rlabel1" %>
@@ -93,15 +93,15 @@
      <%= form.label 'Japanese', :for => "checkboxl2" %>
      <%= form.check_box :use_language_list, :value => "Chinese", :class=> "radio_btn", :id => "checkboxl3" %>
      <%= form.label 'Chinese', :for => "checkboxl3" %>
-     <%= form.text_field :use_language_list, :class =>'myinfo', :placeholder =>'Other Language' %>
+     <%= form.text_field :use_language_list, :class =>"myinfo_basic", :placeholder =>'Other Language' %>
      <h4><a href="javascript:void(0);" onclick="resetcheckboxl()"><i class="fas fa-times-circle fa-fw"></i> Reset</a></h4>
 
 
      <div class = "myinfo-label">One message(max 700 words)</div>
-     <%= form.text_field :name, :class =>'myinfo', :placeholder =>'it will be shown in search page of guest' %>
+     <%= form.text_field :hitokoto_shoukai, :class =>"myinfo", :placeholder =>'it will be shown in search page of guest', :maxlength =>"80"%>
 
      <div class ="myinfo-label">Introduction(max 700 words)</div>
-     <%= form.text_field :name, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.' %>
+     <%= form.text_field :shoukaibun, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.', :maxlength =>"700" %>
 
      <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
      <div class ="myscene-wrapper">

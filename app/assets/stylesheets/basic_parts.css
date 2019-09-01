@@ -173,22 +173,63 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 input:-internal-autofill-selected {
-  background-color: white !important;
+  background-color: white;
 }
 
 input:-webkit-autofill {
-  -webkit-text-fill-color: rgb(164, 179, 239) !important;
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
-  border-color:rgb(164, 179, 239) !important;
-  font-size: 20px  !important;
-  background-color: white !important;
+  -webkit-text-fill-color: rgb(164, 179, 239);
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  border-color:rgb(164, 179, 239);
+  font-size: 20px;
+  background-color: white;
+}
+
+.myinfo_basic, .myinfo, .myinfo_basic_age, input:-internal-autofill-selected {
+  color: rgb(76, 114, 226);
+  border: solid 1px rgb(76, 114, 226);
+  width: 20em;
+  font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
+  height: 50px;
+  font-size: 20px!important;
+  border-radius: 5em;
+  margin: 10px auto;
+  outline: none;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  transition: 0.3s;
+  text-align: left;
+  z-index: 10;
+}
+
+.myinfo {
+  width: 30em;
+}
+
+.myinfo_basic_age {
+  width: 4em;
+  text-align: center;
+}
+
+.myinfo-big {
+  font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
+  height: 200px;
+  width: 30em;
+  text-align: left;
+  padding: 20px;
+  font-size: 20px;
+  margin: 10px auto;
+  border-radius: 20px;
+  border: 1px solid;
+  z-index: 10;
 }
 
 .radio_btn {
   display: none;
 }
 
-.radio_btn + label {
+.radio_btn + label, .myinfo_radio {
   display: inline-block;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
@@ -203,8 +244,13 @@ input:-webkit-autofill {
   cursor: pointer;
 }
 
-.radio_btn:checked + label  {
+.radio_btn:checked + label, .myinfo_radio {
   color: #fff;
   background-color: rgb(76, 114, 226);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 990;
+}
+
+.myinfo_radio {
+
 }

@@ -41,22 +41,22 @@
 
 
     <div class ="myinfo-label">Please enter your E-mail address.</div>
-    <%= form.email_field :email, :class => 'myinfo', :placeholder => 'E-mail' %>
+    <%= form.email_field :email, :class => 'myinfo_basic', :placeholder => 'E-mail' %>
 
     <label class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</label>
-    <%= form.password_field :password, :class => 'myinfo', :placeholder => 'Password' %>
+    <%= form.password_field :password, :class => 'myinfo_basic', :placeholder => 'Password' %>
 
     <div class ="myinfo-label">Please enter your Password,again.</div>
-    <%= form.password_field :rpassword_confirmation, :class => 'myinfo', :placeholder => 'Password' %>
+    <%= form.password_field :rpassword_confirmation, :class => 'myinfo_basic', :placeholder => 'Password' %>
 
     <div class ="myinfo-label">Please enter your Name</div>
-    <%= form.text_field :name, :value => @g_info.name, :class => 'myinfo', :placeholder => 'Name' %>
+    <%= form.text_field :name, :value => @g_info.name, :class => 'myinfo_basic', :placeholder => 'Name', :maxlength =>"20" %>
 
     <div class ="myinfo-label">Please enter your Tel Number</div>
-    <%= form.text_field :tel_number, :value => @g_info.tel_number, :class => 'myinfo', :placeholder => 'Tel Number' %>
+    <%= form.text_field :tel_number, :value => @g_info.tel_number, :class => 'myinfo_basic', :placeholder => 'Tel Number', :maxlength =>"15" %>
 
     <div class ="myinfo-label">Please enter your Age</div><!-- 18歳以下は登録不可制御-->
-    <%= form.text_field :age, :value => @g_info.age, :class => 'myinfo', :placeholder => "Age" %>
+    <%= form.text_field :age, :value => @g_info.age, :class => 'myinfo_basic_age', :placeholder => "Age", :maxlength =>"3" %>
 
     <div class ="myinfo-label">Please choice your Sex</div>
     <%= form.radio_button :sex, "男" , :class=> "radio_btn", :id => "rlabel1" %>
@@ -100,14 +100,14 @@
      <%= form.label 'Japanese', :for => "checkboxl2" %>
      <%= form.check_box :use_language_list, :value => "Chinese", :class=> "radio_btn", :id => "checkboxl3" %>
      <%= form.label 'Chinese', :for => "checkboxl3" %>
-     <%= form.text_field :use_language_list, :class =>'myinfo', :placeholder =>'Other Language' %>
+     <%= form.text_field :use_language_list, :class =>'myinfo', :placeholder =>'Other Language',:maxlength =>"50" %>
      <h4><a href="javascript:void(0);" onclick="resetcheckboxl()"><i class="fas fa-times-circle fa-fw"></i> Reset</a></h4>
 
-     <div class ="myinfo-label">One message(max 50 words)</div>
-     <%= form.text_field :hitokoto_shoukai, :value => @g_info.hitokoto_shoukai, :class => 'myinfo', :placeholder => 'it will be shown in search page of guest' %>
+     <div class ="myinfo-label">One message(max 80 words)</div>
+     <%= form.text_field :hitokoto_shoukai, :value => @g_info.hitokoto_shoukai, :class => 'myinfo', :placeholder => 'it will be shown in search page of guest', :maxlength =>"80" %>
 
      <div class ="myinfo-label">Introduction(max 700 words)</div>
-     <%= form.text_field :shoukaibun, :value => @g_info.shoukaibun, :class => 'myinfo-big', :placeholder => 'Please fill in detailed location, recommended store, notes etc.' %>
+     <%= form.text_field :shoukaibun, :value => @g_info.shoukaibun, :class => 'myinfo-big', :placeholder => 'Please fill in detailed location, recommended store, notes etc.' , :maxlength =>"700" %>
 
      <div class ="myinfo-label"><h4>Please upload photos of the spots you know well.</h4></div>
 

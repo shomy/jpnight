@@ -13,8 +13,11 @@
 }
 
 .btn-one {
-  width: 30%;
-  margin: 8px;
+  width: 10em;
+  margin: 5px;
+  font-size: 15px;
+  line-height: 40px;
+  height: 40px;
 }
 
 #chat-face, .treat-icon, .chat-name, .chat-btn, .chat-delete  {
@@ -32,9 +35,7 @@
   grid-template-columns: 50% 50%;
 }
 }
-.one-message {
 
-}
 
 .town-ill {
   height: 90px;
@@ -55,26 +56,14 @@
   display: inline-block;
 }
 
-.circle, .circle-b {
-  width: 80px;
-  height: 80px;
-  top: 300px;
 }
 
-.circle-b {
-  top: 10px;
-  left: 5px;
-}
+@media (max-width: 870px) {
 
-.circle span, .circle-b span {
-  width: 80px;
-  font-size: 13px;
-  line-height: 14px;
+.top-wrapper::after {
+  bottom: -100px;
+  height: 200px;
 }
-
-}
-
-@media (max-width: 770px) {
 
 .lead {
   font-size: 20px;
@@ -145,17 +134,25 @@ h3 span, .h3media {
   font-size: 20px;
 }
 
+.circle, .circle-b {
+  width: 80px;
+  height: 80px;
+  top: 300px;
+}
+
+.circle-b {
+  top: 10px;
+  left: 5px;
+}
+
+.circle span, .circle-b span {
+  width: 80px;
+  font-size: 13px;
+  line-height: 14px;
+}
 .radio-form {
   font-size: 15px;
   width: 100%;
-}
-
-.btn-one {
-  width: 40%;
-  margin: 5px;
-  font-size: 15px;
-  line-height: 40px;
-  height: 40px;
 }
 
 .area-tag, .area-search {
@@ -259,7 +256,7 @@ footer {
     transform: rotate(10deg)
 }
 
-.myinfo, .guideinfo {
+.myinfo, .myinfo_basic, .guideinfo {
   width: 100% !important;
   height: 40px !important;
   padding: 8px 6px 6px 10px!important;

@@ -52,7 +52,7 @@ $( document ).on ('turbolinks:load', (function(){
 }));
 
 
-$(document).on ('turbolinks:load', (function() {
+$(function(){
   $fileField = $('#files')
 
   // 選択された画像を取得し表示
@@ -74,13 +74,13 @@ $(document).on ('turbolinks:load', (function() {
     })(file);
     reader.readAsDataURL(file);
   });
-}));
+});
 
-$(document).on ('turbolinks:load', (function() {
+$(function(){
   $fileField = $('#file')
 
   // 選択された画像を取得し表示
-  $($fileField).on('change', $fileField, function(e) {
+  $($fileField).on('change', $fileField, function(e){
     file = e.target.files[0]
     reader = new FileReader(),
     $preview = $("#face_img_field");
@@ -98,4 +98,4 @@ $(document).on ('turbolinks:load', (function() {
     })(file);
     reader.readAsDataURL(file);
   });
-}));
+});

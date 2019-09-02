@@ -35,25 +35,25 @@
           <div class="myinfo-wrapper">
 
             <div class="myinfo-label">Email</div>
-            <div class="myinfo"></div>
+            <div class="myinfo_basic"></div>
 
             <div class="myinfo-label">Name</div>
-            <div class="myinfo"><%= @g_info.name %></div>
+            <div class="myinfo_basic"><%= @g_info.name %></div>
 
             <div class="myinfo-label">Sex</div>
-            <div class="myinfo"><%= @g_info.sex %></div>
+            <div class="myinfo_basic_age"><%= @g_info.sex %></div>
 
             <div class="myinfo-label">Age</div>
-            <div class="myinfo"><%= @g_info.age %></div>
+            <div class="myinfo_basic_age"><%= @g_info.age %></div>
 
             <div class="myinfo-label">Tel Number</div>
-            <div class="myinfo"><%= @g_info.tel_number %></div>
+            <div class="myinfo_basic"><%= @g_info.tel_number %></div>
 
           </div>
 
           <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
           <label class="myinfo-label">
-            <h4>After the official launch, guide fee (charged guide)function & payment function will be added.</h4>
+            After the official launch, guide fee (charged guide)function & payment function will be added.
           </label>
 
         </section>
@@ -67,19 +67,37 @@
           <div class="myinfo-wrapper">
 
             <div class="myinfo-label">Where you can guide</div>
-            <div class="myinfo">00000000000</div>
+            <% if @g_info.Roppongi_area.present? %>
+              <div class="myinfo_radio"><%= @g_info.Roppongi_area %></div>
+            <% end %>
+            <% if @g_info.Shinjyuku_area.present? %>
+              <div class="myinfo_radio"><%= @g_info.Shinjyuku_area %></div>
+            <% end %>
+            <% if @g_info.Shibuya_area.present? %>
+              <div class="myinfo_radio"><%= @g_info.Shibuya_area %></div>
+            <% end %>
+            <% if @g_info.Ginza_area.present? %>
+              <div class="myinfo_radio"><%= @g_info.Ginza_area %></div>
+            <% end %>
+            <% if @g_info.Akihabara_area.present? %>
+              <div class="myinfo_radio"><%= @g_info.Akihabara_area %></div>
+            <% end %>
+            <% if @g_info.Others_area.present? %>
+             <div class="myinfo_radio"><%= @g_info.Others_area %></div>
+            <% end %>
 
             <div class="myinfo-label">Language</div>
-            <div class="myinfo"><%= @g_info.use_language_list %></div>
-
-            <div class="myinfo-label">One message(max words)</div>
+            <% if @g_info.use_language_list.present? %>
+            <div class="myinfo_radio"><%= @g_info.use_language_list %></div>
+            <% end %>
+            <div class="myinfo-label">One message</div>
             <div class="myinfo"><%= @g_info.hitokoto_shoukai %></div>
 
-            <div class="myinfo-label">Introduction（max words）</div>
+            <div class="myinfo-label">Introduction</div>
             <div class="myinfo-big"><% @g_info.shoukaibun %></div>
 
+            <div class="myinfo-label">Your pictures</div>
             <div class="myscene-wrapper">
-              <h4 class="guide-area-tag"><a>#Shinjyuku</a></h4>
               <% @g_infos.each do |picture| %>
               <div id="img_field">
                 <% if @g_info.picture.present? %>
@@ -94,7 +112,7 @@
           </div>
 
           <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
-         <label class="myinfo-label"><h4>After the official launch, guide fee (charged guide)function & payment function will be added.</h4></label>
+         <label class="myinfo-label">After the official launch, guide fee (charged guide)function & payment function will be added.</label>
         </section>
       </div>
       <% end %>

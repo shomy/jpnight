@@ -72,3 +72,7 @@ gem "jquery-rails"
 gem 'carrierwave', '~> 1.0'
 
 gem 'rmagick'
+
+gem 'select2-rails'
+
+gem 'simple_form'

@@ -1,5 +1,9 @@
 class GInfosController < ApplicationController
+
   before_action :set_g_info, only: [:show, :edit, :update, :destroy]
+
+
+
 
   # GET /g_infos
   # GET /g_infos.json
@@ -10,16 +14,19 @@ class GInfosController < ApplicationController
 
   # GET /g_infos/1
   # GET /g_infos/1.json
+
   def show
     @g_infos = GInfo.all
     @g_info = GInfo.find_by(id: params[:id])
 
   end
 
+
   # GET /g_infos/new
   def new
     @g_infos = GInfo.all
     @g_info = GInfo.new
+    
 
   end
 
@@ -27,14 +34,14 @@ class GInfosController < ApplicationController
   def edit
     @g_infos = GInfo.all
     @g_info = GInfo.find(params[:id])
-
+    @g_info.sex = true
 
   end
 
   # POST /g_infos
   # POST /g_infos.json
   def create
-    @g_info = GInfo.new(params.require(:g_info).permit(:email, :password, :name, :number, :age, :sex))
+    @g_info = GInfo.new(params.require(:g_info).permit(:email, :password, :name, :tel_number, :age, :sex))
     @g_info.save
 
     respond_to do |format|

@@ -4,15 +4,6 @@
 
 @media (max-width: 1140px) {
 
-.lead {
-  width: 70%;
-  font-size: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 80px auto 40px;
-  letter-spacing: 7px;
-}
-
 .lead4guide {
   font-size: 20px;
 }
@@ -22,8 +13,11 @@
 }
 
 .btn-one {
-  width: 30%;
-  margin: 8px;
+  width: 10em;
+  margin: 5px;
+  font-size: 15px;
+  line-height: 40px;
+  height: 40px;
 }
 
 #chat-face, .treat-icon, .chat-name, .chat-btn, .chat-delete  {
@@ -41,21 +35,17 @@
   grid-template-columns: 50% 50%;
 }
 }
-.one-message {
 
-}
 
 .town-ill {
   height: 90px;
   width: 160px;
   padding: 10px;
 }
-}
-
-@media (max-width: 1035px) {
 
 .logo {
-  font-size: 26px;
+  font-size: 20px;
+  padding: 0px;
 }
 
 .mypagecommand, .login {
@@ -66,22 +56,32 @@
   display: inline-block;
 }
 
-.circle, .circle-b {
-  width: 80px;
-  height: 80px;
-  top: 300px;
 }
 
-.circle-b {
-  top: 10px;
-  left: 5px;
+@media (max-width: 870px) {
+
+.top-wrapper::after {
+  bottom: -100px;
+  height: 200px;
 }
 
-.circle span, .circle-b span {
-  width: 80px;
-  font-size: 13px;
-  line-height: 14px;
+.lead {
+  font-size: 20px;
+  line-height: 22px;
+  mergin: 50px 0 0 0;
+  padding: 0;
+  width:90%;
 }
+
+.footer-wrapper {
+  font-size: 17px;
+}
+
+.circle {
+  left: 70%;
+  top: 320px;
+}
+
 
 }
 
@@ -134,17 +134,32 @@ h3 span, .h3media {
   font-size: 20px;
 }
 
+.circle, .circle-b {
+  width: 80px;
+  height: 80px;
+  top: 300px;
+}
+
+.circle-b {
+  top: 10px;
+  left: 5px;
+}
+
+.circle span, .circle-b span {
+  width: 80px;
+  font-size: 13px;
+  line-height: 14px;
+}
 .radio-form {
   font-size: 15px;
   width: 100%;
 }
 
-.btn-one {
-  width: 50%;
-  margin: 10px;
-  font-size: 20px;
-  line-height: 45px;
-  height: 45px;
+.area-tag, .area-search {
+  font-size: 15px;
+  line-height: 17px;
+  margin: 10px auto;
+  padding: 10px;
 }
 
 
@@ -199,6 +214,10 @@ footer {
   margin: 0;
 }
 
+.footer-list::after {
+  left: 60%;
+}
+
 
 .chat-wrapper, .logout-form, .company-profile {
   padding: 10px;
@@ -213,6 +232,8 @@ footer {
 
 .tab {
   width: 141px;
+  font-size: 15px;
+  margin: 60px 0 0 0;
 }
 
 
@@ -239,7 +260,7 @@ footer {
     transform: rotate(10deg)
 }
 
-.myinfo, .guideinfo {
+.myinfo, .myinfo_basic, .guideinfo {
   width: 100% !important;
   height: 40px !important;
   padding: 8px 6px 6px 10px!important;
@@ -305,11 +326,6 @@ footer {
   font-size: 15px;
 }
 
-.area-tag, .area-search {
-  font-size: 15px;
-  margin: 10px auto;
-}
-
 footer ul {
   font-size: 17px;
 }
@@ -321,35 +337,12 @@ footer ul {
 
 }
 
-@media (max-width: 770px) {
 
-.footer-wrapper {
-  font-size: 17px;
-}
-
-.circle {
-  left: 70%;
-  top: 350px;
-}
-
-
-}
 
 @media (max-width: 370px) {
-
-.lead {
-  margin: 30px auto 5px;
-  font-size: 20px;
-}
 
 .myscene-wrapper {
   width: 100%;
   height: 300px;
   margin: 10px auto;
-}
-
-#preview2, #preview3, #preview4, #preview5 {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 5px;
 }

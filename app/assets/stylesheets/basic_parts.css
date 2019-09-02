@@ -9,7 +9,11 @@ body {
    margin: 0;
    padding: 0;
    overflow-x: hidden;
-   background-color: #ADD8E6;
+   background-color: #e6ecf0;　/*#ADD8E6*/
+}
+
+li, ul {
+  list-style: none;
 }
 
 a {
@@ -33,7 +37,7 @@ h1, h2, .guide figcaption {
   text-align: center;
 }
 
-h3, h4, h5, h6, .login, .header-username, .mypagecommand, .fa-angle-double-right, .guide, .guideinfo, .myinfo-label, .myinfo-big, .face-message, .myarea-info, .dropdown-content, .dropdown-content-header, .guide-area-tag-input, .chat-delete {
+h3, h4, h5, h6, .login, .header-username, .mypagecommand, .fa-angle-double-right, .guide, .guideinfo, .myinfo-label, .face-message, .myarea-info, .dropdown-content, .dropdown-content-header, .guide-area-tag-input, .chat-delete {
   font-family: 'Quicksand', sans-serif,  'Kosugi Maru', sans-serif;
   color: rgb(164, 179, 239);
   text-align: center;
@@ -159,5 +163,94 @@ line-height: 30px;
   border-radius: 50%;
   border: 1px solid;
   border-color: rgb(164, 179, 239);
-  z-index: 
+  z-index:
+}
+
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, .myinfo-big:focus {
+  border-color: dodgerBlue !important;
+  box-shadow: 0 0 8px 0 dodgerBlue !important;
+}
+
+input:-internal-autofill-selected {
+  background-color: white;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: rgb(164, 179, 239);
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  border-color:rgb(164, 179, 239);
+  font-size: 20px;
+  background-color: white;
+}
+
+.myinfo_basic, .myinfo, .myinfo_basic_age, input:-internal-autofill-selected {
+  color: rgb(76, 114, 226);
+  border: solid 1px rgb(76, 114, 226);
+  width: 20em;
+  font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
+  height: 50px;
+  font-size: 20px!important;
+  border-radius: 5em;
+  margin: 10px auto;
+  outline: none;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  transition: 0.3s;
+  text-align: left;
+  z-index: 10;
+}
+
+.myinfo {
+  width: 30em;
+}
+
+.myinfo_basic_age {
+  width: 4em;
+  text-align: center;
+}
+
+.myinfo-big {
+  font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
+  height: 200px;
+  width: 30em;
+  text-align: left;
+  padding: 20px;
+  font-size: 20px;
+  margin: 10px auto;
+  border-radius: 20px;
+  border: 1px solid;
+  z-index: 10;
+}
+
+.radio_btn {
+  display: none;
+}
+
+.radio_btn + label, .myinfo_radio {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif, 'Kosugi Maru', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 10px auto;
+  padding: 10px;
+  color: rgb(76, 114, 226);
+  border: solid 1px rgb(76, 114, 226);
+  border-radius: 5em;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.radio_btn:checked + label, .myinfo_radio {
+  color: #fff;
+  background-color: rgb(76, 114, 226);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 990;
+}
+
+.myinfo_radio {
+
 }

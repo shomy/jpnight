@@ -2,8 +2,40 @@ Pace.on('done', function(){
   $('.wrap').fadeIn(400);
 });
 
+//ラジオボタンリセット
+function resetradio() {
+    for (i = 1; i <= 6; i++) {
+        document.getElementById('radio' + i).checked = false;
+    }
+}
+
+function resetcheckboxl() {
+    for (i = 1; i <= 3; i++) {
+        document.getElementById('checkboxl' + i).checked = false;
+    }
+}
+
+//複数選択セレクトボックス
+
 jQuery(function($){
 	$('.tab').click(function(){
+		$('.is-active').removeClass('is-active');
+		$(this).addClass('is-active');
+		$('.is-show').removeClass('is-show');
+        // クリックしたタブからインデックス番号を取得
+		const index = $(this).index();
+        // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+		$('.panel').eq(index).addClass('is-show');
+    $('.panel div').css('display','block')
+	});
+});
+
+$( document ).on ('turbolinks:load', (function(){
+  $('.panel div').css('display','block')
+}));
+
+jQuery(function($){
+	$('.regi').click(function(){
 		$('.is-active').removeClass('is-active');
 		$(this).addClass('is-active');
 		$('.is-show').removeClass('is-show');

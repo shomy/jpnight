@@ -14,18 +14,18 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
   <div class ="myinfo-label"><%= f.label :email %></div>
-  <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'myinfo', :placeholder => 'E-mail' %>
+  <%= f.text_field :email, autofocus: true, autocomplete: "email", :class => 'myinfo', :placeholder => 'E-mail' %>
   <div class ="myinfo-label"><%= f.label :password %></div>
   <%= f.password_field :password, autocomplete: "current-password", :class => 'myinfo', :placeholder => 'Password' %>
 
   <% if devise_mapping.rememberable? %>
-  <h3><%= f.check_box :remember_me %> <%= f.label :remember_me %></h3>
+  <h3><%= f.check_box :remember_me %> <%= f.label :remember %></h3>
   <% end %>
 
   <%= f.submit "LOGIN" ,:class => 'login-btn' %>
   <% end %>
 
- <h3><%= link_to 'New resistration', new_g_info_path %> ></h3>
+ <div class ="regi-btn"><%= link_to 'New User', new_g_info_path %></div>
  <h3>Forgot password?</h3>
  </section>
 

@@ -5,7 +5,7 @@
 
  <section class ="top-wrapper">
   <h1 class ="lead">MAKE A FRIE<span>N</span>DS A<span>N</span>D E<span>N</span>JOY JAPA<span>N</span>ESE <span>N</span>IGHT</h1>
-  <h2 class ="lead4guide">Resgistraition is very easy & rakes only a minute.<h2>
+  <h2 class ="lead4guide">Resgistraition is very easy & takes only a minute.<h2>
   <div href="" class ="circle"><span>ALL GUIDES<br>FREE<br>ONLY<br>NOW</span></div>
  </section>
 
@@ -13,63 +13,113 @@
  <section id= "regi-form" class='panel-group'>
 
   <div class= "panel is-show">
+    <h3 style ="font-family: 'Poiret One', cursive;"><u><i class="fas fa-cog fa-fw"></i> BASIC INFO</u></h3>
 
     <div class ="myinfo-label">Please enter your Email</div>
-    <%= form.email_field :email, autofocus: true, autocomplete: "email", class: "myinfo"%>
+    <%= form.text_field :email, autofocus: true, autocomplete: "email", class: "myinfo_basic"%>
 
     <div class ="myinfo-label">Please enter your Password.<br>Password must be a mixture of 8 alphanumeric characters.</div>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= form.password_field :password, autocomplete: "new-password", class: "myinfo" %>
+    <%= form.password_field :password, autocomplete: "new-password", class: "myinfo_basic" %>
 
     <div class ="myinfo-label">Please enter your Password,again.</div>
-    <%= form.password_field :password_confirmation, autocomplete: "new-password", class: "myinfo" %>
+    <%= form.password_field :password_confirmation, autocomplete: "new-password", class: "myinfo_basic" %>
 
     <div class ="myinfo-label">Please enter your Name</div>
-    <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Name' %>
+    <%= form.text_field :name, :class => "myinfo_basic", :placeholder => 'Name', :maxlength =>"20" %>
 
     <div class ="myinfo-label">Please enter your Phone Number</div>
-    <%= form.text_field :name, :class => 'myinfo', :placeholder => 'Phone Number' %>
+    <%= form.text_field :tel_number, :class => "myinfo_basic", :placeholder => 'Tel Number', :maxlength =>"15" %>
 
     <div class ="myinfo-label">Please enter your Age</div>
-    <%= form.text_field :age, :class => 'myinfo', :placeholder => "Age" %>
+    <%= form.text_field :age, :class => "myinfo_basic_age", :placeholder => "Age", :maxlength =>"3" %>
 
     <div class ="myinfo-label">Please choice your Sex</div>
-    <div class ="radio-btn"><%= form.radio_button :sex, "男" %> Men</div>
-    <div class ="radio-btn"><%= form.radio_button :sex, "女" %> Women</div>
-    <div class ="radio-btn"><%= form.radio_button :sex, "その他" %> Others</div>
+    <%= form.radio_button :sex, "男" , :class=> "radio_btn", :id => "rlabel1" %>
+    <%= form.label ' Men', :for => "rlabel1" %>
+    <%= form.radio_button :sex, "女", :class=> "radio_btn", :id => "rlabel2" %>
+    <%= form.label ' Women', :for => "rlabel2" %>
+    <%= form.radio_button :sex, "その他", :class=> "radio_btn", :id => "rlabel3" %>
+    <%= form.label ' Others', :for => "rlabel3" %>
+
+    <div class ="myinfo-label"><h4>Please upload your face picture.</h4></div>
+
+       <div id="face_img_field" onClick="$('#file').click()" >
+        <% if @g_info.face_picture.present? %>
+         <%= image_tag(@g_info.face_picture)%>
+         <% else %>
+         <i class="fas fa-smile"></i>
+         <% end %>
+       </div>
+       <%= form.file_field :face_picture, class: "face_preview", style: "display:none;", id: "file"%>
+
+       <div class ="regi-group">
+         <li class ="regi is-active"><%= form.submit 'REGIST as a GEST', :id => 'regi-btn-guest' %></li>
+         <li class ="regi" id= "regi-btn-guide">REGIST as a GUIDE</li>
+       </div>
 
 
-    <%= form.submit 'SIGNUP as a GEST?', :id => 'regi-btn-guest', :class => 'tab is-active' %><br>
-    <div id= "regi-btn-guide" class ="tab">SIGNUP as a GUIDE?</div>
 
   </div>
 
   <div class ="panel">
+        <li class ="regi is-active" id ="back">Back</li>
+
+     <h3 style ="font-family: 'Poiret One', cursive;"><u><i class="fas fa-hat-wizard fa-fw"></i> GUIDE INFO</u></h3>
+
+     <div class ="myinfo-label">Please select all area where you can guide.</div>
+     <section class ="area-tag-wrapper">
+     <%= form.radio_button :Roppongi_area, "Roppongi_area", :class=> "radio_btn", :id => "radio1" %>
+     <label for ="radio1">Roppongi~Azabu~Asakusa</label>
+     <%= form.radio_button :Shinjyuku_area, "Shinjyuku_area", :class=> "radio_btn", :id => "radio2" %>
+     <label for ="radio2">Shinjyuku~Ikebukuro</label>
+     <%= form.radio_button :Shibuya_area, "Shibuya_area", :class=> "radio_btn", :id => "radio3" %>
+     <label for ="radio3">Shibuya~Ebis~Meguro</label>
+     <%= form.radio_button :Ginza_area, "Ginza_area", :class=> "radio_btn", :id => "radio4" %>
+     <label for ="radio4">Ginza~Tokyo Station</label>
+     <%= form.radio_button :Akihabara_area, "Akihabara_area", :class=> "radio_btn", :id => "radio5" %>
+     <label for ="radio5">Akihabara~Ueno~Asakusa</label>
+     <%= form.radio_button :Others_area, "Others_area", :class=> "radio_btn", :id => "radio6" %>
+     <label for ="radio6">Others</label>
+     <h4><a href="javascript:void(0);" onclick="resetradio()"><i class="fas fa-times-circle fa-fw"></i> Reset</a></h4>
+     </section>
+
+     <div class ="myinfo-label">Please select all language  you can speak.</div>
+     <%= form.check_box :use_language_list, :value => "English", :class=> "radio_btn", :id => "checkboxl1" %>
+     <%= form.label 'English', :for => "checkboxl1" %>
+     <%= form.check_box :use_language_list, :value => "Jpanese", :class=> "radio_btn", :id => "checkboxl2" %>
+     <%= form.label 'Japanese', :for => "checkboxl2" %>
+     <%= form.check_box :use_language_list, :value => "Chinese", :class=> "radio_btn", :id => "checkboxl3" %>
+     <%= form.label 'Chinese', :for => "checkboxl3" %>
+     <%= form.text_field :use_language_list, :class =>"myinfo_basic", :placeholder =>'Other Language' %>
+     <h4><a href="javascript:void(0);" onclick="resetcheckboxl()"><i class="fas fa-times-circle fa-fw"></i> Reset</a></h4>
+
 
      <div class = "myinfo-label">One message(max 700 words)</div>
-     <%= form.text_field :name, :class =>'myinfo', :placeholder =>'it will be shown in search page of guest' %>
+     <%= form.text_field :hitokoto_shoukai, :class =>"myinfo", :placeholder =>'it will be shown in search page of guest', :maxlength =>"80"%>
 
      <div class ="myinfo-label">Introduction(max 700 words)</div>
-     <%= form.text_field :name, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.' %>
+     <%= form.text_field :shoukaibun, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.', :maxlength =>"700" %>
 
+     <div class ="myinfo-label">Please upload photos of the spots you know well.</div>
      <div class ="myscene-wrapper">
-      <%= form.text_field :name, :class =>'guide-area-tag-input', :placeholder =>'#' %>
-
-      <img id ="preview2"></img>
-      <div class = "face-message">Please upload a landscape photo</div>
-      <label class ="upload-btn" for ="img2">
-       Upload
-       <input type="file" id= "img2">
-      </label>
+       <div id="img_field" onClick="$('#files').click()" >
+        <% if @g_info.picture.present? %>
+         <%= image_tag(@g_info.picture)%>
+         <% else %>
+         <i class="fas fa-image"></i>
+         <% end %>
+       </div>
+       <%= form.file_field :picture, class: "image", style: "display:none;", id: "files", :multiple => true %>
      </div>
 
-     <div id ="resiback">Back</div>
-     <%= link_to form.submit :class => "regi-btn" %>
+
+     <div><%= link_to form.submit 'Regist', :class => "regi-btn" %></div>
 
   </div>
- </section>  
+ </section>
  <% end %>
 
 </div>

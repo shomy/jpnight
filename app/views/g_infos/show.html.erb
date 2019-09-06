@@ -16,7 +16,7 @@
 
         <section class='panel is-show'>
           <!-- ガイドのタブ -->
-          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info), data: {"turbolinks" => false} %></div>
 
           <div class="mypage-head">
             <div class="myface-wrapper">
@@ -51,7 +51,7 @@
 
           </div>
 
-          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info), data: {"turbolinks" => false}  %></div>
           <label class="myinfo-label">
             After the official launch, guide fee (charged guide)function & payment function will be added.
           </label>
@@ -60,7 +60,7 @@
 
         <section class='panel'>
 
-          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info), data: {"turbolinks" => false}  %></div>
 
           <img src="/assets/wine_w.png" class="bottle-ill"></img>
 
@@ -111,7 +111,7 @@
 
           </div>
 
-          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info) %></div>
+          <div class="edit"><%= link_to 'Edit', edit_g_info_path(@g_info), data: {"turbolinks" => false} %></div>
          <label class="myinfo-label">After the official launch, guide fee (charged guide)function & payment function will be added.</label>
         </section>
       </div>

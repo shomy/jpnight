@@ -5,9 +5,6 @@
 <tbody>
 <div class ="wrap">
 
-
-
-
 <section class ="top-wrapper">
  <ul class ="bxslider">
    <li><img src ="assets/topimage.jpg" width="100%" height="500px"/></li>
@@ -18,7 +15,7 @@
    <h1 class ="lead">EN<span>J</span>OY <span>J</span>APANESE LOCAL LIFE WITH GUIDES</h1>
  </div>
  <div class ="btn-ones">
- <btn class ="btn-one" ><%= link_to 'SIGNUP', new_g_info_path %></btn>
+ <btn class ="btn-one" ><%= link_to 'SIGNUP', new_g_info_path, data: {"turbolinks" => false} %></btn>
  <btn class ="btn-one"><%= link_to 'LOGIN' , login_path %></btn>
  <div href ="" class ="circle"><span>ALL GUIDES FREE ONLY NOW</span></div>
  </div>

@@ -30,10 +30,12 @@
   background: -webkit-linear-gradient(-225deg,rgba(53, 165, 247, 0.58), rgba(168, 88, 208, 0.7));
   background: linear-gradient(-225deg,rgba(53, 165, 247, 0.58), rgba(168, 88, 208, 0.7));
   position: absolute;
+  width: 100%;
   top: 0;
   height: 500px;
   z-index: 1;
 }
+
 
 .bxslider, .bxslider-wrapper, .bx-viewport, .bxslider li, .bx-clone  {
   height: 500px !important;
@@ -178,6 +180,7 @@
 .guide:hover {
 
 }
+
 
 .login-form, #regi-form, #content {
   background-color: rgb(230, 236, 240);

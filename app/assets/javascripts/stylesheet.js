@@ -1,3 +1,4 @@
+//ロード
 Pace.on('done', function(){
   $('.wrap').fadeIn(400);
 });
@@ -15,8 +16,8 @@ function resetcheckboxl() {
     }
 }
 
-//複数選択セレクトボックス
 
+//マイページタブ
 jQuery(function($){
 	$('.tab').click(function(){
 		$('.is-active').removeClass('is-active');
@@ -30,9 +31,9 @@ jQuery(function($){
 	});
 });
 
-$( document ).on ('turbolinks:load', (function(){
+$(function(){
   $('.panel div').css('display','block')
-}));
+});
 
 jQuery(function($){
 	$('.regi').click(function(){
@@ -100,6 +101,8 @@ $(function(){
   });
 });
 
+
+//トップページスライダー
 $(document).on ('turbolinks:load', (function(){
   $('.bxslider').bxSlider({
     auto: true,           // 自動スライド

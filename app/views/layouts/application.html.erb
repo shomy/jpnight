@@ -63,8 +63,8 @@
   <div class = "dropdown-header">
    <ul class ="responsive-menu"><i class="fas fa-bars"></i></ul>
     <div class ="dropdown-content-header">
-     <%= link_to 'SIGNUP' ,new_guide_path %>
-     <a href="#">LOGIN</a>
+     <%= link_to 'SIGNUP' ,new_guide_path , data: {"turbolinks" => false} %>
+     <%= link_to 'LOGIN', login_path %>
     </div>
   </div>
   <ul class ="logo"><a href="/g_infos"><span>J</span>_GUIDE</a></ul>

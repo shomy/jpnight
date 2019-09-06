@@ -24,7 +24,7 @@
 
   <div class='panel is-show'>
 
-   <div class ="back"><%= link_to 'Back', @g_info %></div>
+   <div class ="back"><%= link_to 'Back', @g_info, data: {"turbolinks" => false} %></div>
 
    <%= form_with(model: g_info, local: true) do |form| %>
 
@@ -72,7 +72,7 @@
 
  <div class='panel'>
 
-   <div class ="back"><%= link_to 'Back', @g_info %></div>
+   <div class ="back"><%= link_to 'Back', @g_info, data: {"turbolinks" => false} %></div>
 
    <%= form_with(model: g_info, local: true) do |form| %>
 

@@ -9,6 +9,7 @@ class GInfosController < ApplicationController
   # GET /g_infos.json
   def index
     @g_infos = GInfo.all
+    @g_infos = GInfo.paginate(page: params[:page], per_page: 9)
 
   end
 
@@ -26,7 +27,7 @@ class GInfosController < ApplicationController
   def new
     @g_infos = GInfo.all
     @g_info = GInfo.new
-    
+
 
   end
 
@@ -41,7 +42,7 @@ class GInfosController < ApplicationController
   # POST /g_infos
   # POST /g_infos.json
   def create
-    @g_info = GInfo.new(params.require(:g_info).permit(:email, :password, :name, :tel_number, :age, :sex))
+    @g_info = GInfo.new(params.require(:g_info).permit( :name, :tel_number, :age, :sex))
     @g_info.save
 
     respond_to do |format|

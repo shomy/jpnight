@@ -5,15 +5,15 @@
 header {
   width: 100%;
   height: 50px;
-  background-image: -webkit-linear-gradient(-225deg,rgba(53, 165, 247, 0.85) 20%, rgba(168, 88, 208, 0.7) 90%), url("topimage.jpg");
-  background-image: linear-gradient(-225deg,rgba(53, 165, 247, 0.85) 20%, rgba(168, 88, 208, 0.7) 90%), url("topimage.jpg");
+  background-image: -webkit-linear-gradient(-225deg,rgba(53, 165, 247, 0.85) 20%, rgba(168, 88, 208, 0.7) 90%), url("green.jpg");
+  background-image: linear-gradient(-225deg,rgba(53, 165, 247, 0.85) 20%, rgba(168, 88, 208, 0.7) 90%), url("green.jpg");
   background-position: center;
   margin: 0;
   display: flex;
   position:fixed;
   left:0;
   top:0;
-  z-index: 999;
+  z-index: 9999;
   box-sizing: border-box;
 }
 

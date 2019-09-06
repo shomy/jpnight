@@ -97,8 +97,8 @@
      <h4><a href="javascript:void(0);" onclick="resetcheckboxl()"><i class="fas fa-times-circle fa-fw"></i> Reset</a></h4>
 
 
-     <div class = "myinfo-label">One message(max 700 words)</div>
-     <%= form.text_field :hitokoto_shoukai, :class =>"myinfo", :placeholder =>'it will be shown in search page of guest', :maxlength =>"80"%>
+     <div class = "myinfo-label">One message(max 80 words)</div>
+     <%= form.text_field :hitokoto_shoukai, :class =>"myinfo", :placeholder =>'it will be shown in search page of guest.', :maxlength =>"80"%>
 
      <div class ="myinfo-label">Introduction(max 700 words)</div>
      <%= form.text_field :shoukaibun, :class =>'myinfo-big', :placeholder =>'Please fill in detailed location, recommended store, notes etc.', :maxlength =>"700" %>

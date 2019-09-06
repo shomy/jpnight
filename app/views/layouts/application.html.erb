@@ -3,7 +3,7 @@
 <html>
 
 <head>
-<title>JAPANIGHT</title>
+<title>J_GUIDE</title>
 <meta charset="utf-8">
 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -21,6 +21,7 @@
 <%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js" %>
 <%= javascript_include_tag "http://code.jquery.com/jquery-1.8.1.min.js" %>
 <%= javascript_include_tag "/assets/stylesheet.js" %>
+<%= javascript_include_tag "/assets/application.js" %>
 <%= stylesheet_link_tag "header_footer","basic_parts","btn_ill_parts","text","wrapper","media", :media => "all" %>
 </head>
 
@@ -42,7 +43,7 @@
           <td><%= link_to "LOGOUT", logout_path %></td>
         </div>
       </div>
-   <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
+   <ul class ="logo"><a href="/g_infos"><span>J</span>_GUIDE</a></ul>
 
       <ul class ="header-username"><span>Hello, </span><%= g_info.name %></ul>
       <ul class ="mypagecommand"><i class="fas fa-user-edit fa-fw"></i> <%= link_to 'Mypage', g_info_path(g_info.id) %></ul>
@@ -66,7 +67,7 @@
      <a href="#">LOGIN</a>
     </div>
   </div>
-  <ul class ="logo"><a href="/g_infos">JAPA<span>N</span>IGHT</a></ul>
+  <ul class ="logo"><a href="/g_infos"><span>J</span>_GUIDE</a></ul>
   <ul class ="login"><%= link_to 'LOGIN', login_path %></ul>
   </tr>
 </header>
@@ -76,7 +77,7 @@
 <%= yield %>
 
 <footer>　
-   <ul class ="logo"><a href="">JAPA<span>N</span>IGHT</a></ul>
+   <ul class ="logo"><a href=""><span>J</span>_GUIDE</a></ul>
    <img src  = "/assets/town.png" class ="town-ill"></img>
    <wrapper class ="footer-wrapper">
     <ul class ="footer-list"><%= link_to 'HELP', outline_info_help_path %></ul>

@@ -1,1 +1,7 @@
 *= require select2
+*= require bxslider
+ *= require_tree .
+ *= require_self
+ */
+
+ 

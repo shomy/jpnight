@@ -5,20 +5,29 @@
 <tbody>
 <div class ="wrap">
 
-
-
 <section class ="top-wrapper">
- <h1 class ="lead">E<span>N</span>JOY JAPA<span>N</span>ESE <span>N</span>IGHT WITH GUIDES</h1>
- <div href ="" class ="circle"><span>ALL GUIDES FREE ONLY NOW</span></div>
- <btn class ="btn-one" ><%= link_to 'SIGNUP', new_g_info_path %></btn>
+ <ul class ="bxslider">
+   <li><img src ="assets/topimage.jpg" width="100%" height="500px"/></li>
+   <li><img src ="assets/green.jpg" width="100%" height="500px"/></li>
+   <li><img src ="assets/river.jpg" width="100%" height="500px"/></li>
+ </ul>
+ <div class ="topfunc">
+   <h1 class ="lead">EN<span>J</span>OY <span>J</span>APANESE LOCAL LIFE WITH GUIDES</h1>
+ </div>
+ <div class ="btn-ones">
+ <btn class ="btn-one" ><%= link_to 'SIGNUP', new_g_info_path, data: {"turbolinks" => false} %></btn>
  <btn class ="btn-one"><%= link_to 'LOGIN' , login_path %></btn>
+ <div href ="" class ="circle"><span>ALL GUIDES FREE ONLY NOW</span></div>
+ </div>
 </section>
+
+
 
 
 <section class = "guide-wrapper">
  <div class="pointer">
    <img src ="assets/bottle_b.png" class = "wine-ill"></img>
-   Night Guides Here!!<i class="fas fa-mouse-pointer fa-rotate-180 fa-fw"></i>
+   Local Guides Here!!<i class="fas fa-mouse-pointer fa-rotate-180 fa-fw"></i>
  </div>
  <div href="" class="area-search"><i class="fas fa-briefcase fa-fw"></i> AREASEARCH</div>
  <section class = "area-tag-wrapper">
@@ -33,12 +42,15 @@
  <h3><span><i class="fas fa-hat-wizard fa-fw"></i> ALL GUIDES</span></h3>
  <i class="fas fa-chevron-right"></i>
 
+ <%= page_entries_info @g_infos %>
  <article class ="guide-index">
+
+  <% @g_infos.each do |g_info| %>
   <div class ="guide">
    <h4 class ="guide-area-tag">#Shinjyuku</h4>
    <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
    <img src = "assets/izakaya.jpg" class ="photo"></img>
-   <h4 class ="guide-name">Mocci</h4>
+   <td><h4 class ="guide-name"><%= g_info.name %></h4>
    <h4 class ="review">★★★★★</h4>
    <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
    <figcaption>
@@ -134,7 +146,9 @@
    </figcaption><a href="#"></a>
   </div>
 
+  <% end %>
  </article>
+  <%= paginate @g_infos %>
 
  <i class="fas fa-chevron-right"></i>
 

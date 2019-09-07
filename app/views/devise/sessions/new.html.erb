@@ -5,9 +5,15 @@
 <div class ="wrap">
 
  <section class ="top-wrapper">
-  <h1 class ="lead">Make Your Days Special!</h1>
-  <h2 class ="lead4guide">You will see other side of Japan with Local Experience at Night. </h2>
-  <div href="" class ="circle"><span>ALL GUIDES FREE ONLY NOW</span></div>
+  <ul class ="bxslider">
+    <li><img src ="/assets/topimage.jpg" width="100%" height="500px"/></li>
+    <li><img src ="/assets/green.jpg" width="100%" height="500px"/></li>
+    <li><img src ="/assets/river.jpg" width="100%" height="500px"/></li>
+  </ul>
+  <div class ="topfunc">
+    <h1 class ="lead">MAKE YOUR DAYS SPECIAL!</h1>
+    <h2 class ="lead4guide">You will see other side of Japan with Local Experience<h2>
+  </div>
  </section>
 
  <section class = "login-form">
@@ -25,7 +31,7 @@
   <%= f.submit "LOGIN" ,:class => 'login-btn' %>
   <% end %>
 
- <div class ="regi-btn"><%= link_to 'New User', new_g_info_path %></div>
+ <div class ="regi-btn"><%= link_to 'New User', new_g_info_path , data: {"turbolinks" => false} %></div>
  <h3>Forgot password?</h3>
  </section>
 

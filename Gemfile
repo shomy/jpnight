@@ -76,3 +76,9 @@ gem 'rmagick'
 gem 'select2-rails'
 
 gem 'simple_form'
+
+gem 'will_paginate', '3.1.7'
+
+gem 'bootstrap-will_paginate', '1.0.0'
+
+gem 'bxslider-rails'

@@ -1,3 +1,4 @@
+//ロード
 Pace.on('done', function(){
   $('.wrap').fadeIn(400);
 });
@@ -15,8 +16,8 @@ function resetcheckboxl() {
     }
 }
 
-//複数選択セレクトボックス
 
+//マイページタブ
 jQuery(function($){
 	$('.tab').click(function(){
 		$('.is-active').removeClass('is-active');
@@ -30,9 +31,9 @@ jQuery(function($){
 	});
 });
 
-$( document ).on ('turbolinks:load', (function(){
+$(function(){
   $('.panel div').css('display','block')
-}));
+});
 
 jQuery(function($){
 	$('.regi').click(function(){
@@ -52,7 +53,7 @@ $( document ).on ('turbolinks:load', (function(){
 }));
 
 
-$(document).on ('turbolinks:load', (function() {
+$(function(){
   $fileField = $('#files')
 
   // 選択された画像を取得し表示
@@ -74,13 +75,13 @@ $(document).on ('turbolinks:load', (function() {
     })(file);
     reader.readAsDataURL(file);
   });
-}));
+});
 
-$(document).on ('turbolinks:load', (function() {
+$(function(){
   $fileField = $('#file')
 
   // 選択された画像を取得し表示
-  $($fileField).on('change', $fileField, function(e) {
+  $($fileField).on('change', $fileField, function(e){
     file = e.target.files[0]
     reader = new FileReader(),
     $preview = $("#face_img_field");
@@ -97,5 +98,19 @@ $(document).on ('turbolinks:load', (function() {
       };
     })(file);
     reader.readAsDataURL(file);
+  });
+});
+
+
+//トップページスライダー
+$(document).on ('turbolinks:load', (function(){
+  $('.bxslider').bxSlider({
+    auto: true,           // 自動スライド
+    speed: 2000,          // スライドするスピード
+    moveSlides: 1,        // 移動するスライド数
+    pause: 6000,          // 自動スライドの待ち時間
+    maxSlides: 1,         // 一度に表示させる最大数
+	randomStart: true,    // 最初に表示するスライドをランダムに設定
+    autoHover: true       // ホバー時に自動スライドを停止
   });
 }));

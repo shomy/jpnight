@@ -3,12 +3,10 @@ class GInfosController < ApplicationController
   before_action :set_g_info, only: [:show, :edit, :update, :destroy]
 
 
-
-
   # GET /g_infos
   # GET /g_infos.json
   def index
-    
+
 
   end
 
@@ -57,7 +55,7 @@ class GInfosController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:content, :image)
+    params.require(:post).permit(:content)
   end
 
   # PATCH/PUT /g_infos/1

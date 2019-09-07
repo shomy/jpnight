@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { }
+  devise_for :users, controllers: { :registrations => 'users/registrations'}
+
+  devise_scope :user do
+  get "/users/sign_up"  => "devise/registrations#new"
+  post 'users'  => "devise/registrations#create"
+  get "/users/sign_in"  => "devise/sessions#new"
+  get '/users/sign_out' => "devise/sessions#destroy"
+
+
+  end
   resources :users, :only => [:index, :show]
   root "users#index"
   resources :messages, :only => [:create]
@@ -18,14 +27,7 @@ Rails.application.routes.draw do
   # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  devise_scope :user do
-  get "/users/sign_up"  => "devise/registrations#new"
-  get "/users/sign_in"  => "devise/sessions#new"
-  get "/logout"         => "devise/sessions#logout"
-  get '/users/sign_out' => "devise/sessions#destroy"
-  post "/users/sign_up/create"   => "devise/registrations#create"
 
-  end
 
   get "/g_infos/new" => "g_infos#new"
   get '/g_infos/:id' => 'g_infos#show'

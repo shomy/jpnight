@@ -1,6 +1,6 @@
 class GInfo < ApplicationRecord
   belongs_to :user
-  
+
   mount_uploader :image, ImageUploader
 
   def self.create_g_infos_by(g_info_params)

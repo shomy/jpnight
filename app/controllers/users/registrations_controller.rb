@@ -11,18 +11,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-      @user = User.new(email: params[:email], password: params[:password])
-      @user.save
-
-      respond_to do |format|
-        if @user.save
-          format.html { redirect_to "/g_infos/new", notice: 'Your info was successfully created.' }
-          format.json { render :show, status: :created, location: @user }
-
-        else
-          format.html { render :new }
-          format.json { render json: @user.errors, status: :unprocessable_entity }
-        end
+      if user.save
+      redirect_to new_g_infos_path(id: @user)
+      end
 
   end
 

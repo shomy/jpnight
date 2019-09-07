@@ -14,7 +14,7 @@
  <div class ="topfunc">
    <h1 class ="lead">EN<span>J</span>OY <span>J</span>APANESE LOCAL LIFE WITH GUIDES</h1>
  </div>
- <% if @g_infos.present? %>
+ <% if !user_signed_in? %>
  <div class ="btn-ones">
  <btn class ="btn-one" ><%= link_to 'SIGNUP', new_g_info_path, data: {"turbolinks" => false} %></btn>
  <btn class ="btn-one"><%= link_to 'LOGIN' , login_path %></btn>
@@ -22,8 +22,6 @@
  </div>
  <% end %>
 </section>
-
-
 
 
 <section class = "guide-wrapper">

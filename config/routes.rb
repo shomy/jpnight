@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { }
   resources :users, :only => [:index, :show]
   root "users#index"
   resources :messages, :only => [:create]
@@ -12,15 +13,20 @@ Rails.application.routes.draw do
   resources :g_infos
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :admin_users
-  devise_for :users, controllers: {
-  sessions: 'users/sessions'
-}
 
   resources :guides
   # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get "/" => "g_infos#index"
+  devise_scope :user do
+  get "/users/sign_up"  => "devise/registrations#new"
+  get "/users/sign_in"  => "devise/sessions#new"
+  get "/logout"         => "devise/sessions#logout"
+  get '/users/sign_out' => "devise/sessions#destroy"
+  post "/users/sign_up/create"   => "devise/registrations#create"
+
+  end
+
   get "/g_infos/new" => "g_infos#new"
   get '/g_infos/:id' => 'g_infos#show'
   get '/g_infos/:id/edit' => 'g_infos#edit'
@@ -32,18 +38,8 @@ Rails.application.routes.draw do
   get '/outline_info/team' => 'outline_info#team'
   get '/outline_info/contact' => 'outline_info#contact'
 
-  devise_scope :user do
-  get "/login" => "devise/sessions#new"
-  get "/logout" => "devise/sessions#logout"
-  get '/users/sign_out' => 'devise/sessions#destroy'
-
-  end
 
 
-  get "/mypage_chat" => "g_infos#mypage_chat"
-  get "/mypage_chatroom" => "g_infos#mypage_chatroom"
-  get "/offerpage" => "g_infos#offerpage"
-  get "/offerpage_treat" => "g_infos#offerpage_treat"
 
 
 

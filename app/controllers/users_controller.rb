@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, :only => [:show]
+
+  def new_session_path *args
+  new_user_session_path *args
+  end
+
   def index
     @users=User.all
+    @g_infos= GInfo.all
+    @g_infos = GInfo.paginate(page: params[:page], per_page: 9)
   end
 
   def show
@@ -25,4 +32,6 @@ class UsersController < ApplicationController
       end
     end
   end
+
+
 end

@@ -1,13 +1,162 @@
-<h1>DMサンプルアプリ</h1>
-<% if user_signed_in? %>
-<h2>Hello <%= current_user.email %></h2>
-  <% @users.each do |u| %>
-  <p><a href="/users/<%= u.id %>"><%= u.email %>さん</a></p>
-  <hr>
+<!DOCTYPE html>
+
+<html>
+
+<tbody>
+<div class ="wrap">
+
+<section class ="top-wrapper">
+ <ul class ="bxslider">
+   <li><img src ="assets/topimage.jpg" width="100%" height="500px"/></li>
+   <li><img src ="assets/green.jpg" width="100%" height="500px"/></li>
+   <li><img src ="assets/river.jpg" width="100%" height="500px"/></li>
+ </ul>
+ <div class ="topfunc">
+   <h1 class ="lead">EN<span>J</span>OY <span>J</span>APANESE LOCAL LIFE WITH GUIDES</h1>
+ </div>
+ <% if !user_signed_in? %>
+ <div class ="btn-ones">
+ <btn class ="btn-one" ><%= link_to 'SIGNUP', new_user_registration_path, data: {"turbolinks" => false} %></btn>
+ <btn class ="btn-one"><%= link_to 'LOGIN' , new_user_session_path %></btn>
+ <div href ="" class ="circle"><span>ALL GUIDES FREE ONLY NOW</span></div>
+ </div>
+ <% end %>
+</section>
+
+
+
+<section class = "guide-wrapper">
+ <div class="pointer">
+   <img src ="assets/bottle_b.png" class = "wine-ill"></img>
+   Local Guides Here!!<i class="fas fa-mouse-pointer fa-rotate-180 fa-fw"></i>
+ </div>
+ <div href="" class="area-search"><i class="fas fa-briefcase fa-fw"></i> AREASEARCH</div>
+ <section class = "area-tag-wrapper">
+  <a href="" class = "area-tag">#Roppongi~ Azabu~ Akasaka</a>
+  <a href="" class = "area-tag">#Shinjyuku~ Ikebukuro</a>
+  <a href="" class = "area-tag">#Shibuya~ Ebis~ Meguro</a>
+  <a href="" class = "area-tag">#Ginza~Tokyo Station</a>
+  <a href="" class = "area-tag">#Akihabara~ Ueno~ Asakusa</a>
+  <a href="" class = "area-tag">#Others</a>
+ </section>
+
+ <h3><span><i class="fas fa-hat-wizard fa-fw"></i> ALL GUIDES</span></h3>
+ <i class="fas fa-chevron-right"></i>
+
+
+ <article class ="guide-index">
+
+  <% @g_infos.each do |g_info| %>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <td><h4 class ="guide-name"><%= g_info.name %></h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+  <div class ="guide">
+   <h4 class ="guide-area-tag">#Shinjyuku</h4>
+   <img src = "assets/face-icon_3.jpg" class ="face-icon"></img>
+   <img src = "assets/izakaya.jpg" class ="photo"></img>
+   <h4 class ="guide-name">Mocci</h4>
+   <h4 class ="review">★★★★★</h4>
+   <h4 class ="one-message">I love bar hopping!Live in Shinjyuku & I can take you to Japanese original bar.</h4>
+   <figcaption>
+    <p>ASK TO GUIDE</p>
+   </figcaption><a href="#"></a>
+  </div>
+
   <% end %>
-  <%= link_to "ログアウト", destroy_user_session_path, :method => :delete %>
-<% else %>
-  <%= link_to "ユーザーを登録する", new_user_registration_path %>
-  <br>
-  <%= link_to "ログインする", new_user_session_path %>
-<% end %>
+ </article>
+
+
+ <i class="fas fa-chevron-right"></i>
+
+</section >
+
+
+
+</div>
+</tbody>
+</html>

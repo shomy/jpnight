@@ -1,18 +1,31 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  def new
-    super
-  end
+  #def new
+
+  #end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+      @user = User.new(email: params[:email], password: params[:password])
+      @user.save
+
+      respond_to do |format|
+        if @user.save
+          format.html { redirect_to "/g_infos/new", notice: 'Your info was successfully created.' }
+          format.json { render :show, status: :created, location: @user }
+
+        else
+          format.html { render :new }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
+
+  end
+
 
   # GET /resource/edit
   # def edit

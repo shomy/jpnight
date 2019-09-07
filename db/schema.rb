@@ -70,6 +70,22 @@ ActiveRecord::Schema.define(version: 2019_09_07_041517) do
     t.index ["user_id"], name: "index_g_infos_on_user_id"
   end
 
+  create_table "guide_infos", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_guide_infos_on_user_id"
+  end
+
+  create_table "guides", force: :cascade do |t|
+    t.string "name"
+    t.string "mail"
+    t.string "tel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "room_id"
@@ -111,6 +127,7 @@ ActiveRecord::Schema.define(version: 2019_09_07_041517) do
   add_foreign_key "entries", "rooms"
   add_foreign_key "entries", "users"
   add_foreign_key "g_infos", "users"
+  add_foreign_key "guide_infos", "users"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
 end

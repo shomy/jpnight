@@ -8,8 +8,7 @@ class GInfosController < ApplicationController
   # GET /g_infos
   # GET /g_infos.json
   def index
-    @g_infos = GInfo.all
-    @g_infos = GInfo.paginate(page: params[:page], per_page: 9)
+    
 
   end
 

@@ -48,7 +48,7 @@
                   </div>
                 </div>
                 <ul class="logo">
-                  <a href="/g_infos">
+                  <a href="/">
                     <span>J</span>_GUIDE</a>
                 </ul>
 
@@ -83,15 +83,15 @@
                 <i class="fas fa-bars"></i>
               </ul>
               <div class="dropdown-content-header">
-                <%= link_to 'SIGNUP' ,new_guide_path , data: {"turbolinks" => false} %>
-                <%= link_to 'LOGIN', login_path %>
+                <%= link_to 'SIGNUP', new_user_registration_path, data: {"turbolinks" => false} %>
+                <%= link_to 'LOGIN', new_user_session_path %>
               </div>
             </div>
             <ul class="logo">
-              <a href="/g_infos">
+              <a href="/">
                 <span>J</span>_GUIDE</a>
             </ul>
-            <ul class="login"><%= link_to 'LOGIN', login_path %></ul>
+            <ul class="login"><%= link_to 'LOGIN', new_user_session_path %></ul>
           </tr>
         </header>
       <% end %>

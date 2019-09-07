@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_25_021757) do
+ActiveRecord::Schema.define(version: 2019_09_07_041517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2019_08_25_021757) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "entries", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_entries_on_room_id"
+    t.index ["user_id"], name: "index_entries_on_user_id"
+  end
+
   create_table "g_infos", force: :cascade do |t|
     t.bigint "user_id"
     t.string "name"
@@ -52,24 +61,23 @@ ActiveRecord::Schema.define(version: 2019_08_25_021757) do
     t.string "picture3"
     t.string "picture4"
     t.string "place"
-    v
+    t.string "Roppongi_area"
+    t.string "Shinjyuku_area"
+    t.string "Shibuya_area"
+    t.string "Ginza_area"
+    t.string "Akihabara_area"
+    t.string "Others_area"
     t.index ["user_id"], name: "index_g_infos_on_user_id"
   end
 
-  create_table "guide_infos", force: :cascade do |t|
-    t.string "name"
+  create_table "messages", force: :cascade do |t|
     t.bigint "user_id"
+    t.bigint "room_id"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_guide_infos_on_user_id"
-  end
-
-  create_table "guides", force: :cascade do |t|
-    t.string "name"
-    t.string "mail"
-    t.string "tel"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_messages_on_room_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "news", force: :cascade do |t|
@@ -78,6 +86,12 @@ ActiveRecord::Schema.define(version: 2019_08_25_021757) do
   end
 
   create_table "questions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -94,6 +108,9 @@ ActiveRecord::Schema.define(version: 2019_08_25_021757) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "entries", "rooms"
+  add_foreign_key "entries", "users"
   add_foreign_key "g_infos", "users"
-  add_foreign_key "guide_infos", "users"
+  add_foreign_key "messages", "rooms"
+  add_foreign_key "messages", "users"
 end

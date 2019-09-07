@@ -1,14 +1,24 @@
 Rails.application.routes.draw do
+  resources :users, :only => [:index, :show]
+  root "users#index"
+  resources :messages, :only => [:create]
+  resources :rooms, :only => [:create, :show, :index]
+
+  get 'users/index'
+  get 'users/show'
   resources :create_g_infos
   resources :news
   resources :questions
   resources :g_infos
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :admin_users
+  devise_for :users, controllers: {
+  sessions: 'users/sessions'
+}
+
   resources :guides
-  devise_for :users
+  # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'g_infos#index'
 
   get "/" => "g_infos#index"
   get "/g_infos/new" => "g_infos#new"

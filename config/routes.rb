@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/users/sign_up"  => "devise/registrations#new"
   post 'users'  => "devise/registrations#create"
   get "/users/sign_in"  => "devise/sessions#new"
-  get '/users/sign_out' => "devise/sessions#destroy"
+  get '/users/sign_out' => "devise/sessions#logout"
 
 
   end

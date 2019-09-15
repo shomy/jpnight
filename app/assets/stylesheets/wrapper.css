@@ -197,13 +197,16 @@
 #chatroom, .news-room, .QA-room, .logout-form, .company-profile {
   background-color: rgb(230, 236, 240);
   margin: 100px auto 50px;
-  padding: 20px 30px;
+  padding: 20px 5em;
   text-align: center;
   position: relative;
   z-index: 2;
   box-sizing: border-box;
 }
 
+.company-profile {
+  margin: 40px auto 50px;
+}
 
 
 

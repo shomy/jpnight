@@ -20,7 +20,7 @@ class OutlineInfoController < ApplicationController
     @g_info = GInfo.find_by(id: params[:id])
   end
 
-  def team
+  def terms
     @g_infos = GInfo.all
     @g_info = GInfo.find_by(id: params[:id])
   end

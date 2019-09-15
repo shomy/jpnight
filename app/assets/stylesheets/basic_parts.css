@@ -12,6 +12,11 @@ body {
    background-color: #e6ecf0;　/*#ADD8E6*/
 }
 
+p {
+  text-align: left;
+  color: rgb(164, 179, 239);
+}
+
 li, ul {
   list-style: none;
 }

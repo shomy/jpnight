@@ -131,3 +131,11 @@
   .A {
     font-size: 15px;
   }
+
+  #en_jp {
+    text-align: right;
+    color: rgba(8, 12, 214, 0.5);
+    cursor: pointer;
+    font-size: 13px;
+    margin: 1em;
+  }

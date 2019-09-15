@@ -28,10 +28,10 @@
   <h3><%= f.check_box :remember_me %> <%= f.label :remember %></h3>
   <% end %>
 
-  <%= f.submit "LOGIN" ,:class => 'login-btn' , data: {"turbolinks" => false} %>
+  <%= f.submit "LOGIN" ,:class => 'login-btn' %>
   <% end %>
 
- <div class ="regi-btn"><%= link_to 'New User', new_user_registration_path , data: {"turbolinks" => false} %></div>
+ <div class ="regi-btn"><%= link_to 'New User', new_user_registration_path %></div>
  <h3>Forgot password?</h3>
  </section>
 

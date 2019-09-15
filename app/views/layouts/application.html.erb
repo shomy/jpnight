@@ -100,7 +100,7 @@
 
       <footer>
         <ul class="logo">
-          <a href="">
+          <a href="/">
             <span>J</span>_GUIDE</a>
         </ul>
         <img src="/assets/town.png" class="town-ill"></img>
@@ -109,9 +109,9 @@
           <ul class="footer-list"><%= link_to 'CONTACT', outline_info_contact_path %></ul>
           <ul class="footer-list"><%= link_to 'COMPANY', outline_info_company_path %></ul>
           <ul class="footer-list"><%= link_to 'OUR PHILOSOPHY', outline_info_philosophy_path %></ul>
-          <ul class="footer-list"><%= link_to 'TERMS OF USE', outline_info_team_path %></ul>
-          <ul class="footer-list"><%= link_to 'COMMERCIAL CODE', outline_info_code_path %></ul>
-          <ul class="footer-list"><%= link_to 'PRIVACY POLICY', outline_info_policy_path %></ul>
+          <ul class="footer-list"><%= link_to 'TERMS OF USE', outline_info_terms_path, data: {"turbolinks" => false} %></ul>
+          <ul class="footer-list"><%= link_to 'SPECIAL COMMERCIAL CODE', outline_info_code_path, data: {"turbolinks" => false} %></ul>
+          <ul class="footer-list"><%= link_to 'PRIVACY POLICY', outline_info_policy_path, data: {"turbolinks" => false} %></ul>
         </wrapper>
       </footer>
 

@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   get '/outline_info/code' => 'outline_info#code'
   get '/outline_info/philosophy' => 'outline_info#philosophy'
   get '/outline_info/policy' => 'outline_info#policy'
-  get '/outline_info/team' => 'outline_info#team'
+  get '/outline_info/terms' => 'outline_info#terms'
   get '/outline_info/contact' => 'outline_info#contact'
 
 

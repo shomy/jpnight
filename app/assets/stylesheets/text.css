@@ -80,21 +80,6 @@
     color: rgb(76, 114, 226)!important;
   }
 
-
-  .chatroom-names {
-    position: relative;
-    margin: 10px auto;
-    width: 88%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-.chatroom-name, .chatroom-name2 {
-    display:inline-block;
-}
-
-
   .news-headline {
     text-align: left;
     padding:7px;
@@ -126,6 +111,7 @@
 
   .Q {
     color: rgb(46, 204, 113);
+    border-bottom: 1px solid #c1dccc;
   }
 
   .A {

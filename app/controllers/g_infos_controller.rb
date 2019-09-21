@@ -1,7 +1,5 @@
 class GInfosController < ApplicationController
 
-  before_action :set_g_info, only: [:show, :edit, :update, :destroy]
-
 
   # GET /g_infos
   # GET /g_infos.json
@@ -33,13 +31,18 @@ class GInfosController < ApplicationController
     @g_infos = GInfo.all
     @g_info = GInfo.find(params[:id])
     @g_info.sex = true
-
   end
 
   # POST /g_infos
   # POST /g_infos.json
   def create
+    validates :age, presence: true,
+    numericality: {
+      only_integer: true, greater_than_or_equal_to: 20 }
+    before_action :set_g_info, only: [:show, :edit, :update, :destroy]
+
     @g_info = GInfo.new(params.require(:g_info).permit( :name, :tel_number, :age, :sex))
+
     @g_info.save
 
     respond_to do |format|

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  PER = 8
   before_action :authenticate_user!, :only => [:show]
 
   def new_session_path *args
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
   def index
     @users=User.all
     @g_infos= GInfo.all
-    @g_infos = GInfo.paginate(page: params[:page], per_page: 9)
+    @g_infos = GInfo.page(params[:page]).per(PER)
   end
 
   def show
@@ -33,6 +34,6 @@ class UsersController < ApplicationController
     end
   end
 
-  
+
 
 end

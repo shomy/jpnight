@@ -78,13 +78,6 @@ ActiveRecord::Schema.define(version: 2019_09_07_113657) do
     t.index ["user_id"], name: "index_guide_infos_on_user_id"
   end
 
-  create_table "guides", force: :cascade do |t|
-    t.string "name"
-    t.string "mail"
-    t.string "tel"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "messages", force: :cascade do |t|
     t.bigint "user_id"

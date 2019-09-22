@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.circle, .circle-b {
+.circle, .circle-b, .circle_after {
   width: 150px;
 	height: 150px;
   margin: 10px;
@@ -20,7 +20,7 @@
   z-index: 130;
 }
 
-.circle span, .circle-b span {
+.circle span, .circle-b span, .circle_after span {
   font-size: 23px;
   line-height: 30px;
   color: white;
@@ -32,6 +32,13 @@
   transform: translateY(-50%);
   width :150px;
   text-align:center;
+}
+
+.circle_after {
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 19em;
 }
 
 .bottle_w_l {

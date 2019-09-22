@@ -186,7 +186,7 @@
   padding: 60px 30px;
 }
 
-#chatroom, .news-room, .QA-room, .logout-form, .company-profile {
+#chatroom, .news-room, .QA-room, .logout-form, .company-profile, .company-profile-b {
   background-color: rgb(230, 236, 240);
   margin: 100px auto 50px;
   padding: 20px 5em;
@@ -200,7 +200,10 @@
   margin: 40px auto 50px;
 }
 
-
+.company-profile-b {
+  margin: 0 auto 50px;
+  padding: 3%;
+}
 
 
 .tab-group {

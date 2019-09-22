@@ -1,6 +1,15 @@
   @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 
+  @font-face {
+     font-family: 'milea';
+     src: font-url('/assets/milea.ttf') format('truetype');
+  }
+
+  @font-face {
+     font-family: 'aveline';
+     src: font-url('/assets/aveline.ttf') format('truetype');
+  }
 
   .lead, .btn-one, .circle span, .circle-b span, .pointer, .area-search, .area-tag, h3 span, .footer-wrapper{
     font-family: 'Poiret One', cursive, 'Kosugi Maru', sans-serif;

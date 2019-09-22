@@ -37,6 +37,7 @@
 .logo {
   font-size: 20px;
   padding: 0px;
+  margin: 4px 0;
 }
 
 .mypagecommand, .login {
@@ -86,7 +87,6 @@ header {
   text-align: center;
   font-size: 17px;
   width: 180px;
-  letter-spacing: 5px;
   padding: 0;
 }
 

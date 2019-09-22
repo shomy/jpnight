@@ -22,7 +22,7 @@ header {
 }
 
 .header-username {
-  font-size: 14px;
+  font-size: 17px;
   color: rgb(197,253,255);
   text-align: center;
   margin: 0 20px;
@@ -53,13 +53,10 @@ header {
 }
 
 .logo {
-  font-family: 'Monoton', cursive;
-  font-size: 20px;
-  text-align: left;
+  font-family: 'milea','sans-serif';
+  font-size: 30px;
   color: white;
-  letter-spacing: 5px;
-  margin: 0;
-  height: 50px;
+  margin:  5px 0;
 }
 
 .logo span {

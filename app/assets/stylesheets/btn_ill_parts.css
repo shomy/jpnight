@@ -108,12 +108,11 @@
 }
 
 .pointer {
-  font-family: 'Mountains of Christmas', cursive !important;
+  font-family: 'aveline', 'sans-serif' !important;
   margin-top: 100px;
-  color: #3b393c;
+  color: rgba(69, 71, 74, 0.8);
   transform: rotate(-2deg);
-  font-size: 25px;
-  letter-spacing: 3px;
+  font-size: 60px;
   animation: key1 .6s ease infinite alternate;
 }
 

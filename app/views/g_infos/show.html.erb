@@ -20,13 +20,13 @@
 
           <div class="mypage-head">
             <div class="myface-wrapper">
-              <div id="face_img_field">
+              
                 <% if @g_info.face_picture.present? %>
-                 <%= image_tag(@g_info.face_picture)%>
-                 <% else %>
+                 <%= image_tag(@g_info.face_picture ,:id => "face_img_field") %>
+                <% else %>
                  <i class="fas fa-smile"></i>
-                 <% end %>
-              </div>
+                <% end %>
+
             </div>
           </div>
           <img src="/assets/wine_w.png" class="bottle_w_l"></img>

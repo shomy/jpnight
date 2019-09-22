@@ -137,6 +137,7 @@ line-height: 30px;
 }
 
 #face_img_field  {
+  cursor: pointer;
   height: 200px;
   width: 200px;
   margin: 10px auto;
@@ -145,6 +146,8 @@ line-height: 30px;
   border: 1px solid;
   border-color: rgb(164, 179, 239);
   display: block;
+  overflow: hidden;
+  z-index: 10;
   background-color: rgb(236, 236, 236);
   background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
     -webkit-background-size: 20px 20px;
@@ -250,6 +253,8 @@ input:-webkit-autofill {
 }
 
 .radio_btn:checked + label, .myinfo_radio {
+  display: inline-block;
+  width: fit-content;
   color: #fff;
   background-color: rgb(76, 114, 226);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);

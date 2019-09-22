@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def index
     @users=User.all
     @g_infos= GInfo.all
+    @g_info = GInfo.find_by(id: params[:id])
     @g_infos = GInfo.page(params[:page]).per(PER)
   end
 

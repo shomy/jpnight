@@ -12,6 +12,8 @@ class GInfosController < ApplicationController
   # GET /g_infos/1.json
 
   def show
+    @users=User.all
+
     @g_infos = GInfo.all
     @g_info = GInfo.find_by(id: params[:id])
 
@@ -64,6 +66,7 @@ class GInfosController < ApplicationController
   # PATCH/PUT /g_infos/1
   # PATCH/PUT /g_infos/1.json
   def update
+    @g_info = GInfo.find(params[:id])
     respond_to do |format|
       if @g_info.update(g_info_params)
         format.html { redirect_to @g_info, notice: 'G info was successfully updated.' }
@@ -73,6 +76,7 @@ class GInfosController < ApplicationController
         format.json { render json: @g_info.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to("/g_infos/:id")
   end
 
   # DELETE /g_infos/1

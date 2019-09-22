@@ -69,8 +69,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "jquery-rails"
 
-gem 'carrierwave', '~> 1.0'
-
 gem 'rmagick'
 
 gem 'select2-rails'

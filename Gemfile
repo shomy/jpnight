@@ -83,4 +83,4 @@ gem 'bootstrap-will_paginate', '1.0.0'
 
 gem 'bxslider-rails'
 
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
